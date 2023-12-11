@@ -13,7 +13,8 @@
         <div class="mt-4">
             <x-input-label for="email" :value="__('帳號')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder='請輸入帳號' required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            {{-- 用來顯示錯誤訊息 --}}
+            {{-- <x-input-error :messages="$errors->get('email')" class="mt-2" /> --}}
         </div>
 
 
@@ -39,10 +40,9 @@
         </div>
 
         <!-- Remember Me -->
+                       {{-- 用來顯示錯誤訊息 --}}
+                       <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
-        <div class="flex items-center justify-center items-center mt-4 pt-2.5 pb-2.5 mistake-btn">
-            帳號密碼錯誤
-        </div>
         <div class=" mt-4 flex justify-between items-center">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">

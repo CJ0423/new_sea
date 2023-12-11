@@ -1,9 +1,7 @@
 @props(['messages'])
-
+{{-- 那個message我要怎麼去找到他 --}}
 @if ($messages)
-    <ul {{ $attributes->merge(['class' => 'text-sm text-red-600 space-y-1']) }}>
-        @foreach ((array) $messages as $message)
-            <li>{{ $message }}</li>
-        @endforeach
-    </ul>
+<div class="flex items-center justify-center items-center mt-4 pt-2.5 pb-2.5 mistake-btn">
+    帳號密碼錯誤
+</div>
 @endif

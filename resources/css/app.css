@@ -33,7 +33,6 @@ body #login-area form .login-btn {
   font-size: 14px;
 }
 body #login-area form .mistake-btn {
-  display: none;
   background-color: rgba(240, 55, 56, 0.0509803922);
   color: #e95b5b;
   position: relative;
