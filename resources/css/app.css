@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  font-size: 16px !important;
+}
+
+body {
+  font-family: Noto Sans TC;
+}
+body #login-area h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #6ebe49;
+}
+body #login-area h3 {
+  color: #707070;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 27px;
+  text-align: center;
+}
+body #login-area form .forget-password {
+  text-decoration: none;
+}
+body #login-area form .login-btn {
+  width: 77px;
+  height: 44px;
+  background-color: #6ebe49;
+  font-weight: 600;
+  font-size: 14px;
+}
+body #login-area form .mistake-btn {
+  display: none;
+  background-color: rgba(240, 55, 56, 0.0509803922);
+  color: #e95b5b;
+  position: relative;
+}
+body #login-area form .mistake-btn::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 30px;
+  top: 12px;
+  background-image: url("./img/login/Warning.png");
+}
+body #login-area form input {
+  font-weight: 400;
+  size: 14px;
+  line-height: 20px;
+  font-family: Open Sans;
+}
+body #login-area form input::-moz-placeholder {
+  font-weight: 400;
+  size: 14px;
+  line-height: 20px;
+  font-family: Open Sans;
+}
+body #login-area form input::placeholder {
+  font-weight: 400;
+  size: 14px;
+  line-height: 20px;
+  font-family: Open Sans;
+}/*# sourceMappingURL=app.css.map */
