@@ -17,6 +17,7 @@
     </head>
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+            {{-- 這邊很有趣他在判斷login有沒有出現在路由中，可以看到這邊是在登入前會有，因為在登入前他是吃到guest的路由，而在登入後則是吃到auth的路由 --}}
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
