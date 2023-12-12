@@ -9,11 +9,10 @@ body {
 	background-color: var(--beige);
 	.menu {
 		height: 100vh;
-		top: 0;
-		background-color: #6ebe49;
-		position: sticky;
 		width: 240px;
-		left: 0;
+		background-color: #6ebe49;
+		position: fixed;
+		top: 0;
 
 		&-2 {
 			position: relative;
@@ -168,6 +167,7 @@ body {
 	.header {
 		display: flex;
 		width: calc(100% - 240px);
+		min-width: 824px;
 		height: 72px;
 		align-items: center;
 		justify-content: space-between;

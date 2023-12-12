@@ -1,0 +1,161 @@
+.menu .div .ul-navigation .item1{
+    width: 240px;
+    background-color: #8ddb69;
+}
+
+.frame {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 20px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+
+        .frame-2 {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+
+            .size12 {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            .button-establish {
+                display: inline-flex;
+                flex: 0 0 auto;
+                background-color: var(--nero);
+                border-radius: 4px;
+                border: 1px solid;
+                border-color: var(--mercury);
+                align-items: center;
+                gap: 4px;
+                padding: 4px 8px;
+                position: relative;
+                box-sizing: border-box;
+                color: #6ebe49;
+
+                &:hover {
+                    background-color: #D9D9D9;
+                    transition: background-color 0.3s linear;
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+
+            .frame-3 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+                align-self: stretch;
+                width: 100%;
+                flex: 0 0 auto;
+                border-radius: 12px;
+                overflow: hidden;
+
+                .table {
+                    thead {
+                        th {
+                            font-size: 12px;
+                            background-color: #EEFFE6;
+                        }
+                    }
+
+                    tbody {
+                        font-size: 12px;
+
+                        .link {
+                            width: 100%;
+                            resize: none;
+                            position: relative;
+                            top: 5px;
+
+                        }
+
+                        .upload-td{
+                            width: 100px;
+
+                            .upload-label {
+                                background-color: #fff;
+                                color: #6EBE49;
+                                width: 64px;
+                                height: 25px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 5px;
+                                border: unset;
+                                cursor: pointer;
+                                position: relative;
+                                z-index: 1;
+
+                                &:hover {
+                                    background-color: #D9D9D9;
+                                    transition: background-color 0.3s linear;
+                                }
+                            }
+
+                            .upload-input{
+                                position: relative;
+                                top: -20px;
+                            }
+                        }
+                    }
+
+                    .button-revise {
+                        display: flex;
+                        width: 64px;
+                        justify-content: center;
+                        background-color: #6EBE49;
+                        border-radius: 20px;
+                        align-items: center;
+                        gap: 4px;
+                        padding: 10px 8px;
+                        position: relative;
+                        box-sizing: border-box;
+                        color: #fff;
+
+                        &:hover {
+                            background-color: #61a542;
+                            transition: background-color 0.3s linear;
+                        }
+                    }
+
+                    .button-store{
+                        display: flex;
+                        width: 64px;
+                        justify-content: center;
+                        background-color: #ffffff;
+                        border-radius: 20px;
+                        align-items: center;
+                        gap: 4px;
+                        padding: 10px 8px;
+                        position: relative;
+                        box-sizing: border-box;
+                        color: #6EBE49;
+
+                        &:hover {
+                            background-color: #6EBE49;
+                            color: #fff;
+                            transition: background-color 0.3s linear;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
