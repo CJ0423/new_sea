@@ -12,7 +12,7 @@
 
         <div class="mt-4">
             <x-input-label for="email" :value="__('帳號')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder='請輸入帳號' required autofocus autocomplete="username" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder='請輸入帳號' autofocus autocomplete="username" />
             {{-- 用來顯示錯誤訊息 --}}
             {{-- <x-input-error :messages="$errors->get('email')" class="mt-2" /> --}}
         </div>
@@ -23,10 +23,12 @@
         <div class="flex justify-between ">
              <x-input-label for="password" :value="__('密碼')" />
 
+             {{-- 是否有被點擊 --}}
              @if (Route::has('password.request'))
-                  <a  class="underline text-sm text-gray-400 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 forget-password" href="{{ route('password.request') }}">
+                  <button  class="underline text-sm text-gray-400 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 forget-password">
                 {{ __('忘記密碼?') }}
-                 </a>
+                 </button>
+
               @endif
         </div>
 

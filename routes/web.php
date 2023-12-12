@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('welcome'); //到時候要改成真正的畫面
+})->middleware(['auth', 'verified'])->name('go-to-login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

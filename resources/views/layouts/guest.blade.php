@@ -14,7 +14,8 @@
 
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+        @vite(['resources/css/app.css'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-cover bg-no-repeat bg-center" style="background-image: url('../img/login/login-bg.png')">
@@ -24,8 +25,13 @@
                 </a>
             </div>
             <div  id="login-area" class="w-80 h-full sm:max-w-md mt-6 px-12 py-8 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+                {{$slot }}
             </div>
         </div>
+
+        {{-- 呼喚自建組建 --}}
+        <x-box-message  />
+
+        @vite(['resources/js/app.js'])
     </body>
 </html>

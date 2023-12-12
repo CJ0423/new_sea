@@ -67,4 +67,35 @@ body {
             }
         }
     }
+    #msg-box {
+        display: none;
+        position: absolute;
+        left: calc(50% - 120px);
+        top: calc(50% - 75px);
+
+        width: 250px;
+        height: 150px;
+        padding: 10px 10px;
+        background-color: #dad7d7;
+        border-radius: 8px;
+
+        text-align: center;
+        // line-height: 100px;
+
+        div {
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+        #center-btn {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 25px;
+            background-color: #6ebe49;
+            padding: 10px 30px;
+            border-radius: 8px;
+            &:active {
+                background-color: #559835;
+            }
+        }
+    }
 }
