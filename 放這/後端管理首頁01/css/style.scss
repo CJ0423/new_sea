@@ -1,0 +1,638 @@
+.screen {
+	position: relative;
+	width: 100%;
+	background-color: var(--beige);
+	.menu {
+		height: 100vh;
+		top: 0;
+		background-color: #6ebe49;
+		position: sticky;
+		width: 240px;
+		left: 0;
+		
+		&-2 {
+			position: relative;
+			width: 24px;
+			height: 24px;
+		}
+	}
+	.div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		top: 120px;
+		position: absolute;
+		width: 240px;
+		left: 0;
+		&-wrapper {
+			gap: 10px;
+			padding: 20px 24px 20px 48px;
+			align-self: stretch;
+			width: 100%;
+			flex: 0 0 auto;
+			background-color: var(--primary);
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+		&-2 {
+			display: flex;
+			height: 42px;
+			align-items: flex-start;
+			position: relative;
+			align-self: stretch;
+			width: 100%;
+		}
+	}
+	.viewhover{
+		&:hover{
+			width: 240px;
+			background-color: #8ddb69;
+			transition: background-color 0.3s linear;
+		}
+	}
+	.view {
+		gap: 10px;
+		padding: 20px 24px;
+		align-self: stretch;
+		width: 100%; 
+		height: 50px;
+		flex: 0 0 auto;
+		background-color: var(--primary-80);
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		
+		&-2 {
+			justify-content: space-between;
+			padding: 20px 24px;
+			align-self: stretch;
+			width: 100%;
+			height: 70px;
+			flex: 0 0 auto;
+			background-color: var(--primary);
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+		&-3 {
+			gap: 10px;
+			padding: 20px 24px;
+			align-self: stretch;
+			width: 100%;
+			flex: 0 0 auto;
+			background-color: var(--primary);
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+		&-4 {
+			flex-direction: column;
+			width: 1152px;
+			gap: 20px;
+			padding: 20px;
+			flex: 0 0 auto;
+			background-color: var(--white);
+			border-radius: 12px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+		&-5 {
+			width: 60px;
+			justify-content: center;
+			gap: 20px;
+			padding: 0px 12px;
+			align-self: stretch;
+			background-color: var(--primary-20);
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+	}
+	.text-wrapper {
+		position: relative;
+		width: fit-content;
+		margin-top: -1px;
+		font-family: "Noto Sans TC", Helvetica;
+		font-weight: 500;
+		color: #ffffff;
+		font-size: 16px;
+		letter-spacing: 0;
+		line-height: normal;
+		&-2 {
+			position: relative;
+			width: fit-content;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 500;
+			color: #ffffff;
+			font-size: 14px;
+			letter-spacing: 0;
+			line-height: normal;
+		}
+		&-3 {
+			position: relative;
+			width: fit-content;
+			margin-top: -1px;
+			font-family: var(--5-font-family);
+			font-weight: var(--5-font-weight);
+			color: var(--mine-shaft);
+			font-size: var(--5-font-size);
+			letter-spacing: var(--5-letter-spacing);
+			line-height: var(--5-line-height);
+			font-style: var(--5-font-style);
+		}
+		&-4 {
+			position: relative;
+			width: 96px;
+			margin-top: -1px;
+			font-family: var(---font-family);
+			font-weight: var(---font-weight);
+			color: var(--mine-shaft);
+			font-size: var(---font-size);
+			letter-spacing: var(---letter-spacing);
+			line-height: var(---line-height);
+			font-style: var(---font-style);
+		}
+		&-5 {
+			position: relative;
+			align-self: stretch;
+			width: 62.13px;
+			margin-top: -1px;
+			margin-left: -13.07px;
+			margin-right: -13.07px;
+			font-family: var(---font-family);
+			font-weight: var(---font-weight);
+			color: var(--mine-shaft);
+			font-size: var(---font-size);
+			text-align: center;
+			letter-spacing: var(---letter-spacing);
+			line-height: var(---line-height);
+			font-style: var(---font-style);
+		}
+		&-6 {
+			position: relative;
+			flex: 1;
+			align-self: stretch;
+			margin-top: -1px;
+			font-family: var(---font-family);
+			font-weight: var(---font-weight);
+			color: var(--mine-shaft);
+			font-size: var(---font-size);
+			letter-spacing: var(---letter-spacing);
+			line-height: var(---line-height);
+			font-style: var(---font-style);
+		}
+		&-7 {
+			position: relative;
+			width: fit-content;
+			font-family: var(---font-family);
+			font-weight: var(---font-weight);
+			color: var(--mine-shaft);
+			font-size: var(---font-size);
+			text-align: center;
+			letter-spacing: var(---letter-spacing);
+			line-height: var(---line-height);
+			font-style: var(---font-style);
+		}
+		&-8 {
+			position: relative;
+			width: 116.85px;
+			font-family: var(---font-family);
+			font-weight: var(---font-weight);
+			color: var(--mine-shaft);
+			font-size: var(---font-size);
+			letter-spacing: var(---letter-spacing);
+			line-height: var(---line-height);
+			font-style: var(---font-style);
+		}
+		&-9 {
+			position: relative;
+			width: fit-content;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 400;
+			color: var(--black-50);
+			font-size: 12px;
+			letter-spacing: 0;
+			line-height: normal;
+		}
+		&-10 {
+			position: relative;
+			width: fit-content;
+			font-family: var(---font-family);
+			font-weight: var(---font-weight);
+			color: var(--mine-shaft);
+			font-size: var(---font-size);
+			letter-spacing: var(---letter-spacing);
+			line-height: var(---line-height);
+			font-style: var(---font-style);
+		}
+	}
+	.iconamoon-arrow-down {
+		&-1{
+			position: relative;
+			width: 16px;
+			height: 16px;
+			left: 100px;
+		}
+		&-2{
+			position: relative;
+			width: 16px;
+			height: 16px;
+			left: 123px;
+		}
+	}
+	.logo {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		position: absolute;
+		top: 22px;
+		left: 24px;
+	}
+	.img {
+		position: relative;
+		width: 121.6px;
+		height: 32px;
+	}
+	.header {
+		display: flex;
+		width: calc(100% - 240px);
+		height: 72px;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0px 24px;
+		position: absolute;
+		top: 0;
+		left: 240px;
+		background-color: var(--nero);
+		box-shadow: 0px 0px 8px #0000000d;
+
+		.bread-sticks{
+			background-color: #fff;
+			&:hover{
+				background-color: #E5E5E5;
+				transition: background-color 0.3s linear;
+			}
+		}
+
+		.sign-out{
+			&:hover{
+				background-color: #E5E5E5;
+				transition: background-color 0.3s linear;
+			}
+		}
+	}
+	.button {
+		display: flex;
+		width: 48px;
+		justify-content: center;
+		background-color: var(--nero);
+		border-radius: 4px;
+		border: 1px solid;
+		border-color: var(--mercury);
+		align-items: center;
+		gap: 4px;
+		padding: 4px 8px;
+		position: relative;
+		all: unset;
+		box-sizing: border-box;
+		&-2 {
+			display: inline-flex;
+			flex: 0 0 auto;
+			background-color: var(--nero);
+			border-radius: 4px;
+			border: 1px solid;
+			border-color: var(--mercury);
+			align-items: center;
+			gap: 4px;
+			padding: 4px 8px;
+			position: relative;
+			all: unset;
+			box-sizing: border-box;
+		}
+		&-wrapper {
+			display: flex;
+			width: 120px;
+			align-items: center;
+			padding: 12px;
+			position: relative;
+			align-self: stretch;
+		}
+		&-3 {
+			display: flex;
+			width: 64px;
+			justify-content: center;
+			background-color: var(--primary);
+			border-radius: 20px;
+			align-items: center;
+			gap: 4px;
+			padding: 4px 8px;
+			position: relative;
+			all: unset;
+			box-sizing: border-box;
+		}
+		&-4 {
+			display: flex;
+			width: 64px;
+			justify-content: center;
+			background-color: var(--nero);
+			border-radius: 4px;
+			border: 1px solid;
+			border-color: var(--mercury);
+			align-items: center;
+			gap: 4px;
+			padding: 4px 8px;
+			position: relative;
+			all: unset;
+			box-sizing: border-box;
+		}
+		&-5 {
+			display: flex;
+			width: 64px;
+			justify-content: center;
+			background-color: var(--nero);
+			border-radius: 20px;
+			border: 1px solid;
+			border-color: var(--mercury);
+			align-items: center;
+			gap: 4px;
+			padding: 4px 8px;
+			position: relative;
+			all: unset;
+			box-sizing: border-box;
+		}
+	}
+	.text {
+		position: relative;
+		width: fit-content;
+		margin-top: -1px;
+		font-family: "Inter", Helvetica;
+		font-weight: 500;
+		color: var(--mine-shaft);
+		font-size: 12px;
+		letter-spacing: 0.24px;
+		line-height: 20px;
+		white-space: nowrap;
+		&-2 {
+			position: relative;
+			width: fit-content;
+			margin-top: -1px;
+			font-family: "Inter", Helvetica;
+			font-weight: 500;
+			color: var(--primary);
+			font-size: 12px;
+			letter-spacing: 0.24px;
+			line-height: 20px;
+			white-space: nowrap;
+		}
+		&-3 {
+			position: relative;
+			width: fit-content;
+			margin-top: -1px;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 500;
+			color: var(--gray-100);
+			font-size: 12px;
+			letter-spacing: 0.6px;
+			line-height: 20px;
+			white-space: nowrap;
+		}
+		&-4 {
+			position: relative;
+			width: fit-content;
+			margin-top: -1px;
+			margin-left: -1px;
+			margin-right: -1px;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 500;
+			color: var(--primary);
+			font-size: 12px;
+			letter-spacing: 0.6px;
+			line-height: 20px;
+			white-space: nowrap;
+		}
+		&-5 {
+			position: relative;
+			width: fit-content;
+			margin-top: -1px;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 500;
+			color: var(--mine-shaft);
+			font-size: 12px;
+			letter-spacing: 0.6px;
+			line-height: 20px;
+			white-space: nowrap;
+		}
+		&-6 {
+			position: relative;
+			width: fit-content;
+			margin-top: -1px;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 500;
+			color: var(--nero);
+			font-size: 12px;
+			letter-spacing: 0.6px;
+			line-height: 20px;
+			white-space: nowrap;
+		}
+	}
+	.frame {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		position: absolute;
+		width: calc(100% - 288px);
+		background-color: aqua;
+		top: 112px;
+		left: 264px;
+		&-2 {
+			justify-content: space-between;
+			display: flex;
+			align-items: center;
+			position: relative;
+			align-self: stretch;
+			width: 100%;
+			flex: 0 0 auto;
+		}
+		&-3 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+			align-self: stretch;
+			width: 100%;
+			flex: 0 0 auto;
+			border-radius: 12px;
+			overflow: hidden;
+		}
+		&-4 {
+			display: flex;
+			width: 320px;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			padding: 0px 12px;
+			position: relative;
+			align-self: stretch;
+			background-color: var(--primary-20);
+		}
+		&-5 {
+			display: flex;
+			align-items: center;
+			padding: 0px 12px;
+			position: relative;
+			flex: 1;
+			align-self: stretch;
+			flex-grow: 1;
+			background-color: var(--primary-20);
+		}
+		&-6 {
+			display: flex;
+			width: 120px;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			padding: 0px 12px;
+			position: relative;
+			align-self: stretch;
+			background-color: var(--primary-20);
+		}
+		&-7 {
+			display: flex;
+			flex-direction: column;
+			width: 60px;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			padding: 0px 12px;
+			position: relative;
+			align-self: stretch;
+		}
+		&-8 {
+			display: flex;
+			width: 320px;
+			align-items: center;
+			padding: 12px;
+			position: relative;
+			align-self: stretch;
+		}
+		&-9 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 12px;
+			position: relative;
+			flex: 1;
+			align-self: stretch;
+			flex-grow: 1;
+		}
+		&-10 {
+			display: flex;
+			width: 120px;
+			align-items: center;
+			justify-content: center;
+			padding: 12px;
+			position: relative;
+			align-self: stretch;
+		}
+		&-11 {
+			gap: 1px;
+			display: flex;
+			align-items: center;
+			position: relative;
+			align-self: stretch;
+			width: 100%;
+			flex: 0 0 auto;
+		}
+		&-12 {
+			display: flex;
+			width: 392px;
+			align-items: center;
+			padding: 0px 12px;
+			position: relative;
+			align-self: stretch;
+			background-color: var(--primary-20);
+		}
+		&-wrapper {
+			display: flex;
+			width: 220px;
+			align-items: center;
+			padding: 12px;
+			position: relative;
+			align-self: stretch;
+		}
+		&-13 {
+			display: inline-flex;
+			height: 40px;
+			align-items: center;
+			gap: 12px;
+			position: relative;
+			flex: 0 0 auto;
+		}
+	}
+	.icon-outline-plus {
+		position: relative;
+		width: 12px;
+		height: 12px;
+	}
+	.row {
+		display: flex;
+		height: 70px;
+		align-items: flex-start;
+		position: relative;
+		align-self: stretch;
+		width: 100%;
+		background-color: var(--nero);
+	}
+	.https-www-pchomeec {
+		align-self: stretch;
+		margin-top: -1px;
+		position: relative;
+		flex: 1;
+		font-family: "Noto Sans TC", Helvetica;
+		font-weight: 400;
+		color: var(--mine-shaft);
+		font-size: 10px;
+		letter-spacing: 0;
+		line-height: normal;
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			padding: 0px 12px;
+			position: relative;
+			flex: 1;
+			align-self: stretch;
+			flex-grow: 1;
+			border-radius: 4px;
+			border: 1px solid;
+			border-color: var(--mercury);
+		}
+		&-2 {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			position: relative;
+			flex: 1;
+			font-family: "Noto Sans TC", Helvetica;
+			font-weight: 400;
+			color: var(--mine-shaft);
+			font-size: 10px;
+			letter-spacing: 0;
+			line-height: normal;
+		}
+	}
+	.devider {
+		position: relative;
+		align-self: stretch;
+		width: 100%;
+		height: 1.5px;
+	}
+}
