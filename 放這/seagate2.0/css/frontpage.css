@@ -92,7 +92,8 @@
   z-index: 1;
 }
 .frame .card form .frame-3 .table tbody .upload-td .upload-label:hover {
-  background-color: #D9D9D9;
+  background-color: #6EBE49;
+  color: #fff;
   transition: background-color 0.3s linear;
 }
 .frame .card form .frame-3 .table tbody .upload-td .upload-input {

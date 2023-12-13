@@ -1,0 +1,149 @@
+.menu .div .ul-navigation .item8 {
+  width: 240px;
+  background-color: #8ddb69;
+}
+
+.frame .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.frame .card .frame-2 {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+.frame .card .frame-2 .size12 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.frame .card .frame-3 {
+  width: 100%;
+  padding: 0px 0px 0px 100px;
+}
+.frame .card .frame-4 {
+  width: 100%;
+}
+.frame .card .frame-4 form {
+  width: 100%;
+}
+.frame .card .frame-4 form .input {
+  width: 100%;
+  align-items: center;
+  gap: 24px;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+  margin: 0px 0px 20px 0px;
+}
+.frame .card .frame-4 form .input .base-wrapper {
+  align-items: flex-start;
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
+.frame .card .frame-4 form .input .base-wrapper .base {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .frame-5 {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  gap: 12px;
+  padding: 0px 12px 0px 0px;
+  position: relative;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .frame-5 .label {
+  font-size: 16px;
+  font-weight: bold;
+  width: 120px;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .frame-5 .frame-6 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #EEFFE6;
+  color: #6EBE49;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .input-field {
+  width: 80%;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .input-field input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .input-field .logo-label {
+  background-color: #fff;
+  color: #6EBE49;
+  position: relative;
+  top: 18px;
+  width: 85px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  z-index: 1;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .input-field .logo-label:hover {
+  background-color: #61a542;
+  color: #fff;
+  transition: background-color 0.3s linear;
+}
+.frame .card .frame-4 form .input .base-wrapper .base .input-field .logo-input {
+  position: relative;
+  top: -10px;
+}
+.frame .card .frame-4 form .frame-7 {
+  text-align: right;
+}
+.frame .card .frame-4 form .frame-7 .button-2 {
+  width: 135px;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #6EBE49;
+  color: #fff;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.frame .card .frame-4 form .frame-7 .button-2:hover {
+  background-color: #61a542;
+  transition: background-color 0.3s linear;
+}
+.frame .card .frame-4 form .frame-7 .button-3 {
+  width: 135px;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #fff;
+  color: #6EBE49;
+  position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.frame .card .frame-4 form .frame-7 .button-3:hover {
+  background-color: #D9D9D9;
+  transition: background-color 0.3s linear;
+}/*# sourceMappingURL=recommendestablish.css.map */
