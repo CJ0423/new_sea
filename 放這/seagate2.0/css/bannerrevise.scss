@@ -1,0 +1,205 @@
+.menu .div .ul-navigation .item3 {
+    width: 240px;
+    background-color: #8ddb69;
+}
+
+.frame {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 20px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+
+        .frame-2 {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+
+            .size12 {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+
+        .frame-3 {
+            width: 100%;
+            padding: 0px 0px 0px 100px;
+        }
+
+        .frame-4 {
+            width: 100%;
+
+            form {
+                width: 100%;
+
+                .input {
+                    width: 100%;
+                    align-items: center;
+                    gap: 24px;
+                    flex: 0 0 auto;
+                    display: flex;
+                    position: relative;
+                    margin: 0px 0px 20px 0px;
+
+                    .base-wrapper {
+                        align-items: flex-start;
+                        flex: 1;
+                        flex-grow: 1;
+                        display: flex;
+                        position: relative;
+
+                        .base {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            flex: 1;
+                            flex-grow: 1;
+
+                            .frame-5 {
+                                display: flex;
+                                width: 200px;
+                                align-items: center;
+                                gap: 12px;
+                                padding: 0px 12px 0px 0px;
+                                position: relative;
+
+                                .label {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    width: 120px;
+                                }
+
+                                .frame-6 {
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 10px;
+                                    padding: 5px;
+                                    position: relative;
+                                    flex: 0 0 auto;
+                                    background-color: #EEFFE6;
+                                    color: #6EBE49;
+                                }
+                            }
+
+                            .input-field {
+                                width: 80%;
+
+                                input {
+                                    width: 100%;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                }
+
+                                .phone-label {
+                                    background-color: #fff;
+                                    color: #6EBE49;
+                                    position: relative;
+                                    top: 18px;
+                                    width: 85px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 5px;
+                                    z-index: 1;
+
+                                    &:hover {
+                                        background-color: #61a542;
+                                        color: #fff;
+                                        transition: background-color 0.3s linear;
+                                    }
+                                }
+
+                                .phone-input {
+                                    position: relative;
+                                    top: -10px;
+                                }
+
+                                .computer-label {
+                                    background-color: #fff;
+                                    color: #6EBE49;
+                                    position: relative;
+                                    top: 18px;
+                                    width: 85px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 5px;
+                                    z-index: 1;
+
+                                    &:hover {
+                                        background-color: #61a542;
+                                        color: #fff;
+                                        transition: background-color 0.3s linear;
+                                    }
+                                }
+
+                                .computer-input {
+                                    position: relative;
+                                    top: -10px;
+                                }
+                            }
+
+                            .input-field-2{
+                                select{
+                                    width: 80px;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .frame-7 {
+                    text-align: right;
+
+                    .button-2 {
+                        width: 135px;
+                        gap: 8px;
+                        padding: 8px 12px;
+                        background-color: #6EBE49;
+                        color: #fff;
+                        position: relative;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            background-color: #61a542;
+                            transition: background-color 0.3s linear;
+                        }
+                    }
+
+                    .button-3 {
+                        width: 135px;
+                        gap: 8px;
+                        padding: 8px 12px;
+                        background-color: #fff;
+                        color: #6EBE49;
+                        position: relative;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            background-color: #D9D9D9;
+                            transition: background-color 0.3s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
