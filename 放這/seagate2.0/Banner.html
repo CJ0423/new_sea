@@ -132,13 +132,18 @@
                   <td>1</td>
                   <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
                   <td>已上架</td>
-                  <td class="operate"><input type="button" class="border border-0 button-edit" value="編輯"><input type="button" class="border button-down" value="下架"></td>
+                  <td>
+                    <div class="operate">
+                        <input type="button" class="border border-0 button-edit" value="編輯">
+                        <input type="button" class="border button-down" value="下架">
+                    </div>
+                </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          
+
         </form>
       </div>
       <!-- 以上分割 -->
@@ -178,9 +183,9 @@
   <script>
     var edit = document.querySelector('.button-edit'); //編輯
     var down = document.querySelector('.button-down'); //下架
-    var box_down = document.querySelector('.prompt-box-down'); //下架提示 
-    var confirm = document.querySelector('.confirm'); //確認 
-    var cancel = document.querySelector('.cancel'); //取消 
+    var box_down = document.querySelector('.prompt-box-down'); //下架提示
+    var confirm = document.querySelector('.confirm'); //確認
+    var cancel = document.querySelector('.cancel'); //取消
 
     down.onclick = function () {
       box_down.style.display = "flex";

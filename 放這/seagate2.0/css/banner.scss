@@ -37,13 +37,13 @@
                 padding: 20px 50px 20px 50px;
                 border-radius: 10px;
 
-                .size14{
+                .size14 {
                     font-size: 20px;
                     font-weight: bold;
                     margin: 30px 0px 10px 0px;
                 }
 
-                .confirm{
+                .confirm {
                     background-color: #6EBE49;
                     color: #ffffff;
                     border-radius: 5px;
@@ -56,7 +56,7 @@
                     }
                 }
 
-                .cancel{
+                .cancel {
                     background-color: #ffffff;
                     color: #6EBE49;
                     border-radius: 5px;
@@ -85,7 +85,7 @@
                 font-weight: bold;
             }
 
-            .input-all{
+            .input-all {
                 background-color: #fff;
                 color: #6ebe49;
                 font-weight: bold;
@@ -93,7 +93,7 @@
                 padding: 0px 0px 9px 0px;
             }
 
-            .input-down{
+            .input-down {
                 background-color: #fff;
                 color: #000000;
                 font-weight: bold;
@@ -159,7 +159,7 @@
                             .operate {
                                 display: flex;
                                 flex-direction: row;
-    
+
                                 .button-edit {
                                     display: flex;
                                     width: 64px;
@@ -172,13 +172,13 @@
                                     position: relative;
                                     box-sizing: border-box;
                                     color: #fff;
-    
+
                                     &:hover {
                                         background-color: #61a542;
                                         transition: background-color 0.3s linear;
                                     }
                                 }
-    
+
                                 .button-down {
                                     display: flex;
                                     width: 64px;
@@ -192,7 +192,7 @@
                                     box-sizing: border-box;
                                     color: #000000;
                                     margin: 0px 0px 0px 5px;
-    
+
                                     &:hover {
                                         background-color: #D9D9D9;
                                         transition: background-color 0.3s linear;
@@ -201,6 +201,10 @@
                             }
                         }
 
+                        th,
+                        td {
+                            vertical-align: middle;
+                        }
                     }
                 }
             }

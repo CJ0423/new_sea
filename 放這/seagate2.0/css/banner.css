@@ -172,4 +172,8 @@
 .frame .card form .frame-3 .table tbody .border-bottom .operate .button-down:hover {
   background-color: #D9D9D9;
   transition: background-color 0.3s linear;
+}
+.frame .card form .frame-3 .table tbody th,
+.frame .card form .frame-3 .table tbody td {
+  vertical-align: middle;
 }/*# sourceMappingURL=banner.css.map */
