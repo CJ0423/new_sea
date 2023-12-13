@@ -90,6 +90,7 @@
                 color: #6ebe49;
                 font-weight: bold;
                 width: 100px;
+                padding: 0px 0px 9px 0px;
             }
 
             .input-down{
@@ -97,6 +98,7 @@
                 color: #000000;
                 font-weight: bold;
                 width: 100px;
+                padding: 0px 0px 9px 0px;
             }
 
             .button-establish {
@@ -112,6 +114,7 @@
                 position: relative;
                 box-sizing: border-box;
                 color: #6ebe49;
+                margin: 2px;
 
                 &:hover {
                     background-color: #D9D9D9;
@@ -152,51 +155,52 @@
                             img {
                                 height: 100px;
                             }
-                        }
 
-                        .operate {
-                            display: flex;
-                            flex-direction: row;
-
-                            .button-edit {
+                            .operate {
                                 display: flex;
-                                width: 64px;
-                                justify-content: center;
-                                background-color: #6EBE49;
-                                border-radius: 20px;
-                                align-items: center;
-                                gap: 4px;
-                                padding: 10px 8px;
-                                position: relative;
-                                box-sizing: border-box;
-                                color: #fff;
-
-                                &:hover {
-                                    background-color: #61a542;
-                                    transition: background-color 0.3s linear;
+                                flex-direction: row;
+    
+                                .button-edit {
+                                    display: flex;
+                                    width: 64px;
+                                    justify-content: center;
+                                    background-color: #6EBE49;
+                                    border-radius: 20px;
+                                    align-items: center;
+                                    gap: 4px;
+                                    padding: 10px 8px;
+                                    position: relative;
+                                    box-sizing: border-box;
+                                    color: #fff;
+    
+                                    &:hover {
+                                        background-color: #61a542;
+                                        transition: background-color 0.3s linear;
+                                    }
+                                }
+    
+                                .button-down {
+                                    display: flex;
+                                    width: 64px;
+                                    justify-content: center;
+                                    background-color: #ffffff;
+                                    border-radius: 20px;
+                                    align-items: center;
+                                    gap: 4px;
+                                    padding: 10px 8px;
+                                    position: relative;
+                                    box-sizing: border-box;
+                                    color: #000000;
+                                    margin: 0px 0px 0px 5px;
+    
+                                    &:hover {
+                                        background-color: #D9D9D9;
+                                        transition: background-color 0.3s linear;
+                                    }
                                 }
                             }
-
-                            .button-down {
-                                display: flex;
-                                width: 64px;
-                                justify-content: center;
-                                background-color: #ffffff;
-                                border-radius: 20px;
-                                align-items: center;
-                                gap: 4px;
-                                padding: 10px 8px;
-                                position: relative;
-                                box-sizing: border-box;
-                                color: #000000;
-                                margin: 0px 0px 0px 5px;
-
-                                &:hover {
-                                    background-color: #D9D9D9;
-                                    transition: background-color 0.3s linear;
-                                }
-                            }
                         }
+
                     }
                 }
             }

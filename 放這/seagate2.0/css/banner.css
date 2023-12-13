@@ -81,12 +81,14 @@
   color: #6ebe49;
   font-weight: bold;
   width: 100px;
+  padding: 0px 0px 9px 0px;
 }
 .frame .card .frame-2 .input-down {
   background-color: #fff;
   color: #000000;
   font-weight: bold;
   width: 100px;
+  padding: 0px 0px 9px 0px;
 }
 .frame .card .frame-2 .button-establish {
   display: inline-flex;
@@ -101,6 +103,7 @@
   position: relative;
   box-sizing: border-box;
   color: #6ebe49;
+  margin: 2px;
 }
 .frame .card .frame-2 .button-establish:hover {
   background-color: #D9D9D9;
@@ -131,11 +134,11 @@
 .frame .card form .frame-3 .table tbody .border-bottom img {
   height: 100px;
 }
-.frame .card form .frame-3 .table tbody .operate {
+.frame .card form .frame-3 .table tbody .border-bottom .operate {
   display: flex;
   flex-direction: row;
 }
-.frame .card form .frame-3 .table tbody .operate .button-edit {
+.frame .card form .frame-3 .table tbody .border-bottom .operate .button-edit {
   display: flex;
   width: 64px;
   justify-content: center;
@@ -148,11 +151,11 @@
   box-sizing: border-box;
   color: #fff;
 }
-.frame .card form .frame-3 .table tbody .operate .button-edit:hover {
+.frame .card form .frame-3 .table tbody .border-bottom .operate .button-edit:hover {
   background-color: #61a542;
   transition: background-color 0.3s linear;
 }
-.frame .card form .frame-3 .table tbody .operate .button-down {
+.frame .card form .frame-3 .table tbody .border-bottom .operate .button-down {
   display: flex;
   width: 64px;
   justify-content: center;
@@ -166,7 +169,7 @@
   color: #000000;
   margin: 0px 0px 0px 5px;
 }
-.frame .card form .frame-3 .table tbody .operate .button-down:hover {
+.frame .card form .frame-3 .table tbody .border-bottom .operate .button-down:hover {
   background-color: #D9D9D9;
   transition: background-color 0.3s linear;
 }/*# sourceMappingURL=banner.css.map */
