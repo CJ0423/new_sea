@@ -7,6 +7,8 @@ let isOpen = false;
 let lastChoose;
 let lastChooseDate;
 let inputArea = document.querySelectorAll('.input-area');
+let neverChooseDay = true;
+let isNowButton = false;
 inputArea.forEach((item, index) => {
     getDateControl(item, index);
 });
@@ -116,6 +118,11 @@ function getDateControl(inputArea, inputAreaIndex) {
             frameMask.style.display = 'block';
         }
         isOpen = !isOpen;
+        if(inputBox.id === 'start-time-input'){
+            console.log(`${lastChooseDate[0]}-${lastChooseDate[1]}-${lastChooseDate[2]}`);
+            datepicker.selectDate(`${lastChooseDate[0]}-${lastChooseDate[1]}-${lastChooseDate[2]}`);
+            console.log("好了");
+        }
         if (inputBox.id === 'end-time-input') {
             if (lastChoose) {
                 datepicker.options.addCellClassesResolver(function (day) {
@@ -131,6 +138,8 @@ function getDateControl(inputArea, inputAreaIndex) {
         }
     });
     datepicker.options.onSelect(function (event, day, previousDay) {
+        isNowButton = false;
+        neverChooseDay = false;
         setYear = day.year;
         setMonth = day.month;
         setDay = day.dayNumber;
@@ -164,10 +173,13 @@ function getDateControl(inputArea, inputAreaIndex) {
 
     });
     checkButton.addEventListener('click', () => {
+        isNowButton = false;
         isOpen = !isOpen;
         datePickerBox.style.display = 'none';
         frameMask.style.display = 'none';
-        inputBox.value = `${setYear}-${setMonth}-${setDay} ${setTime}`;
+        if(neverChooseDay){
+            inputBox.value = `${setYear}-${setMonth}-${setDay} ${setTime}`;
+        }
         lastChoose = document.querySelector('.the-datepicker__day--selected span');
         lastChoose.classList.add('color');
         lastChooseDate = [setYear, setMonth, setDay];
@@ -186,9 +198,11 @@ frameMask.addEventListener('click', function () {
 });
 let nowButton = document.querySelector('.now-button');
 nowButton.addEventListener('click', function () {
+    isNowButton = true;
     let nowDate = new Date();
     let inputBox = document.querySelector('.input-box');
     inputBox.value = `${nowDate.getFullYear()}-${nowDate.getMonth() + 1}-${nowDate.getDate()} ${nowDate.getHours()}:${nowDate.getMinutes()}`;
+    lastChooseDate = [nowDate.getFullYear(), nowDate.getMonth() + 1, nowDate.getDate()];
 });
 
 
