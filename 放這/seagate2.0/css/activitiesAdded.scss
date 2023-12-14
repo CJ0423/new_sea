@@ -297,6 +297,65 @@ body {
                 }
             }
         }
+        .prompt-box-down {
+            width: 300px;
+            height: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+
+            .prompt {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(255, 255, 255);
+                border-width: 1px;
+                border-style: solid;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px 50px 20px 50px;
+                border-radius: 10px;
+
+                .size14 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .confirm {
+                    background-color: #6EBE49;
+                    color: #ffffff;
+                    border-radius: 5px;
+                    padding: 10px 15px 10px 15px;
+                    margin: 10px;
+
+                    &:hover {
+                        background-color: #61a542;
+                        transition: background-color 0.3s linear;
+                    }
+                }
+
+                .cancel {
+                    background-color: #ffffff;
+                    color: #6EBE49;
+                    border-radius: 5px;
+                    padding: 10px 15px 10px 15px;
+                    margin: 10px;
+
+                    &:hover {
+                        background-color: #D9D9D9;
+                        transition: background-color 0.3s linear;
+                    }
+                }
+            }
+        }
     }
 }
 

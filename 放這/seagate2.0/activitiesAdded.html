@@ -313,6 +313,16 @@
           <button type="button" class="down-added-button">下架</button>
         </div>
       </form>
+      <!-- 提示訊息 -->
+      <div class="prompt-box-down">
+        <div class="prompt">
+          <p class="size14">確定要下架嗎?</p>
+          <div>
+            <input class="border confirm" type="button" value="確認">
+            <input class="border cancel" type="button" value="取消">
+          </div>
+        </div>
+      </div>
     </div>
     <!-- 以上分割 -->
   </div>
@@ -347,6 +357,24 @@
         a = 0;
       }
     }
+  </script>
+  <!-- 新增JS -->
+  <script>
+    var down = document.querySelector('.down-added-button'); //下架
+    var box_down = document.querySelector('.prompt-box-down'); //下架提示
+    var confirm = document.querySelector('.confirm'); //確認
+    var cancel = document.querySelector('.cancel'); //取消
+
+    down.onclick = function () {
+      box_down.style.display = "flex";
+    }
+    confirm.onclick = function () {
+      box_down.style.display = "none";
+    }
+    cancel.onclick = function () {
+      box_down.style.display = "none";
+    }
+
   </script>
 </body>
 
