@@ -168,6 +168,7 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    margin-bottom: 24px;
 
                     .label-area {
                         width: 200px;
@@ -200,7 +201,7 @@
                         align-items: center;
                         gap: 1rem;
                         width: 80%;
-                        padding: 1rem;
+                        padding: 5px 0px;
 
 
                         select {
@@ -222,7 +223,7 @@
                         .now-button{
                             border: rgb(222, 226, 230) 1px solid;
                             color: #61a542;
-                            padding: .5rem 1rem;
+                            padding: 5px 1rem;
                             background-color: #fff;
                             border-radius: 4px;
                             transition: all .3s linear;
@@ -239,7 +240,7 @@
                                 border-radius: 5px;
                                 padding: 5px 0rem 5px 2.5rem;
                                 appearance: none;
-                                border: 1px solid #70707070;
+                                border: 1px solid rgb(222, 226, 230);
                             }
 
                             .input-img {
