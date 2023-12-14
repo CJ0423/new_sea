@@ -1,3 +1,8 @@
+.menu .div .ul-navigation .item6 {
+  width: 240px;
+  background-color: #8ddb69;
+}
+
 body {
   background-color: rgba(221, 221, 221, 0.2);
 }
@@ -19,11 +24,14 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border-radius: 4px;
+  padding: 20px;
+  border-radius: 12px;
 }
 .screen .frame form .pattern-container .pattern-area h4 {
   padding: 0.5rem;
   border-bottom: 1px solid rgba(221, 221, 221, 0.4);
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .screen .frame form .pattern-container .pattern-area .pattern-box {
   width: 100%;
