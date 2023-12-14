@@ -1,0 +1,109 @@
+body {
+  background-color: rgba(221, 221, 221, 0.2);
+}
+
+.screen .frame {
+  max-width: 1400px;
+  background-color: transparent;
+  position: relative;
+}
+.screen .frame form .pattern-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.screen .frame form .pattern-container .pattern-area {
+  width: 48%;
+  padding: 0.5rem;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.screen .frame form .pattern-container .pattern-area h4 {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.4);
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box input[type=radio] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  opacity: 0;
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box input[type=radio]:checked + label {
+  border-color: #6EBE49;
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box label.pattern-choose-label {
+  max-width: 220px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 2px;
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box label.pattern-choose-label .pattern-box-item {
+  flex: 1 1 50px;
+  width: 100%;
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box label.pattern-choose-label .pattern-box-item img {
+  width: 100%;
+}
+.screen .frame form .pattern-container .pattern-area .pattern-box label.pattern-choose-label:hover {
+  border-color: rgba(110, 190, 73, 0.3764705882);
+}
+.screen .frame form .submit-container {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.screen .frame .prompt-box {
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  box-shadow: 2px 2px 5px 2px #ccc;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: none;
+}
+.screen .frame .prompt-box h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+button, .clear-change-button {
+  border: 1px solid rgba(112, 112, 112, 0.2509803922);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem;
+  transition: all 0.3s linear;
+}
+button:hover, .clear-change-button:hover {
+  opacity: 0.6;
+}
+
+a.clear-change-button {
+  background-color: white;
+  color: #6EBE49;
+}
+
+button.apply-change-button {
+  background-color: #6EBE49;
+  color: white;
+}
+
+.close-prompt-box {
+  background-color: #6EBE49;
+  color: white;
+}/*# sourceMappingURL=choosePattern.css.map */
