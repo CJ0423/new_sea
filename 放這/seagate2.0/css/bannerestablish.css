@@ -146,8 +146,30 @@
 }
 .frame .card .frame-4 form .area {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+}
+.frame .card .frame-4 form .area .label-area {
+  width: 200px;
+  display: flex;
+  padding: 0px 12px 0px 0px;
+  align-items: center;
+  gap: 12px;
+}
+.frame .card .frame-4 form .area .label-area label {
+  font-weight: bold;
+  width: 120px;
+}
+.frame .card .frame-4 form .area .label-area span {
+  background-color: #EEFFE6;
+  color: #6EBE49;
+  padding: 5px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.frame .card .frame-4 form .area .label-area .hidden-span {
+  opacity: 0;
+  visibility: hidden;
 }
 .frame .card .frame-4 form .area .select-area {
   display: flex;
@@ -155,13 +177,6 @@
   gap: 1rem;
   width: 80%;
   padding: 1rem;
-}
-.frame .card .frame-4 form .area .select-area > span {
-  background-color: #EEFFE6;
-  color: #6EBE49;
-  padding: 0.2rem;
-  font-size: 0.8rem;
-  white-space: nowrap;
 }
 .frame .card .frame-4 form .area .select-area select {
   flex: 3 1 50px;
@@ -176,10 +191,20 @@
   background-repeat: no-repeat;
   background-position: center right;
 }
-.frame .card .frame-4 form .area .select-area .hidden-span,
 .frame .card .frame-4 form .area .select-area .hidden-button {
   opacity: 0;
   visibility: hidden;
+}
+.frame .card .frame-4 form .area .select-area .now-button {
+  border: rgb(222, 226, 230) 1px solid;
+  color: #61a542;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s linear;
+}
+.frame .card .frame-4 form .area .select-area .now-button:hover {
+  background-color: #D9D9D9;
 }
 .frame .card .frame-4 form .area .select-area .input-area {
   position: relative;
@@ -187,8 +212,8 @@
 }
 .frame .card .frame-4 form .area .select-area .input-area input.input-box {
   width: 100%;
-  border-radius: 10px;
-  padding: 0.8rem 0rem 0.8rem 2.5rem;
+  border-radius: 5px;
+  padding: 5px 0rem 5px 2.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;

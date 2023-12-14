@@ -119,10 +119,10 @@ function getDateControl(inputArea, inputAreaIndex) {
         if (inputBox.id === 'end-time-input') {
             if (lastChoose) {
                 datepicker.options.addCellClassesResolver(function (day) {
-                    setYear = day.year;
-                    setMonth = day.month;
-                    setDay = day.dayNumber;
                     if ((day.year === lastChooseDate[0]) && (day.month === lastChooseDate[1]) && (day.dayNumber === lastChooseDate[2])) {
+                        setYear = day.year;
+                        setMonth = day.month;
+                        setDay = day.dayNumber;
                         return ['next-color'];
                     }
                 });
