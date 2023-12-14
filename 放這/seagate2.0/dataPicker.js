@@ -65,7 +65,6 @@ function getDateControl(inputArea, inputAreaIndex) {
     if (defaultHours === 24) {
         defaultHours = 0;
         setDay = defaultDate.getDate() + 1;
-        console.log(setDay);
     }
     if (defaultHours < 10) {
         defaultHours = `0${defaultHours}`;
@@ -117,17 +116,13 @@ function getDateControl(inputArea, inputAreaIndex) {
             frameMask.style.display = 'block';
         }
         isOpen = !isOpen;
-        console.log(inputBox);
         if (inputBox.id === 'end-time-input') {
             if (lastChoose) {
-                console.log(lastChoose);
-                console.log(lastChooseDate);
                 datepicker.options.addCellClassesResolver(function (day) {
                     setYear = day.year;
                     setMonth = day.month;
                     setDay = day.dayNumber;
                     if ((day.year === lastChooseDate[0]) && (day.month === lastChooseDate[1]) && (day.dayNumber === lastChooseDate[2])) {
-                        console.log(day);
                         return ['next-color'];
                     }
                 });
@@ -140,16 +135,12 @@ function getDateControl(inputArea, inputAreaIndex) {
         setMonth = day.month;
         setDay = day.dayNumber;
         inputBox.value = `${setYear}-${setMonth}-${setDay} ${setTime}`;
-        console.log(day);
-        console.log(this.container.id);
         if (this.container.id === 'datePickerStart') {
 
             let allChoose = document.querySelectorAll('.the-datepicker__cell span');
             allChoose.forEach((n) => {
                 let haveClass = n.classList.contains('color');
-                console.log(haveClass);
                 if (haveClass) {
-                    console.log("有");
                     n.classList.remove('color');
                 }
             });
@@ -158,7 +149,6 @@ function getDateControl(inputArea, inputAreaIndex) {
             lastChoose.classList.add('color');
             lastChooseDate = [setYear, setMonth, setDay];
         }
-        console.log(lastChoose.classList);
     });
 
     let clearButton = datePickerBox.querySelector('.date-clear-button');
