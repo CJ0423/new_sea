@@ -118,10 +118,10 @@ function getDateControl(inputArea, inputAreaIndex) {
             frameMask.style.display = 'block';
         }
         isOpen = !isOpen;
-        if(inputBox.id === 'start-time-input'){
-            console.log(`${lastChooseDate[0]}-${lastChooseDate[1]}-${lastChooseDate[2]}`);
-            datepicker.selectDate(`${lastChooseDate[0]}-${lastChooseDate[1]}-${lastChooseDate[2]}`);
-            console.log("好了");
+        if (inputBox.id === 'start-time-input') {
+            if (isNowButton) {
+                datepicker.selectDate(`${lastChooseDate[0]}-${lastChooseDate[1]}-${lastChooseDate[2]}`);
+            }
         }
         if (inputBox.id === 'end-time-input') {
             if (lastChoose) {
@@ -177,7 +177,7 @@ function getDateControl(inputArea, inputAreaIndex) {
         isOpen = !isOpen;
         datePickerBox.style.display = 'none';
         frameMask.style.display = 'none';
-        if(neverChooseDay){
+        if (neverChooseDay) {
             inputBox.value = `${setYear}-${setMonth}-${setDay} ${setTime}`;
         }
         lastChoose = document.querySelector('.the-datepicker__day--selected span');
