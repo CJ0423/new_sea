@@ -1,0 +1,229 @@
+body {
+  width: 100%;
+  height: auto;
+  background-color: var(--beige);
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  background-color: var(--beige);
+}
+.screen .menu {
+  height: 100vh;
+  width: 240px;
+  background-color: #6ebe49;
+  position: fixed;
+  top: 0;
+}
+.screen .menu-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.screen .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 120px;
+  position: absolute;
+  width: 240px;
+  left: 0;
+}
+.screen .div-wrapper {
+  gap: 10px;
+  padding: 20px 24px 20px 48px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.screen .div-2 {
+  display: flex;
+  height: 42px;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+.screen .viewhover:hover {
+  width: 240px;
+  background-color: #8ddb69;
+  transition: background-color 0.3s linear;
+}
+.screen .view {
+  gap: 10px;
+  padding: 20px 24px;
+  align-self: stretch;
+  width: 100%;
+  height: 50px;
+  flex: 0 0 auto;
+  background-color: var(--primary-80);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.screen .view-2 {
+  justify-content: space-between;
+  padding: 20px 24px;
+  align-self: stretch;
+  width: 100%;
+  height: 70px;
+  flex: 0 0 auto;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.screen .view-3 {
+  gap: 10px;
+  padding: 20px 24px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.screen .view-4 {
+  flex-direction: column;
+  width: 1152px;
+  gap: 20px;
+  padding: 20px;
+  flex: 0 0 auto;
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.screen .view-5 {
+  width: 60px;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px 12px;
+  align-self: stretch;
+  background-color: var(--primary-20);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.screen .text-wrapper {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Noto Sans TC", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.screen .text-wrapper-2 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Noto Sans TC", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.screen .iconamoon-arrow-down-1 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  left: 100px;
+}
+.screen .iconamoon-arrow-down-2 {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  left: 123px;
+}
+.screen .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  position: absolute;
+  top: 22px;
+  left: 24px;
+}
+.screen .img {
+  position: relative;
+  width: 121.6px;
+  height: 32px;
+}
+.screen .header {
+  display: flex;
+  width: calc(100% - 240px);
+  min-width: 824px;
+  height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 24px;
+  position: absolute;
+  top: 0;
+  left: 240px;
+  background-color: var(--nero);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0509803922);
+}
+.screen .header .bread-sticks {
+  background-color: #fff;
+}
+.screen .header .bread-sticks:hover {
+  background-color: #E5E5E5;
+  transition: background-color 0.3s linear;
+}
+.screen .header .sign-out:hover {
+  background-color: #E5E5E5;
+  transition: background-color 0.3s linear;
+}
+.screen .button {
+  display: flex;
+  width: 48px;
+  justify-content: center;
+  background-color: var(--nero);
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: var(--mercury);
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  position: relative;
+  box-sizing: border-box;
+}
+.screen .text {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: var(--mine-shaft);
+  font-size: 14px;
+  letter-spacing: 0.24px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.screen .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+  width: calc(100% - 288px);
+  top: 112px;
+  left: 264px;
+}
+.screen .frame .size16 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
