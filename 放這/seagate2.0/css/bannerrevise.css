@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .menu .div .ul-navigation .item3 {
   width: 240px;
   background-color: #8ddb69;
@@ -143,6 +144,175 @@
   padding: 5px;
   border-radius: 5px;
 }
+.frame .card .frame-4 form .area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.frame .card .frame-4 form .area .label-area {
+  width: 200px;
+  display: flex;
+  padding: 0px 12px 0px 0px;
+  align-items: center;
+  gap: 12px;
+}
+.frame .card .frame-4 form .area .label-area label {
+  font-weight: bold;
+  width: 120px;
+}
+.frame .card .frame-4 form .area .label-area span {
+  background-color: #EEFFE6;
+  color: #6EBE49;
+  padding: 5px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.frame .card .frame-4 form .area .label-area .hidden-span {
+  opacity: 0;
+  visibility: hidden;
+}
+.frame .card .frame-4 form .area .select-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  padding: 5px 0px;
+}
+.frame .card .frame-4 form .area .select-area select {
+  flex: 3 1 50px;
+  border-radius: 10px;
+  padding: 0.8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid rgba(112, 112, 112, 0.4392156863);
+  background-image: url("../img/建立活動-版型設定/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.frame .card .frame-4 form .area .select-area .hidden-button {
+  opacity: 0;
+  visibility: hidden;
+  padding: 5px 1rem;
+}
+.frame .card .frame-4 form .area .select-area .now-button {
+  border: rgb(222, 226, 230) 1px solid;
+  color: #61a542;
+  padding: 5px 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s linear;
+}
+.frame .card .frame-4 form .area .select-area .now-button:hover {
+  background-color: #D9D9D9;
+}
+.frame .card .frame-4 form .area .select-area .input-area {
+  position: relative;
+  flex: 3 0 250px;
+}
+.frame .card .frame-4 form .area .select-area .input-area input.input-box {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 0rem 5px 2.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid rgb(222, 226, 230);
+}
+.frame .card .frame-4 form .area .select-area .input-area .input-img {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/建立活動-版型設定/Today.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%) translateX(50%);
+  z-index: 2;
+}
+.frame .card .frame-4 form .area .select-area .input-area .the-datepicker__body {
+  display: flex;
+}
+.frame .card .frame-4 form .area .select-area .input-area .the-datepicker__main select.the-datepicker__select {
+  background-image: unset;
+}
+.frame .card .frame-4 form .area .select-area .input-area .date-container {
+  padding: 0.6rem;
+  position: fixed;
+  z-index: 20;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 5px 2px #ccc;
+  margin: 1rem;
+}
+.frame .card .frame-4 form .area .select-area .input-area ul.time-list {
+  height: 100%;
+  overflow-y: scroll;
+  margin: 0px;
+  list-style: none;
+  position: relative;
+}
+.frame .card .frame-4 form .area .select-area .input-area ul.time-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: rgba(221, 221, 221, 0.2);
+  padding: 0rem 0.5rem;
+}
+.frame .card .frame-4 form .area .select-area .input-area ul.time-list::-webkit-scrollbar {
+  display: none;
+}
+.frame .card .frame-4 form .area .select-area .input-area ul.time-list li {
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: rgba(112, 112, 112, 0.4392156863);
+}
+.frame .card .frame-4 form .area .select-area .input-area ul.time-list li:hover {
+  background-color: rgba(221, 221, 221, 0.4666666667);
+  /* color: #000; */
+}
+.frame .card .frame-4 form .area .select-area .input-area ul.time-list li.active {
+  color: black;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+  font-weight: bold;
+}
+.frame .card .frame-4 form .area .select-area .input-area .date-clear-button,
+.frame .card .frame-4 form .area .select-area .input-area .date-check-button {
+  border: 1px solid rgba(170, 170, 170, 0.4666666667);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.frame .card .frame-4 form .area .select-area .input-area .date-clear-button:hover,
+.frame .card .frame-4 form .area .select-area .input-area .date-check-button:hover {
+  opacity: 0.6;
+}
+.frame .card .frame-4 form .area .select-area .input-area .date-clear-button {
+  color: #6EBE49;
+  background-color: white;
+}
+.frame .card .frame-4 form .area .select-area .input-area .date-check-button {
+  color: white;
+  background-color: #6EBE49;
+}
+.frame .card .frame-4 form .area .select-area .input-area .picker-control {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+.frame .card .frame-4 form .area .select-area .input-area .the-datepicker__row:last-child .the-datepicker__day--outside .the-datepicker__day--button span {
+  background-color: unset;
+}
 .frame .card .frame-4 form .frame-7 {
   text-align: right;
 }
@@ -173,4 +343,12 @@
 .frame .card .frame-4 form .frame-7 .button-3:hover {
   background-color: #D9D9D9;
   transition: background-color 0.3s linear;
+}
+
+.color {
+  background-color: #6EBE49 !important;
+}
+
+.next-color span {
+  background-color: rgba(110, 190, 73, 0.4392156863) !important;
 }/*# sourceMappingURL=bannerrevise.css.map */

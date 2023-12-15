@@ -1,0 +1,544 @@
+@charset "UTF-8";
+.menu .div .ul-navigation .item6 {
+  width: 240px;
+  background-color: #8ddb69;
+}
+
+body {
+  position: relative;
+}
+body .frame-mask {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4666666667);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+.screen .frame {
+  max-width: 1400px;
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+}
+.screen .frame .text-wrapper-3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.screen .frame form {
+  width: 100%;
+}
+.screen .frame form .pattern {
+  width: 100%;
+}
+.screen .frame form .pattern h4 {
+  color: #707070;
+}
+.screen .frame form .pattern .pattern-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.screen .frame form .pattern .pattern-container .pattern-show {
+  flex: 0 1 100px;
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main {
+  width: 30vw;
+  display: grid;
+  grid-gap: 5px;
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item {
+  background-color: #DDD;
+  position: relative;
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item::after {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  color: white;
+  transform: translateX(-50%) translateY(-50%);
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item1::after {
+  content: "1";
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item2::after {
+  content: "2";
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item3::after {
+  content: "3";
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item4::after {
+  content: "4";
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item5::after {
+  content: "5";
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item6::after {
+  content: "6";
+}
+.screen .frame form .pattern .pattern-container .pattern-show .pattern-main .item.item7::after {
+  content: "7";
+}
+.screen .frame form .pattern .pattern-container .setting-container {
+  flex: 1 1 450px;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  padding: 1rem;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area > span {
+  background-color: #EEFFE6;
+  color: #6EBE49;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area select {
+  flex: 3 1 50px;
+  border-radius: 10px;
+  padding: 0.8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid rgba(112, 112, 112, 0.4392156863);
+  background-image: url("../img/建立活動-版型設定/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .hidden-span,
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .hidden-button {
+  opacity: 0;
+  visibility: hidden;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area {
+  position: relative;
+  flex: 3 0 250px;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area input.input-box {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.8rem 0rem 0.8rem 2.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid rgba(112, 112, 112, 0.4392156863);
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .input-img {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/建立活動-版型設定/Today.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%) translateX(50%);
+  z-index: 2;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .the-datepicker__body {
+  display: flex;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .the-datepicker__main select.the-datepicker__select {
+  background-image: unset;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-container {
+  padding: 0.6rem;
+  position: fixed;
+  z-index: 20;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 5px 2px #ccc;
+  margin: 1rem;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area ul.time-list {
+  height: 100%;
+  overflow-y: scroll;
+  margin: 0px;
+  list-style: none;
+  position: relative;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area ul.time-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: rgba(221, 221, 221, 0.2);
+  padding: 0rem 0.5rem;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area ul.time-list::-webkit-scrollbar {
+  display: none;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area ul.time-list li {
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: rgba(112, 112, 112, 0.4392156863);
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area ul.time-list li:hover {
+  background-color: rgba(221, 221, 221, 0.4666666667);
+  /* color: #000; */
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area ul.time-list li.active {
+  color: black;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+  font-weight: bold;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-clear-button,
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-check-button {
+  border: 1px solid rgba(170, 170, 170, 0.4666666667);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-clear-button:hover,
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-check-button:hover {
+  opacity: 0.6;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-clear-button {
+  color: #6EBE49;
+  background-color: white;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .date-check-button {
+  color: white;
+  background-color: #6EBE49;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .picker-control {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+.screen .frame form .pattern .pattern-container .setting-container .area .select-area .input-area .the-datepicker__row:last-child .the-datepicker__day--outside .the-datepicker__day--button span {
+  background-color: unset;
+}
+.screen .frame form .control-container {
+  text-align: right;
+}
+.screen .frame form .control-container .submit-button {
+  background-color: #6EBE49;
+  color: white;
+  padding: 0.5rem 2.5rem;
+}
+
+button,
+.pattern-show a {
+  border: 1px solid rgba(112, 112, 112, 0.2509803922);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem;
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+button:hover,
+.pattern-show a:hover {
+  opacity: 0.6;
+}
+button.now-button,
+.pattern-show a.now-button {
+  background-color: white;
+  color: #6EBE49;
+}
+
+.pattern-show a {
+  color: #000;
+}
+
+.color {
+  background-color: #6EBE49 !important;
+}
+
+.next-color span {
+  background-color: rgba(110, 190, 73, 0.4392156863) !important;
+}
+
+.area7 {
+  display: none;
+}
+
+.screen .frame.blockA-1 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 30vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+.screen .frame.blockA-1 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 2;
+}
+.screen .frame.blockA-1 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 2;
+}
+.screen .frame.blockA-1 form .pattern .pattern-container .pattern-show .pattern-main .item5,
+.screen .frame.blockA-1 form .pattern .pattern-container .pattern-show .pattern-main .item6,
+.screen .frame.blockA-1 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockA-1 form .pattern .pattern-container .setting-container .area.area5, .screen .frame.blockA-1 form .pattern .pattern-container .setting-container .area.area6, .screen .frame.blockA-1 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 40vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(17, 1fr);
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 13;
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 8;
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 5;
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 4;
+  grid-column: 1/-1;
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item5,
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item6,
+.screen .frame.blockA-3 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockA-3 form .pattern .pattern-container .setting-container .area.area5, .screen .frame.blockA-3 form .pattern .pattern-container .setting-container .area.area6, .screen .frame.blockA-3 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 40vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(23, 1fr);
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 10;
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 17;
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 7;
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 6;
+  grid-column: 1/-1;
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item5,
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item6,
+.screen .frame.blockA-2 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockA-2 form .pattern .pattern-container .setting-container .area.area5, .screen .frame.blockA-2 form .pattern .pattern-container .setting-container .area.area6, .screen .frame.blockA-2 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 40vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 2;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 1;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 2;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 1;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-column: 1/-1;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item6,
+.screen .frame.blockB-1 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockB-1 form .pattern .pattern-container .setting-container .area.area6, .screen .frame.blockB-1 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 40vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(18, 1fr);
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 7;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 9;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 4;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 9;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-row: span 7;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item6,
+.screen .frame.blockB-2 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockB-2 form .pattern .pattern-container .setting-container .area.area6, .screen .frame.blockB-2 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 40vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(34, 1fr);
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 17;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 13;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 8;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 17;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-row: span 13;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item6,
+.screen .frame.blockB-3 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockB-3 form .pattern .pattern-container .setting-container .area.area6, .screen .frame.blockB-3 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 40vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 2;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 1;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 2;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 1;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-row: span 1;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item6 {
+  grid-row: span 1;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockC-1 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 50vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(46, 1fr);
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 18;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 13;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 10;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 18;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-row: span 13;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item6 {
+  grid-row: span 10;
+  grid-column: 1/-1;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockC-2 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 50vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 2;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 1;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 2;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 1;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-row: span 1;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item6 {
+  grid-row: span 1;
+}
+.screen .frame.blockD-1 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  grid-row: span 1;
+  grid-column: 1/-1;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main {
+  height: 50vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(47, 1fr);
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item1 {
+  grid-row: span 20;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item2 {
+  grid-row: span 20;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item3 {
+  grid-row: span 9;
+  grid-column: 1/-1;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item4 {
+  grid-row: span 9;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item5 {
+  grid-row: span 9;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item6 {
+  grid-row: span 9;
+  grid-column: 1/-1;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .pattern-show .pattern-main .item7 {
+  display: none;
+}
+.screen .frame.blockD-2 form .pattern .pattern-container .setting-container .area.area7 {
+  display: none;
+}/*# sourceMappingURL=createActivities.css.map */
