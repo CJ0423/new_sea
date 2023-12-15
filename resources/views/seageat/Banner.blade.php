@@ -31,10 +31,10 @@
           <div class="size12"><input type="button" class="border border-0 border-bottom border-success-subtle input-all"
               value="全部"><input type="button" class="border border-0 border-bottom border-success-subtle input-down"
               value="已下架"></div>
-          <button class="button-establish">
+          <a href={{route('BannerEstabilsh')}} class="button-establish">
             <img class="icon-outline-plus" src={{asset("img/icon-outline-plus-22.svg")}} >
             <div class="text-2">建立選單</div>
-          </button>
+          </a>
         </div>
         <form action="" method="post">
           <div class="frame-3">
@@ -53,15 +53,19 @@
               <tbody>
                 <tr class="border-bottom">
                   <th scope="row">1</th>
-                  <td><img src="./img/banner01.png" alt=""></td>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
                   <td>一指輕鬆備份 專為品味而生</td>
                   <td>1</td>
                   <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
                   <td>已上架</td>
                   <td>
                     <div class="operate">
-                        <input type="button" class="border border-0 button-edit" value="編輯">
-                        <input type="button" class="border button-down" value="下架">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
                     </div>
                 </td>
                 </tr>

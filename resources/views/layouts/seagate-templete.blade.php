@@ -135,6 +135,26 @@
             }
         }
     </script>
+
+    {{-- 來自下架的js --}}
+    <script>
+        var edit = document.querySelector('.button-edit'); //編輯
+        var down = document.querySelector('.button-down'); //下架
+        var box_down = document.querySelector('.prompt-box-down'); //下架提示
+        var confirm = document.querySelector('.confirm'); //確認
+        var cancel = document.querySelector('.cancel'); //取消
+
+        down.onclick = function () {
+          box_down.style.display = "flex";
+        }
+        confirm.onclick = function () {
+          box_down.style.display = "none";
+        }
+        cancel.onclick = function () {
+          box_down.style.display = "none";
+        }
+
+      </script>
 </body>
 
 </html>

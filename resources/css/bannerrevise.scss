@@ -1,0 +1,406 @@
+.menu .div .ul-navigation .item3 {
+    width: 240px;
+    background-color: #8ddb69;
+}
+
+.frame {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 20px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+
+        .frame-2 {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+
+            .size12 {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+
+        .frame-3 {
+            width: 100%;
+            padding: 0px 0px 0px 100px;
+        }
+
+        .frame-4 {
+            width: 100%;
+
+            form {
+                width: 100%;
+
+                .input {
+                    width: 100%;
+                    align-items: center;
+                    gap: 24px;
+                    flex: 0 0 auto;
+                    display: flex;
+                    position: relative;
+                    margin: 0px 0px 20px 0px;
+
+                    .base-wrapper {
+                        align-items: flex-start;
+                        flex: 1;
+                        flex-grow: 1;
+                        display: flex;
+                        position: relative;
+
+                        .base {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            flex: 1;
+                            flex-grow: 1;
+
+                            .frame-5 {
+                                display: flex;
+                                width: 200px;
+                                align-items: center;
+                                gap: 12px;
+                                padding: 0px 12px 0px 0px;
+                                position: relative;
+
+                                .label {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    width: 120px;
+                                }
+
+                                .frame-6 {
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 10px;
+                                    padding: 5px;
+                                    position: relative;
+                                    flex: 0 0 auto;
+                                    background-color: #eeffe6;
+                                    color: #6ebe49;
+                                }
+                            }
+
+                            .input-field {
+                                width: 80%;
+
+                                input {
+                                    width: 100%;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                }
+
+                                .phone-label {
+                                    background-color: #fff;
+                                    color: #6ebe49;
+                                    position: relative;
+                                    top: 18px;
+                                    width: 85px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 5px;
+                                    z-index: 1;
+
+                                    &:hover {
+                                        background-color: #61a542;
+                                        color: #fff;
+                                        transition: background-color 0.3s linear;
+                                    }
+                                }
+
+                                .phone-input {
+                                    position: relative;
+                                    top: -10px;
+                                }
+
+                                .computer-label {
+                                    background-color: #fff;
+                                    color: #6ebe49;
+                                    position: relative;
+                                    top: 18px;
+                                    width: 85px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 5px;
+                                    z-index: 1;
+
+                                    &:hover {
+                                        background-color: #61a542;
+                                        color: #fff;
+                                        transition: background-color 0.3s linear;
+                                    }
+                                }
+
+                                .computer-input {
+                                    position: relative;
+                                    top: -10px;
+                                }
+                            }
+
+                            .input-field-2 {
+                                select {
+                                    width: 80px;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .area {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 24px;
+
+                    .label-area {
+                        width: 200px;
+                        display: flex;
+                        padding: 0px 12px 0px 0px;
+                        align-items: center;
+                        gap: 12px;
+
+                        label {
+                            font-weight: bold;
+                            width: 120px;
+                        }
+
+                        span {
+                            background-color: #eeffe6;
+                            color: #6ebe49;
+                            padding: 5px;
+                            font-size: 1rem;
+                            white-space: nowrap;
+                        }
+
+                        .hidden-span {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+
+                    .select-area {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        width: 80%;
+                        padding: 5px 0px;
+
+                        select {
+                            flex: 3 1 50px;
+                            border-radius: 10px;
+                            padding: 0.8rem;
+                            appearance: none;
+                            border: 1px solid #70707070;
+                            background-image: url("../img/建立活動-版型設定/arrow-down.png");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center right;
+                        }
+
+                        .hidden-button {
+                            opacity: 0;
+                            visibility: hidden;
+                            padding: 5px 1rem;
+                        }
+                        .now-button {
+                            border: rgb(222, 226, 230) 1px solid;
+                            color: #61a542;
+                            padding: 5px 1rem;
+                            background-color: #fff;
+                            border-radius: 4px;
+                            transition: all 0.3s linear;
+                            &:hover {
+                                background-color: #d9d9d9;
+                            }
+                        }
+                        .input-area {
+                            position: relative;
+                            flex: 3 0 250px;
+
+                            input.input-box {
+                                width: 100%;
+                                border-radius: 5px;
+                                padding: 5px 0rem 5px 2.5rem;
+                                appearance: none;
+                                border: 1px solid rgb(222, 226, 230);
+                            }
+
+                            .input-img {
+                                width: 20px;
+                                height: 20px;
+                                background-image: url("../img/建立活動-版型設定/Today.png");
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                                position: absolute;
+                                top: 50%;
+                                left: 0px;
+                                transform: translateY(-50%) translateX(50%);
+                                z-index: 2;
+                            }
+
+                            .the-datepicker__body {
+                                display: flex;
+                            }
+
+                            .the-datepicker__main
+                                select.the-datepicker__select {
+                                background-image: unset;
+                            }
+
+                            .date-container {
+                                padding: 0.6rem;
+                                position: fixed;
+                                z-index: 20;
+                                background-color: #fff;
+                                top: 50%;
+                                left: 50%;
+                                transform: translateX(-50%) translateY(-50%);
+                                border-radius: 2rem;
+                                box-shadow: 2px 2px 5px 2px #ccc;
+                                margin: 1rem;
+                            }
+
+                            ul.time-list {
+                                height: 100%;
+                                overflow-y: scroll;
+                                margin: 0px;
+                                list-style: none;
+                                position: relative;
+                            }
+
+                            ul.time-list {
+                                -ms-overflow-style: none;
+                                scrollbar-width: none;
+                                background-color: #ddd3;
+                                padding: 0rem 0.5rem;
+                            }
+
+                            ul.time-list::-webkit-scrollbar {
+                                display: none;
+                            }
+
+                            ul.time-list li {
+                                padding: 0.5rem;
+                                cursor: pointer;
+                                border: 1px solid transparent;
+                                color: #70707070;
+                            }
+
+                            ul.time-list li:hover {
+                                background-color: #ddd7;
+                                /* color: #000; */
+                            }
+
+                            ul.time-list li.active {
+                                color: black;
+                                border-top: 1px solid #aaa;
+                                border-bottom: 1px solid #aaa;
+                                font-weight: bold;
+                            }
+
+                            .date-clear-button,
+                            .date-check-button {
+                                border: 1px solid #aaa7;
+                                padding: 0.3rem 0.8rem;
+                                border-radius: 0.3rem;
+                                margin: 0.3rem;
+                                cursor: pointer;
+                                transition: all 0.3s linear;
+                            }
+
+                            .date-clear-button:hover,
+                            .date-check-button:hover {
+                                opacity: 0.6;
+                            }
+
+                            .date-clear-button {
+                                color: #6ebe49;
+                                background-color: white;
+                            }
+
+                            .date-check-button {
+                                color: white;
+                                background-color: #6ebe49;
+                            }
+
+                            .picker-control {
+                                display: flex;
+                                justify-content: flex-end;
+                                padding: 0.5rem 0rem;
+                            }
+
+                            .the-datepicker__row:last-child
+                                .the-datepicker__day--outside
+                                .the-datepicker__day--button
+                                span {
+                                background-color: unset;
+                            }
+                        }
+                    }
+                }
+
+                .frame-7 {
+                    text-align: right;
+
+                    .button-2 {
+                        width: 135px;
+                        gap: 8px;
+                        padding: 8px 12px;
+                        background-color: #6ebe49;
+                        color: #fff;
+                        position: relative;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            background-color: #61a542;
+                            transition: background-color 0.3s linear;
+                        }
+                    }
+
+                    .button-3 {
+                        width: 135px;
+                        gap: 8px;
+                        padding: 8px 12px;
+                        background-color: #fff;
+                        color: #6ebe49;
+                        position: relative;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            background-color: #d9d9d9;
+                            transition: background-color 0.3s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.color {
+    background-color: #6ebe49 !important;
+}
+
+.next-color span {
+    background-color: #6ebe4970 !important;
+}

@@ -62,6 +62,14 @@ class ProfileController extends Controller
     {
         return view('seageat.FrontPage');
     }
+    public function FrontPageCreateMenu()
+    {
+        return view('seageat.FrontPageCreateMenu');
+    }
+    public function FrontPageEditMenu()
+    {
+        return view('seageat.FrontPageEditMenu');
+    }
     // Banner管理
     public function Banner()
     {
@@ -70,6 +78,10 @@ class ProfileController extends Controller
     public function Banner_estabilsh()
     {
         return view('seageat.BannerEstabilsh');
+    }
+    public function Banner_revise()
+    {
+        return view('seageat.BannerRevise');
     }
     // 活動管理
     public function Activity()

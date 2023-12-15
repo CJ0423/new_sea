@@ -33,9 +33,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // 這是首頁的區域
     Route::get('seagate/front_page', [ProfileController::class, 'Front_page'])->name('Front_page');
+
+    Route::get('seagate/front_page/createmenu', [ProfileController::class, 'FrontPageCreateMenu'])->name('CreateMenu');
+
+    Route::get('seagate/front_page/editmenu', [ProfileController::class, 'FrontPageEditMenu'])->name('EditMenu');
     // banner管理
     Route::get('seagate/banner', [ProfileController::class, 'Banner'])->name('Banner');
     Route::get('seagate/banner_estabilsh', [ProfileController::class, 'Banner_estabilsh'])->name('BannerEstabilsh');
+    Route::get('seagate/banner_revise', [ProfileController::class, 'Banner_revise'])->name('BannerRevise');
     // 活動管理
     Route::get('seagate/activity', [ProfileController::class, 'Activity'])->name('activity');
     Route::get('seagate/activityEstablish', [ProfileController::class, 'ActivityEstablish'])->name('ActivityEstablish');
