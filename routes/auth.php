@@ -60,6 +60,9 @@ Route::middleware('auth')->group(function () {
     Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
     // 登出按鈕請接到這邊
+
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
+    // Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])
+    //     ->name('logout');
 });

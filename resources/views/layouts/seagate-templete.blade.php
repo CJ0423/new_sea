@@ -90,8 +90,16 @@
                 <img class="menu-2" src={{asset("img/menu.svg")}} />
             </button>
             <button class="button sign-out">
-                <div><a href="" class="text">登出</a></div>
+                <div>
+                    <a  class="text" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">登出</a>
+
+                    {{-- <a href="{{route('logout')}}" class="text">登出</a> --}}
+                </div>
             </button>
+            {{-- 隱藏表單協助登出系統 --}}
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </header>
         <div class="frame">
             @yield('cut')
