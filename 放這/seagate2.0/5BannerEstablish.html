@@ -373,30 +373,30 @@
         </script>
     <!-- 新增JS -->
     <script src="./thedatepicker-master/dist/the-datepicker.js"></script>
-    <script src="./dataPicker.js"></script>
+    <script src="./thedatepicker-master/dist/dataPicker.js"></script>
 
     <script>
-        var sticks = document.querySelector('.bread-sticks');
-        var menu = document.querySelector('.menu');
-        var header = document.querySelector('.header');
-        var frame = document.querySelector('.frame');
-        var a = 0;
+        var sticks = document.querySelector('.bread-sticks')
+        var menu = document.querySelector('.menu')
+        var header = document.querySelector('.header')
+        var frame = document.querySelector('.frame')
+        var a = 0
 
         sticks.onclick = function () {
             if (a == 0) {
-                menu.style.display = "none";
-                header.style.width = "100%";
-                header.style.left = "0px";
-                frame.style.width = "calc(100% - 48px)";
-                frame.style.left = "24px";
-                a = 1;
+                menu.style.display = "none"
+                header.style.width = "100%"
+                header.style.left = "0px"
+                frame.style.width = "calc(100% - 48px)"
+                frame.style.left = "24px"
+                a = 1
             } else if (a == 1) {
-                menu.style.display = "flex";
-                header.style.width = "calc(100% - 240px)";
-                header.style.left = "240px";
-                frame.style.width = "calc(100% - 288px)";
-                frame.style.left = "264px";
-                a = 0;
+                menu.style.display = "flex"
+                header.style.width = "calc(100% - 240px)"
+                header.style.left = "240px"
+                frame.style.width = "calc(100% - 288px)"
+                frame.style.left = "264px"
+                a = 0
             }
         }
     </script>

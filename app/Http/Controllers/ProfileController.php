@@ -57,9 +57,32 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-
+    // 首頁管理
     public function front_page()
     {
         return view('seageat.FrontPage');
+    }
+    // Banner管理
+    public function Banner()
+    {
+        return view('seageat.Banner');
+    }
+    public function Banner_estabilsh()
+    {
+        return view('seageat.BannerEstabilsh');
+    }
+    // 活動管理
+    public function Activity()
+    {
+        return view('seageat.Activity');
+    }
+    public function ActivityEstablish()
+    {
+        return view('seageat.ActivityEstablish');
+    }
+    // 通路管理
+    public function Recommend()
+    {
+        return view('seageat.Recommend');
     }
 }
