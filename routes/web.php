@@ -29,4 +29,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('seagate/front_page', [ProfileController::class, 'Front_page']);
+
 require __DIR__ . '/auth.php';

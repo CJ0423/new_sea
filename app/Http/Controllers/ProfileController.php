@@ -57,4 +57,9 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function front_page()
+    {
+        return view('seageat.FrontPage');
+    }
 }
