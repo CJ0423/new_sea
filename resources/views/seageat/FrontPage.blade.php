@@ -12,15 +12,14 @@
 
 
 @section('cut')
-                    <div class="size12">選單管理列表</div>
 <div class="size16">首頁管理</div>
 <div class="border border-0 card">
     <div class="frame-2">
         <div class="size12">選單管理列表</div>
-        <button class="button-establish">
+        <a href={{route('CreateMenu')}} class="button-establish">
             <img class="icon-outline-plus" src={{asset("img/icon-outline-plus-22.svg")}} />
             <div class="text-2">建立選單</div>
-        </button>
+        </a>
     </div>
     <form action="" method="post">
         <div class="frame-3">
@@ -40,7 +39,7 @@
                         <td>
                             https://www.pchomeec.tw/sites/seagate?utm_source=google&utm_medium=cpc&utm_campaign=fq2_cacafly_sem
                         </td>
-                        <td><input type="button" class="border border-0 button-revise" value="修改"></td>
+                        <td><a href={{route("EditMenu")}} class="border border-0 button-revise" >修改</a></td>
                     </tr>
                     <tr class="border-bottom">
                         <th scope="row">2</th>
@@ -104,7 +103,7 @@
                         </td>
                         <td><input type="button" class="border button-store" value="儲存"></td>
                     </tr>
-
+                    {{-- 這個要六個 --}}
                 </tbody>
             </table>
         </div>
