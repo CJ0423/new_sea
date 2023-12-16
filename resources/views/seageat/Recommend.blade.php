@@ -8,9 +8,6 @@
 @section('css')
 @vite(['resources/css/recommend.scss'])
 @endsection
-
-
-
 @section('cut')
       <!-- 以下分割 -->
       <div class="size16">推薦通路管理</div>
@@ -54,7 +51,7 @@
                   <td>https://www.pchomeec.tw/sites/seagate?utm_source=google&utm_medium=cpc&utm_campaign=fq2_cacafly_sem</td>
                   <td>
                     <div class="operate">
-                        <input type="button" class="border border-0 button-edit" value="編輯">
+                        <a href=" {{ route('RecommendRevise') }}" class="border border-0 button-edit">編輯</a>
                         <input type="button" class="border button-delete" value="刪除">
                     </div>
                 </td>

@@ -64,8 +64,7 @@
                  <td>排程上架</td>
                  <td>
                    <div class="operate">
-                       <input type="button" class="border border-0 button-edit" value="編輯">
-                    這邊還沒好前端版型有少
+                       <a href={{route('ActivityRevise')}} class="border border-0 button-edit" >編輯</a>
                    </div>
                </td>
                </tr>
