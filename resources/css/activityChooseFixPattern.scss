@@ -1,0 +1,902 @@
+.menu .div .ul-navigation .item6 {
+    width: 240px;
+    background-color: #8ddb69;
+}
+
+body {
+    position: relative;
+
+    .frame-mask {
+        width: 100%;
+        height: 100vh;
+        background-color: #0007;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+}
+
+.screen {
+    .frame {
+        max-width: 1400px;
+        background-color: #fff;
+        position: relative;
+        padding: 20px;
+        border-radius: 12px;
+
+        .text-wrapper-3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        form {
+            width: 100%;
+
+            .pattern {
+                width: 100%;
+
+                h4 {
+                    color: #707070;
+                }
+
+                .pattern-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    .pattern-show {
+                        flex: 0 1 100px;
+
+                        .pattern-main {
+                            width: 30vw;
+                            display: grid;
+                            grid-gap: 5px;
+
+                            .item {
+                                background-color: #ddd;
+                                position: relative;
+
+                                &::after {
+                                    content: "1";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    font-size: 2rem;
+                                    color: white;
+                                    transform: translateX(-50%) translateY(-50%);
+                                }
+
+                                &.item1 {
+                                    &::after {
+                                        content: "1";
+                                    }
+                                }
+
+                                &.item2 {
+                                    &::after {
+                                        content: "2";
+                                    }
+                                }
+
+                                &.item3 {
+                                    &::after {
+                                        content: "3";
+                                    }
+                                }
+
+                                &.item4 {
+                                    &::after {
+                                        content: "4";
+                                    }
+                                }
+
+                                &.item5 {
+                                    &::after {
+                                        content: "5";
+                                    }
+                                }
+
+                                &.item6 {
+                                    &::after {
+                                        content: "6";
+                                    }
+                                }
+
+                                &.item7 {
+                                    &::after {
+                                        content: "7";
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .setting-container {
+                        flex: 1 1 450px;
+
+                        .area {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .select-area {
+                                display: flex;
+                                align-items: center;
+                                gap: 1rem;
+                                width: 80%;
+                                padding: 1rem;
+
+                                label {
+                                }
+
+                                & > span {
+                                    background-color: #eeffe6;
+                                    color: #6ebe49;
+                                    padding: 0.2rem;
+                                    font-size: 0.8rem;
+                                    white-space: nowrap;
+                                }
+
+                                select {
+                                    flex: 3 1 50px;
+                                    border-radius: 10px;
+                                    padding: 0.8rem;
+                                    appearance: none;
+                                    border: 1px solid #70707070;
+                                    background-image: url("../img/建立活動-版型設定/arrow-down.png");
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center right;
+                                }
+
+                                .hidden-span,
+                                .hidden-button {
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+
+                                .input-area {
+                                    position: relative;
+                                    flex: 3 0 250px;
+
+                                    input.input-box {
+                                        width: 100%;
+                                        border-radius: 10px;
+                                        padding: 0.8rem 0rem 0.8rem 2.5rem;
+                                        appearance: none;
+                                        border: 1px solid #70707070;
+                                    }
+
+                                    .input-img {
+                                        width: 20px;
+                                        height: 20px;
+                                        background-image: url("../img/建立活動-版型設定/Today.png");
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: contain;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0px;
+                                        transform: translateY(-50%)
+                                            translateX(50%);
+                                        z-index: 2;
+                                    }
+
+                                    .the-datepicker__body {
+                                        display: flex;
+                                    }
+
+                                    .the-datepicker__main
+                                        select.the-datepicker__select {
+                                        background-image: unset;
+                                    }
+
+                                    .date-container {
+                                        padding: 0.6rem;
+                                        position: fixed;
+                                        z-index: 20;
+                                        background-color: #fff;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                        border-radius: 2rem;
+                                        box-shadow: 2px 2px 5px 2px #ccc;
+                                        margin: 1rem;
+                                    }
+
+                                    ul.time-list {
+                                        height: 100%;
+                                        overflow-y: scroll;
+                                        margin: 0px;
+                                        list-style: none;
+                                        position: relative;
+                                    }
+
+                                    ul.time-list {
+                                        -ms-overflow-style: none;
+                                        scrollbar-width: none;
+                                        background-color: #ddd3;
+                                        padding: 0rem 0.5rem;
+                                    }
+
+                                    ul.time-list::-webkit-scrollbar {
+                                        display: none;
+                                    }
+
+                                    ul.time-list li {
+                                        padding: 0.5rem;
+                                        cursor: pointer;
+                                        border: 1px solid transparent;
+                                        color: #70707070;
+                                    }
+
+                                    ul.time-list li:hover {
+                                        background-color: #ddd7;
+                                        /* color: #000; */
+                                    }
+
+                                    ul.time-list li.active {
+                                        color: black;
+                                        border-top: 1px solid #aaa;
+                                        border-bottom: 1px solid #aaa;
+                                        font-weight: bold;
+                                    }
+
+                                    .date-clear-button,
+                                    .date-check-button {
+                                        border: 1px solid #aaa7;
+                                        padding: 0.3rem 0.8rem;
+                                        border-radius: 0.3rem;
+                                        margin: 0.3rem;
+                                        cursor: pointer;
+                                        transition: all 0.3s linear;
+                                    }
+
+                                    .date-clear-button:hover,
+                                    .date-check-button:hover {
+                                        opacity: 0.6;
+                                    }
+
+                                    .date-clear-button {
+                                        color: #6ebe49;
+                                        background-color: white;
+                                    }
+
+                                    .date-check-button {
+                                        color: white;
+                                        background-color: #6ebe49;
+                                    }
+
+                                    .picker-control {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        padding: 0.5rem 0rem;
+                                    }
+
+                                    .the-datepicker__row:last-child
+                                        .the-datepicker__day--outside
+                                        .the-datepicker__day--button
+                                        span {
+                                        background-color: unset;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .control-container {
+                text-align: right;
+
+                .submit-button {
+                    background-color: #6ebe49;
+                    color: white;
+                    padding: 0.5rem 2.5rem;
+                }
+
+                .down-added-button {
+                    background-color: white;
+                    color: #e95b5b;
+                }
+            }
+        }
+        .prompt-box-down {
+            width: 300px;
+            height: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+
+            .prompt {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(255, 255, 255);
+                border-width: 1px;
+                border-style: solid;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px 50px 20px 50px;
+                border-radius: 10px;
+
+                .size14 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .confirm {
+                    background-color: #6ebe49;
+                    color: #ffffff;
+                    border-radius: 5px;
+                    padding: 10px 15px 10px 15px;
+                    margin: 10px;
+
+                    &:hover {
+                        background-color: #61a542;
+                        transition: background-color 0.3s linear;
+                    }
+                }
+
+                .cancel {
+                    background-color: #ffffff;
+                    color: #6ebe49;
+                    border-radius: 5px;
+                    padding: 10px 15px 10px 15px;
+                    margin: 10px;
+
+                    &:hover {
+                        background-color: #d9d9d9;
+                        transition: background-color 0.3s linear;
+                    }
+                }
+            }
+        }
+    }
+}
+
+button,
+.pattern-show a {
+    border: 1px solid #70707040;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.3rem;
+    margin: 0.3rem;
+    transition: all 0.3s linear;
+    display: inline-block;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &.now-button {
+        background-color: white;
+        color: #6ebe49;
+    }
+}
+
+.pattern-show a {
+    color: #6ebe49;
+}
+
+.color {
+    background-color: #6ebe49 !important;
+}
+
+.next-color span {
+    background-color: #6ebe4970 !important;
+}
+
+.area7 {
+    display: none;
+}
+
+.screen {
+    .frame {
+        &.blockA-1 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 30vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(3, 1fr);
+
+                                .item1 {
+                                    grid-row: span 2;
+                                }
+
+                                .item3 {
+                                    grid-row: span 2;
+                                }
+
+                                .item5,
+                                .item6,
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area5,
+                                &.area6,
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockA-3 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 40vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(17, 1fr);
+
+                                .item1 {
+                                    grid-row: span 13;
+                                }
+
+                                .item2 {
+                                    grid-row: span 8;
+                                }
+
+                                .item3 {
+                                    grid-row: span 5;
+                                }
+
+                                .item4 {
+                                    grid-row: span 4;
+                                    grid-column: 1 / -1;
+                                }
+
+                                .item5,
+                                .item6,
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area5,
+                                &.area6,
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockA-2 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 40vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(23, 1fr);
+
+                                .item1 {
+                                    grid-row: span 10;
+                                }
+
+                                .item2 {
+                                    grid-row: span 17;
+                                }
+
+                                .item3 {
+                                    grid-row: span 7;
+                                }
+
+                                .item4 {
+                                    grid-row: span 6;
+                                    grid-column: 1 / -1;
+                                }
+
+                                .item5,
+                                .item6,
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area5,
+                                &.area6,
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockB-1 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 40vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(4, 1fr);
+
+                                .item1 {
+                                    grid-row: span 2;
+                                }
+
+                                .item2 {
+                                    grid-row: span 1;
+                                }
+
+                                .item3 {
+                                    grid-row: span 2;
+                                }
+
+                                .item4 {
+                                    grid-row: span 1;
+                                }
+
+                                .item5 {
+                                    grid-column: 1 / -1;
+                                }
+
+                                .item6,
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area6,
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockB-2 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 40vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(18, 1fr);
+
+                                .item1 {
+                                    grid-row: span 7;
+                                }
+
+                                .item2 {
+                                    grid-row: span 9;
+                                }
+
+                                .item3 {
+                                    grid-row: span 4;
+                                }
+
+                                .item4 {
+                                    grid-row: span 9;
+                                }
+
+                                .item5 {
+                                    grid-row: span 7;
+                                }
+
+                                .item6,
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area6,
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockB-3 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 40vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(34, 1fr);
+
+                                .item1 {
+                                    grid-row: span 17;
+                                }
+
+                                .item2 {
+                                    grid-row: span 13;
+                                }
+
+                                .item3 {
+                                    grid-row: span 8;
+                                }
+
+                                .item4 {
+                                    grid-row: span 17;
+                                }
+
+                                .item5 {
+                                    grid-row: span 13;
+                                }
+
+                                .item6,
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area6,
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockC-1 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 40vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(4, 1fr);
+
+                                .item1 {
+                                    grid-row: span 2;
+                                }
+
+                                .item2 {
+                                    grid-row: span 1;
+                                }
+
+                                .item3 {
+                                    grid-row: span 2;
+                                }
+
+                                .item4 {
+                                    grid-row: span 1;
+                                }
+
+                                .item5 {
+                                    grid-row: span 1;
+                                }
+
+                                .item6 {
+                                    grid-row: span 1;
+                                }
+
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockC-2 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 50vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(46, 1fr);
+
+                                .item1 {
+                                    grid-row: span 18;
+                                }
+
+                                .item2 {
+                                    grid-row: span 13;
+                                }
+
+                                .item3 {
+                                    grid-row: span 10;
+                                }
+
+                                .item4 {
+                                    grid-row: span 18;
+                                }
+
+                                .item5 {
+                                    grid-row: span 13;
+                                }
+
+                                .item6 {
+                                    grid-row: span 10;
+                                    grid-column: 1 / -1;
+                                }
+
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockD-1 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 50vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(5, 1fr);
+
+                                .item1 {
+                                    grid-row: span 2;
+                                }
+
+                                .item2 {
+                                    grid-row: span 1;
+                                }
+
+                                .item3 {
+                                    grid-row: span 2;
+                                }
+
+                                .item4 {
+                                    grid-row: span 1;
+                                }
+
+                                .item5 {
+                                    grid-row: span 1;
+                                }
+
+                                .item6 {
+                                    grid-row: span 1;
+                                }
+
+                                .item7 {
+                                    grid-row: span 1;
+                                    grid-column: 1 / -1;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blockD-2 {
+            form {
+                .pattern {
+                    .pattern-container {
+                        .pattern-show {
+                            .pattern-main {
+                                height: 50vw;
+                                grid-template-columns: 1fr 1fr;
+                                grid-template-rows: repeat(47, 1fr);
+
+                                .item1 {
+                                    grid-row: span 20;
+                                }
+
+                                .item2 {
+                                    grid-row: span 20;
+                                }
+
+                                .item3 {
+                                    grid-row: span 9;
+                                    grid-column: 1 / -1;
+                                }
+
+                                .item4 {
+                                    grid-row: span 9;
+                                }
+
+                                .item5 {
+                                    grid-row: span 9;
+                                }
+
+                                .item6 {
+                                    grid-row: span 9;
+                                    grid-column: 1 / -1;
+                                }
+
+                                .item7 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .setting-container {
+                            .area {
+                                &.area7 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
