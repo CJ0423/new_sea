@@ -88,6 +88,11 @@ class ProfileController extends Controller
     {
         return view('seageat.Activity');
     }
+    // 活動編輯
+    public function ActivityRevise()
+    {
+        return view('seageat.ActivityRevise');
+    }
     public function ActivityEstablish()
     {
         return view('seageat.ActivityEstablish');
@@ -113,5 +118,9 @@ class ProfileController extends Controller
     public function RecommendEstablish()
     {
         return view('seageat.RecommendEstablish');
+    }
+    public function RecommendRevise()
+    {
+        return view('seageat.RecommendRevise');
     }
 }

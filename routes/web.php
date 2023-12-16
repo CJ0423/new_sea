@@ -43,6 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::get('seagate/banner_revise', [ProfileController::class, 'Banner_revise'])->name('BannerRevise');
     // 活動管理
     Route::get('seagate/activity', [ProfileController::class, 'Activity'])->name('activity');
+    // 活動編輯
+    Route::get('seagate/activity/revise', [ProfileController::class, 'ActivityRevise'])->name('ActivityRevise');
+
     Route::get('seagate/activityEstablish', [ProfileController::class, 'ActivityEstablish'])->name('ActivityEstablish');
 
     // 版型設定修改
@@ -58,6 +61,8 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('seagate/recommend/recommendEstablish', [ProfileController::class, 'RecommendEstablish'])->name('RecommendEstablish');
+
+    Route::get('seagate/recommend/recommendRevise', [ProfileController::class, 'RecommendRevise'])->name('RecommendRevise');
 });
 
 
