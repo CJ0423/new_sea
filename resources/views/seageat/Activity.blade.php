@@ -30,14 +30,14 @@
        <div class="frame-2">
          <div class="size12">活動資訊</div>
          <div>
-             <button class="button-establish">
+             <a href={{route('ActivityEstablish')}} class="button-establish">
                <img class="icon-outline-plus" src={{asset('img/icon-outline-plus-22.svg') }}>
-               <div class="text-2">建立選單</div>
-             </button>
-             <button class="button-establish">
+               <div class="text-2">建立活動</div>
+             </a>
+             <a href={{route('ChosePattern')}} class="button-establish">
                <img class="icon-outline-plus" src={{asset('img/icon-outline-plus-22.svg')}}>
                <div class="text-3">選擇版型</div>
-             </button>
+             </a>
          </div>
        </div>
        <form action="" method="post">
@@ -58,11 +58,14 @@
                  <th scope="row">1</th>
                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
                  <td>One Touch 4TB 全色款</td>
-                 <td><div class="version-id">B-3</div></td>
+                 <td>
+                    <a href={{route('ActivityPatternSetting')}} class="version-id">B-3</a>
+                </td>
                  <td>排程上架</td>
                  <td>
                    <div class="operate">
                        <input type="button" class="border border-0 button-edit" value="編輯">
+                    這邊還沒好前端版型有少
                    </div>
                </td>
                </tr>

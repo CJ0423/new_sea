@@ -30,10 +30,10 @@
         <div class="frame-2">
           <div class="size12">推薦通路列表</div>
           <div>
-              <button class="button-establish">
+              <a href={{route('RecommendEstablish')}}  class="button-establish">
                 <img class="icon-outline-plus" src={{asset("img/icon-outline-plus-22.svg")}} />
-                <div class="text-2">建立通路</div>
-              </button>
+                <div class="text-2"> 建立通路</div>
+              </a>
           </div>
         </div>
         <form action="" method="post">

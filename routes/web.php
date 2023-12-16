@@ -44,8 +44,20 @@ Route::middleware('auth')->group(function () {
     // 活動管理
     Route::get('seagate/activity', [ProfileController::class, 'Activity'])->name('activity');
     Route::get('seagate/activityEstablish', [ProfileController::class, 'ActivityEstablish'])->name('ActivityEstablish');
+
+    // 版型設定修改
+    Route::get('seagate/activityPatternSetting', [ProfileController::class, 'ActivityPatternSetting'])->name('ActivityPatternSetting');
+
+    // 活動管理的選版型
+    Route::get('seagate/ActivityEstablishChosePattern', [ProfileController::class, 'ActivityEstablishChosePattern'])->name('ChosePattern');
+
+    // Route::get('seagate/ActivityEstablishChosePattern2', [ProfileController::class, 'ActivityEstablishChosePattern'])->name('ChosePattern');
+
     // 通路管理
     Route::get('seagate/recommend', [ProfileController::class, 'Recommend'])->name('Recommend');
+
+
+    Route::get('seagate/recommend/recommendEstablish', [ProfileController::class, 'RecommendEstablish'])->name('RecommendEstablish');
 });
 
 

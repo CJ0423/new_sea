@@ -101,7 +101,7 @@
                 @csrf
             </form>
         </header>
-        <div class="frame">
+        <div class="frame @yield('special')">
             @yield('cut')
         </div>
     </div>

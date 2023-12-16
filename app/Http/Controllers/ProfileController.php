@@ -92,9 +92,26 @@ class ProfileController extends Controller
     {
         return view('seageat.ActivityEstablish');
     }
+
+    public function ActivityPatternSetting()
+    {
+        return view('seageat.ActivityPatternSetting');
+    }
+    public function ActivityEstablishChosePattern()
+    {
+        return view('seageat.activityEstablishChosePattern');
+    }
+    public function ActivityEstablishChosePattern2()
+    {
+        return view('seageat.ActivityEstablishChosePattern2');
+    }
     // 通路管理
     public function Recommend()
     {
         return view('seageat.Recommend');
+    }
+    public function RecommendEstablish()
+    {
+        return view('seageat.RecommendEstablish');
     }
 }
