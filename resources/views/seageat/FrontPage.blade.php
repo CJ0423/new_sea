@@ -103,6 +103,50 @@
                         </td>
                         <td><input type="button" class="border button-store" value="儲存"></td>
                     </tr>
+                    <tr class="border-bottom">
+                        <th scope="row">3</th>
+                        <td>IronWolf Pro NT launch</td>
+                        <td><textarea name="" id=""
+                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
+                        <td class="upload-td">
+                            <label for="upload02" class="border upload-label">選擇檔案</label>
+                            <input type="file" name="upload" id="upload02" class="upload-input">
+                        </td>
+                        <td><input type="button" class="border button-store" value="儲存"></td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <th scope="row">4</th>
+                        <td>IronWolf Pro NT launch</td>
+                        <td><textarea name="" id=""
+                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
+                        <td class="upload-td">
+                            <label for="upload02" class="border upload-label">選擇檔案</label>
+                            <input type="file" name="upload" id="upload02" class="upload-input">
+                        </td>
+                        <td><input type="button" class="border button-store" value="儲存"></td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <th scope="row">5</th>
+                        <td>IronWolf Pro NT launch</td>
+                        <td><textarea name="" id=""
+                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
+                        <td class="upload-td">
+                            <label for="upload02" class="border upload-label">選擇檔案</label>
+                            <input type="file" name="upload" id="upload02" class="upload-input">
+                        </td>
+                        <td><input type="button" class="border button-store" value="儲存"></td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <th scope="row">6</th>
+                        <td>IronWolf Pro NT launch</td>
+                        <td><textarea name="" id=""
+                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
+                        <td class="upload-td">
+                            <label for="upload02" class="border upload-label">選擇檔案</label>
+                            <input type="file" name="upload" id="upload02" class="upload-input">
+                        </td>
+                        <td><input type="button" class="border button-store" value="儲存"></td>
+                    </tr>
                     {{-- 這個要六個 --}}
                 </tbody>
             </table>

@@ -8,8 +8,7 @@
 @section('css')
 @vite(['resources/css/activity.scss'])
 @endsection
-
-
+{{-- {{dd($activities)}} --}}
 
 @section('cut')
      <!-- 以下分割 -->
@@ -36,7 +35,7 @@
              </a>
              <a href={{route('ChosePattern')}} class="button-establish">
                <img class="icon-outline-plus" src={{asset('img/icon-outline-plus-22.svg')}}>
-               <div class="text-3">選擇版型</div>
+               <div class="text-2">選擇版型</div>
              </a>
          </div>
        </div>
@@ -54,20 +53,25 @@
                </tr>
              </thead>
              <tbody>
-               <tr class="border-bottom">
-                 <th scope="row">1</th>
-                 <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                 <td>One Touch 4TB 全色款</td>
-                 <td>
-                    <a href={{route('ActivityPatternSetting')}} class="version-id">B-3</a>
-                </td>
-                 <td>排程上架</td>
-                 <td>
-                   <div class="operate">
-                       <a href={{route('ActivityRevise')}} class="border border-0 button-edit" >編輯</a>
-                   </div>
-               </td>
-               </tr>
+                {{-- 因為要使用index因此需要補上 --}}
+                @foreach ($activities as $index=>$item )
+                <tr class="border-bottom">
+                    <th scope="row">{{$index+1}}</th>
+                    <td><img src={{asset('storage/'.$item->img_pc_url)}} alt=""></td>
+                    <td>{{$item->title}}</td>
+                    <td>
+                       <a href={{route('ActivityPatternSetting')}} class="version-id">B-3</a>
+                       {{-- 後面要補上id --}}
+                   </td>
+                    <td>排程上架</td>
+                    <td>
+                      <div class="operate">
+                          <a id="{{$item->id}}" href={{route('ActivityRevise')}} class="border border-0 button-edit" >編輯</a>
+                      </div>
+                    </td>
+                  </tr>
+                @endforeach
+
              </tbody>
            </table>
          </div>

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ActivityController;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,6 +45,11 @@ Route::middleware('auth')->group(function () {
     Route::get('seagate/banner_revise', [ProfileController::class, 'Banner_revise'])->name('BannerRevise');
     // 活動管理
     Route::get('seagate/activity', [ProfileController::class, 'Activity'])->name('activity');
+    // 建立新的活動
+
+    Route::post('seagate/Create_Activity', [ActivityController::class, 'store']); //訪問新建立的controller
+
+
     // 活動編輯
     Route::get('seagate/activity/revise', [ProfileController::class, 'ActivityRevise'])->name('ActivityRevise');
 

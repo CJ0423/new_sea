@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('activity_img', function (Blueprint $table) {
+        Schema::create('activity', function (Blueprint $table) {
 
             // 圖片位址 圖片替代文字 圖片區域 是否為手機 活動外鍵盤->因為會有兩個一個是手機的一個是電腦的
             $table->id();
@@ -24,8 +24,8 @@ return new class extends Migration
 
             $table->string("img_pc_url"); //電腦圖片網址
             $table->string("img_pad_url"); //手機圖片網址
-            $table->string("img_type")->nullable(); //直向、橫向、專門給手機的 column-img row-img
-            $table->unsignedBigInteger("activity_id");
+            $table->string("img_size_pc"); //直向、橫向、專門給電腦
+            $table->string("img_size_pad"); //直向、橫向、專門給手機的 column-img row-img
         });
     }
 

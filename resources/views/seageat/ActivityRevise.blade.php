@@ -42,6 +42,24 @@
           </div>
         </div>
         <div class="input">
+            <div class="base-wrapper">
+              <div class="base">
+                <div class="frame-5">
+                  <div class="label">桌機圖片類型</div>
+                  <div class="frame-6">
+                    <div class="text-wrapper-5">必填</div>
+                  </div>
+                </div>
+                <div class="input-field">
+                <select name="" id="">
+                  <option value="">之後改成各種比例</option>
+                  <option value="">之後改成各種比例</option>
+                </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="input">
           <div class="base-wrapper">
             <div class="base">
               <div class="frame-5">
@@ -57,6 +75,24 @@
             </div>
           </div>
         </div>
+        <div class="input">
+            <div class="base-wrapper">
+              <div class="base">
+                <div class="frame-5">
+                  <div class="label">手機圖片類型</div>
+                  <div class="frame-6">
+                    <div class="text-wrapper-5">必填</div>
+                  </div>
+                </div>
+                <div class="input-field">
+                <select name="" id="">
+                  <option value="">直向</option>
+                  <option value="">橫向</option>
+                </select>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="input">
           <div class="base-wrapper">
             <div class="base">
