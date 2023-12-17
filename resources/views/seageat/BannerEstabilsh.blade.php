@@ -35,7 +35,7 @@
                                   </div>
                                   <div class="input-field">
                                       <label for="computer" class="border computer-label">選擇檔案</label>
-                                      <input type="file" name="computer" id="computer" class="computer-input">
+                                      <input type="file" name="computer" id="computer" class="computer-input" required>
                                   </div>
                               </div>
                           </div>
@@ -293,5 +293,7 @@
 @section('js')
 <script src={{asset("./thedatepicker-master/dist/the-datepicker.js")}}></script>
 <script src={{asset("./thedatepicker-master/dist/dataPicker.js")}}></script>
+
+@vite(['resources/js/label.js'])
 
 @endsection

@@ -34,6 +34,12 @@
                     <div class="input-field">
                         <label for="computer" class="border computer-label">選擇檔案</label>
                         <input type="file" name="computer" id="computer" class="computer-input">
+                        <span style="position: absolute;
+                        right:30%;
+
+                        "
+
+                        >建議比例：</span>
                     </div>
                   </div>
                 </div>

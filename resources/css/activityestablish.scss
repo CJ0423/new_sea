@@ -88,8 +88,8 @@
                                     padding: 5px;
                                     position: relative;
                                     flex: 0 0 auto;
-                                    background-color: #EEFFE6;
-                                    color: #6EBE49;
+                                    background-color: #eeffe6;
+                                    color: #6ebe49;
                                 }
                             }
 
@@ -104,7 +104,7 @@
 
                                 .phone-label {
                                     background-color: #fff;
-                                    color: #6EBE49;
+                                    color: #6ebe49;
                                     position: relative;
                                     top: 18px;
                                     width: 85px;
@@ -125,11 +125,13 @@
                                 .phone-input {
                                     position: relative;
                                     top: -10px;
+
+                                    pointer-events: none;
                                 }
 
                                 .computer-label {
                                     background-color: #fff;
-                                    color: #6EBE49;
+                                    color: #6ebe49;
                                     position: relative;
                                     top: 18px;
                                     width: 85px;
@@ -150,6 +152,7 @@
                                 .computer-input {
                                     position: relative;
                                     top: -10px;
+                                    pointer-events: none;
                                 }
                             }
                         }
@@ -163,7 +166,7 @@
                         width: 135px;
                         gap: 8px;
                         padding: 8px 12px;
-                        background-color: #6EBE49;
+                        background-color: #6ebe49;
                         color: #fff;
                         position: relative;
                         border-radius: 4px;
@@ -180,13 +183,13 @@
                         gap: 8px;
                         padding: 8px 12px;
                         background-color: #fff;
-                        color: #6EBE49;
+                        color: #6ebe49;
                         position: relative;
                         border-radius: 4px;
                         box-sizing: border-box;
 
                         &:hover {
-                            background-color: #D9D9D9;
+                            background-color: #d9d9d9;
                             transition: background-color 0.3s linear;
                         }
                     }
