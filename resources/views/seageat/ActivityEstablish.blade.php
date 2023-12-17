@@ -51,8 +51,13 @@
                     </div>
                     <div class="input-field">
                     <select name="img_size_pc" id="">
-                      <option value="text">之後改成各種比例</option>
-                      <option value="text">之後改成各種比例</option>
+                        <option value="37:34">37:34</option>
+                        <option value="37:40">37:40</option>
+                        <option value="37:60">37:60</option>
+                        <option value="185:96">185:96</option>
+                        <option value="185:112">185:112</option>
+                        <option value="185:226">185:226</option>
+                        <option value="186:55">186:55</option>
                     </select>
                     </div>
                   </div>
@@ -85,8 +90,8 @@
                     </div>
                     <div class="input-field">
                     <select name="img_size_pad" id="">
-                      <option value="column-img">直向</option>
-                      <option value="row-img">橫向</option>
+                      <option value="column-img">直向 173:196</option>
+                      <option value="row-img">橫向 692:369</option>
                     </select>
                     </div>
                   </div>

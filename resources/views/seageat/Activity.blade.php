@@ -45,7 +45,7 @@
              <thead>
                <tr>
                  <th scope="col">活動編號</th>
-                 <th scope="col">活動範圍</th>
+                 <th scope="col">活動縮圖</th>
                  <th scope="col">主標題</th>
                  <th scope="col">版型編號</th>
                  <th scope="col">狀態</th>
@@ -66,7 +66,7 @@
                     <td>排程上架</td>
                     <td>
                       <div class="operate">
-                          <a id="{{$item->id}}" href={{route('ActivityRevise')}} class="border border-0 button-edit" >編輯</a>
+                          <a id="{{$item->id}}" href={{route('ActivityRevise',$item->id)}} class="border border-0 button-edit" >編輯</a>
                       </div>
                     </td>
                   </tr>

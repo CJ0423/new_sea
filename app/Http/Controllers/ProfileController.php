@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
 
 
 class ProfileController extends Controller
@@ -94,10 +95,67 @@ class ProfileController extends Controller
         return view('seageat.Activity', compact('activities'));
     }
     // 活動編輯
-    public function ActivityRevise()
+    // 用於顯示活動編輯表單的方法
+    public function showActivityRevise($id)
     {
-        return view('seageat.ActivityRevise');
+        $activity = DB::table('activity')->where('id', $id)->first();
+
+        if (!$activity) {
+            // 處理找不到活動的情況，例如重定向回上一頁或顯示錯誤訊息
+            return redirect()->back()->with('error', 'Activity not found.');
+        }
+
+        return view('seageat.ActivityRevise', compact('activity'));
     }
+
+    // 用於處理編輯表單提交的方法
+    public function updateActivityRevise(Request $request, $id)
+    {
+        // dd($id);
+
+        $validatedData = $request->validate([
+            // 验证规则
+        ]);
+
+        // 檢查活動是否存在
+        $activity = DB::table('activity')->where('id', $id)->first();
+        if (!$activity) {
+            return redirect()->back()->with('error', 'Activity not found.');
+        }
+
+        // 處理 'computer' 文件上傳
+        if ($request->hasFile('computer')) {
+            $computerFile = $request->file('computer');
+            $computerFilePath = $computerFile->store('public/img/activity');
+            $validatedData['img_pc_url'] = substr($computerFilePath, 7);
+        }
+
+        // 處理 'phone' 文件上傳
+        if ($request->hasFile('phone')) {
+            $phoneFile = $request->file('phone');
+            $phoneFilePath = $phoneFile->store('public/img/activity');
+            $validatedData['img_pad_url'] = substr($phoneFilePath, 7);
+        }
+
+        // 更新資料庫
+        DB::table('activity')->where('id', $id)->update([
+            'img_pc_url' => $validatedData['img_pc_url'] ?? $activity->img_pc_url,
+            'img_pad_url' => $validatedData['img_pad_url'] ?? $activity->img_pad_url,
+            'img_size_pc' => $request->input('img_size_pc'),
+            'img_size_pad' => $request->input('img_size_pad'),
+            'button_name' => $request->input('button_name'),
+            'button_link' => $request->input('button_link'),
+            'subtitle' => $request->input('subtitle'),
+            'title' => $request->input('title'),
+            'updated_at' => Carbon::now()
+        ]);
+
+        return redirect('/success-page');
+    }
+
+
+
+    //活動建立
     public function ActivityEstablish()
     {
         return view('seageat.ActivityEstablish');

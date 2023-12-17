@@ -51,7 +51,12 @@ Route::middleware('auth')->group(function () {
 
 
     // 活動編輯
-    Route::get('seagate/activity/revise', [ProfileController::class, 'ActivityRevise'])->name('ActivityRevise');
+    // 顯示活動編輯表單（GET 請求）
+    Route::get('seagate/activity/revise/{id}', [ProfileController::class, 'showActivityRevise'])->name('ActivityRevise');
+
+    // 處理活動編輯表單提交（PUT 請求）
+    Route::put('seagate/activity/revise/{id}', [ProfileController::class, 'updateActivityRevise'])->name('ActivityRevise.update');
+
 
     Route::get('seagate/activityEstablish', [ProfileController::class, 'ActivityEstablish'])->name('ActivityEstablish');
 
