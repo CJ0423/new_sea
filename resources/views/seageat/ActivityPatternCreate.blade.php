@@ -48,7 +48,7 @@
             <label for="no{{$i}}">編號{{$i}}</label>
             <div class="select-area">
               <span>必填</span>
-              <select name="no{{$i}}" id="no{{$i}}">
+              <select required name="no{{$i}}" id="no{{$i}}">
                 @foreach ($allActivity as $item )
                      <option value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}
                     </option>
@@ -125,7 +125,7 @@
               <div class="select-area">
                 <span>必填</span>
                 <div class="input-area">
-                  <input type="text" class="input-box up-time" name="start-time-input" id="start-time-input"
+                  <input required type="text" class="input-box up-time" name="start-time-input" id="start-time-input"
                     autocomplete="off">
                   <div class="input-img"></div>
                   <div class="date-container">

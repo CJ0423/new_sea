@@ -47,7 +47,7 @@
               <label for="no1">編號1</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no1" id="no1">
+                <select required name="no1" id="no1">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -56,7 +56,7 @@
               <label for="no2">編號2</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no2" id="no2">
+                <select required name="no2" id="no2">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -65,7 +65,7 @@
               <label for="no3">編號3</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no3" id="no3">
+                <select required name="no3" id="no3">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -74,7 +74,7 @@
               <label for="no4">編號4</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no4" id="no4">
+                <select required name="no4" id="no4">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -83,7 +83,7 @@
               <label for="no5">編號5</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no5" id="no5">
+                <select required name="no5" id="no5">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -92,7 +92,7 @@
               <label for="no6">編號6</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no6" id="no6">
+                <select required name="no6" id="no6">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -101,7 +101,7 @@
               <label for="no7">編號7</label>
               <div class="select-area">
                 <span>必填</span>
-                <select name="no7" id="no7">
+                <select required name="no7" id="no7">
                   <option value="1">1</option>
                 </select>
               </div>
@@ -111,7 +111,7 @@
               <div class="select-area">
                 <span>必填</span>
                 <div class="input-area">
-                  <input type="text" class="input-box" name="start-time-input" id="start-time-input"
+                  <input required required type="text" class="input-box" name="start-time-input" id="start-time-input"
                     autocomplete="off">
                   <div class="input-img"></div>
                   <div class="date-container">

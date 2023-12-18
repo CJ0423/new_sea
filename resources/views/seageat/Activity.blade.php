@@ -63,8 +63,6 @@
 
                         {{-- {{dd($uniquePatterns)}} --}}
                         @foreach ( $uniquePatterns as $items )
-
-
                             @if($items->activity_id==$item->id)
                             <a href="{{ route('store_patternShow', ['id' => $items->id, 'pattern' => 'block' . $items->whitch_pattern]) }}" class="version-id">
                                 {{$items->whitch_pattern}}
@@ -77,7 +75,31 @@
                        {{-- {{route('PatternSetting')}}  --}}
                        {{-- 後面要補上id或者該說這個是不對，這邊之後要變成是編輯--}}
                    </td>
-                    <td>排程上架</td>
+         <td>
+           @php
+           $nowTime = \Carbon\Carbon::now();
+
+           // 假设 $items 包含 start_time 和 end_time
+           $start_time = \Carbon\Carbon::parse($items->start_time);
+           $end_time = \Carbon\Carbon::parse($items->end_time);
+
+           $isOnSale = $start_time->lte($nowTime) && $end_time->gt($nowTime);
+           $isOffSale = $end_time->lte($nowTime);
+          @endphp
+
+@foreach ( $uniquePatterns as $items )
+@if($items->activity_id==$item->id)
+@if ($isOnSale)
+<p>已经上架</p>
+@elseif ($isOffSale)
+<p>已下架</p>
+@else
+<p>排程上架</p>
+@endif
+@endif
+@endforeach
+
+        </td>
                     <td>
                       <div class="operate">
                           <a id="{{$item->id}}" href={{route('ActivityRevise',$item->id)}} class="border border-0 button-edit" >編輯</a>

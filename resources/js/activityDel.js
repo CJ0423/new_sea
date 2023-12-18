@@ -12,3 +12,10 @@ function masbox () {
 function masboxClose () {
     promptBoxDown.style.display = "none"
 }
+
+let centerBtn = document.querySelector(".center")
+centerBtn.addEventListener("click", send)
+
+function send () {
+
+}

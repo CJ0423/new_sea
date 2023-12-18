@@ -89,6 +89,8 @@ class ProfileController extends Controller
     // 活動管理
     public function Activity()
     {
+        $now = Carbon::now()->timezone('Asia/Taipei'); //讀取現在時間
+
         $activities = DB::table('activity')->get();
         //版型編號和裝態，是跟著選擇版型走的
         $chose_patterns = DB::table('pattern_table')
@@ -106,7 +108,7 @@ class ProfileController extends Controller
 
         // $uniquePatterns 現在包含了每組唯一的記錄
 
-        return view('seageat.Activity', compact('activities', 'uniquePatterns'));
+        return view('seageat.Activity', compact('activities', 'uniquePatterns', 'now'));
     }
     // 活動編輯
     // 用於顯示活動編輯表單的方法

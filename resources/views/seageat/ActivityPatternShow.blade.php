@@ -27,7 +27,7 @@
 @section('cut')
 <!-- 以下分割 -->
 <div class="text-wrapper-3">版型設定</div>
-<form action="{{ route('store_patternUpdate', ['id' => $chose_pattern[0]->id]) }}" method="post">
+<form id="send" action="{{ route('store_patternUpdate', ['id' => $chose_pattern[0]->id]) }}" method="post">
     @csrf
     <input type="hidden" name="_method" value="PUT">
     {{-- action={{route('ActivityPatternCreate')}} --}}
@@ -66,7 +66,7 @@
                     <div class="select-area">
                         <span>必填</span>
 
-                        <select name="no{{$i}}" id="no{{$i}}">
+                        <select required name="no{{$i}}" id="no{{$i}}">
 
 
                             @foreach ($allActivity as $item )
@@ -160,7 +160,7 @@
                 <div class="select-area">
                     <span>必填</span>
                     <div class="input-area">
-                        <input value='{{$chose_pattern[0]->start_time}}'  type="text" class="input-box up-time" name="start-time-input" id="start-time-input" autocomplete="off">
+                        <input required value='{{$chose_pattern[0]->start_time}}'  type="text" class="input-box up-time" name="start-time-input" id="start-time-input" autocomplete="off">
                         <div class="input-img"></div>
                         <div class="date-container">
                             <div id="datePickerStart" class="date-picker datePicker"></div>
@@ -228,7 +228,7 @@
                 <div class="select-area">
                     <span class="hidden-span">　　</span>
                     <div class="input-area">
-                        <input {{$chose_pattern[0]->end_time}} type="text" class="input-box up-time" name="end-time-input" id="end-time-input" autocomplete="off">
+                        <input value='{{$chose_pattern[0]->end_time}}' type="text" class="input-box up-time" name="end-time-input" id="end-time-input" autocomplete="off">
                         <div class="input-img"></div>
                         <div class="date-container">
                             <div id="datePickerEnd" class="date-picker datePicker"></div>
@@ -304,7 +304,7 @@
     <div class="prompt">
         <p class="size14">確定要下架嗎?</p>
         <div>
-            <a href="#{}" class="border confirm">確認</a>
+            <button  class="border confirm center">確認</button>
             <button class="border cancel" type="button" >取消</button>
         </div>
     </div>
@@ -317,7 +317,19 @@
 <script src={{asset("./thedatepicker-master/dist/dataPicker.js")}}></script>
 {{-- 補上js去禁用 --}}
 @vite(['resources/js/activityChooseFixPattern.js'])
-@vite(['resources/js/activityDel.js'])
+@vite(['resources/js/activityDel-spe.js'])
 
+<script>
+    window.onload = function() {
+        var inputTime = new Date(document.getElementById('start-time-input').value);
+        var nowTime = new Date();
+
+        // 如果输入时间早于当前时间，则禁用输入框
+        if(inputTime < nowTime) {
+            document.querySelector('.now-button').disabled = true;
+            document.getElementById('start-time-input').disabled = true;
+        }
+    };
+    </script>
 
 @endsection

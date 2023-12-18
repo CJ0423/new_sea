@@ -35,7 +35,7 @@
                     </div>
                     <div class="input-field">
                         <label for="computer" class="border computer-label">選擇檔案</label>
-                        <input type="file" name="computer" id="computer" class="computer-input">
+                        <input required required type="file" name="computer" id="computer" class="computer-input">
                     </div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                       </div>
                     </div>
                     <div class="input-field">
-                    <select name="img_size_pc" id="">
+                    <select required name="img_size_pc" id="">
                         <option value="37:34">37:34</option>
                         <option value="37:40">37:40</option>
                         <option value="37:60">37:60</option>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="input-field">
                         <label for="phone" class="border phone-label">選擇檔案</label>
-                        <input type="file" name="phone" id="phone" class="phone-input">
+                        <input required type="file" name="phone" id="phone" class="phone-input">
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
                       </div>
                     </div>
                     <div class="input-field">
-                    <select name="img_size_pad" id="">
+                    <select required name="img_size_pad" id="">
                       <option value="column-img">直向 173:196</option>
                       <option value="row-img">橫向 692:369</option>
                     </select>
@@ -107,7 +107,7 @@
                       </div>
                     </div>
                     <div class="input-field">
-                      <input type="text" class="border" name="title">
+                      <input required type="text" class="border" name="title">
                     </div>
                   </div>
                 </div>

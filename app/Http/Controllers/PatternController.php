@@ -10,8 +10,6 @@ class PatternController extends Controller
 {
     public function store(Request $request)
     {
-
-
         $requestArray = $request->all();
         $requestArrayLength = count($requestArray) - 4; //重複次數剛好減少4就是要存儲的資料數
         // dd($requestArray);
@@ -60,7 +58,6 @@ class PatternController extends Controller
         // dd($requestArray);
         // dd($requestArray);
         $requestArrayLength = count($requestArray) - 5;
-
 
         // 假设 $id 是 chose_pattern 的 ID
         DB::table('chose_pattern')->where('id', $id)->update([

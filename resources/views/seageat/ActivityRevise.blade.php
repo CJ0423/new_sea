@@ -44,7 +44,7 @@
                 </div>
                 <div class="input-field">
                     <label for="computer" class="border computer-label">更新檔案</label>
-                    <input type="file" name="computer" id="computer" class="computer-input" value={{$activity->id}}>
+                    <input required type="file" name="computer" id="computer" class="computer-input" value={{$activity->id}}>
                     <img  src="{{ Storage::url($activity->img_pc_url) }}" alt="Activity Image" style=" position: absolute; right:1px;max-width: 100px; max-height: 100px;" />
                 </div>
               </div>
@@ -60,7 +60,7 @@
                   </div>
                 </div>
                 <div class="input-field">
-                <select name="img_size_pc" id="">
+                <select required name="img_size_pc" id="">
                         <option value="37:34" {{ $activity->img_size_pc == '37:34' ? 'selected' : '' }}>37:34</option>
                         <option value="37:40" {{ $activity->img_size_pc == '37:40' ? 'selected' : '' }}>37:40</option>
                         <option value="37:60" {{ $activity->img_size_pc == '37:60' ? 'selected' : '' }}>37:60</option>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="input-field">
                     <label for="phone" class="border phone-label">更新檔案</label>
-                    <input type="file" name="phone" id="phone" class="phone-input">
+                    <input required type="file" name="phone" id="phone" class="phone-input">
                     <img  src="{{ Storage::url($activity->img_pad_url) }}" alt="Activity Image" style=" position: absolute; right:1px;max-width: 100px; max-height: 100px;" />
                 </div>
               </div>
@@ -102,7 +102,7 @@
                   </div>
                 </div>
                 <div class="input-field">
-                <select name="img_size_pad" id="">
+                <select required name="img_size_pad" id="">
                   <option value="column-img" {{ $activity->img_size_pad == 'column-img' ? 'selected' : '' }}>直向 173:196</option>
                   <option value="row-img" {{ $activity->img_size_pc == 'row-img' ? 'selected' : '' }}>橫向 692:369</option>
                 </select>
@@ -120,7 +120,7 @@
                   </div>
                 </div>
                 <div class="input-field">
-                  <input type="text" class="border" name="title" value={{ $activity->title}}>
+                  <input required type="text" class="border" name="title" value={{ $activity->title}}>
                 </div>
               </div>
             </div>
