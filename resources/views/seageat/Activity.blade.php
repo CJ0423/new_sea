@@ -57,11 +57,25 @@
                 @foreach ($activities as $index=>$item )
                 <tr class="border-bottom">
                     <th scope="row">{{$index+1}}</th>
-                    <td><img src={{asset('storage/'.$item->img_pc_url)}} alt=""></td>
+                    <td><img style="max-width:100px; max-height: 100px;" src={{asset('storage/'.$item->img_pc_url)}} alt=""></td>
                     <td>{{$item->title}}</td>
                     <td>
-                       <a href={{route('ActivityPatternSetting')}} class="version-id">B-3</a>
-                       {{-- 後面要補上id --}}
+
+                        {{-- {{dd($uniquePatterns)}} --}}
+                        @foreach ( $uniquePatterns as $items )
+
+
+                            @if($items->activity_id==$item->id)
+                            <a href="{{ route('store_patternShow', ['id' => $items->id, 'pattern' => 'block' . $items->whitch_pattern]) }}" class="version-id">
+                                {{$items->whitch_pattern}}
+                            </a>
+                            @endif
+                        @endforeach
+
+
+
+                       {{-- {{route('PatternSetting')}}  --}}
+                       {{-- 後面要補上id或者該說這個是不對，這邊之後要變成是編輯--}}
                    </td>
                     <td>排程上架</td>
                     <td>

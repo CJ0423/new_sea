@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\PatternController;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -60,13 +61,27 @@ Route::middleware('auth')->group(function () {
 
     Route::get('seagate/activityEstablish', [ProfileController::class, 'ActivityEstablish'])->name('ActivityEstablish');
 
-    // 版型設定修改
-    Route::get('seagate/activityPatternSetting', [ProfileController::class, 'ActivityPatternSetting'])->name('ActivityPatternSetting');
+    // 版型設定 確定版型之後的事情
+    Route::get('seagate/activityPatternCreate', [ProfileController::class, 'ActivityPatternCreate'])->name('PatternSetting-create');
+
+    Route::post('seagate/store_PatternCreate', [PatternController::class, 'store'])->name('store_pattern');
+
+    Route::get('seagate/store_PatternCreate/{id}', [ProfileController::class, 'ActivityPatternShow'])->name('store_patternShow');
+
+    // 版型設定 更新版型之後的事情
+    Route::put('seagate/store_PatternCreate/{id}', [ProfileController::class, 'ActivityPatternUpdate'])->name('store_patternUpdate');
+
+    // 建立新的版型 選擇好之後要上傳的時候才是這邊
+    // Route::post('seagate/ActivityPatternCreate', [PatternController::class, 'PatternSetting'])->name('PatternSetting-create');
+
 
     // 活動管理的選版型
     Route::get('seagate/ActivityEstablishChosePattern', [ProfileController::class, 'ActivityEstablishChosePattern'])->name('ChosePattern');
 
     // Route::get('seagate/ActivityEstablishChosePattern2', [ProfileController::class, 'ActivityEstablishChosePattern'])->name('ChosePattern');
+
+
+
 
     // 通路管理
     Route::get('seagate/recommend', [ProfileController::class, 'Recommend'])->name('Recommend');

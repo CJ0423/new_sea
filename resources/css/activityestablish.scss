@@ -161,7 +161,6 @@
 
                 .frame-7 {
                     text-align: right;
-
                     .button-2 {
                         width: 135px;
                         gap: 8px;
@@ -171,14 +170,14 @@
                         position: relative;
                         border-radius: 4px;
                         box-sizing: border-box;
-
                         &:hover {
                             background-color: #61a542;
                             transition: background-color 0.3s linear;
                         }
                     }
-
                     .button-3 {
+                        text-align: center;
+                        display: inline-block;
                         width: 135px;
                         gap: 8px;
                         padding: 8px 12px;

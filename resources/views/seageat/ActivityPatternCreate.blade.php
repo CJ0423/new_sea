@@ -1,7 +1,5 @@
+{{-- {{建立最新的版型}} --}}
 @extends('layouts.seagate-templete')
-
-
-
 @section('title')
 建立活動-版型設定
 @endsection
@@ -15,7 +13,7 @@
 {{-- <link rel="stylesheet" href="./css/activitiesAdded.css"> --}}
 {{-- 檔案名稱要改 --}}
 @endsection
-
+{{-- {{dd( $allActivity)}} --}}
 @section('special')
 {{$selectedPattern}}
 {{-- 這邊才是要改的內容 --}}
@@ -23,8 +21,10 @@
 @section('cut')
 <!-- 以下分割 -->
     <div class="text-wrapper-3">版型設定</div>
-    <form  method="post">
-        {{-- action={{route('PatternSetting')}} --}}
+    <form  action={{route('store_pattern')}} method="post">
+        @csrf
+        {{-- action={{route('ActivityPatternCreate')}} --}}
+      <input type="hidden" name="whitch_pattern" value={{$selectedPattern}}>
       <div class="pattern">
         <h4>請依據編號選取設定</h4>
         <div class="pattern-container">
@@ -43,7 +43,21 @@
           </div>
           <div class="setting-container">
             <h3>版型編號：<span></span></h3>
-            <div class="area area1">
+            @for ($i=1;$i<8;$i++)
+            <div class="area area{{$i}}">
+            <label for="no{{$i}}">編號{{$i}}</label>
+            <div class="select-area">
+              <span>必填</span>
+              <select name="no{{$i}}" id="no{{$i}}">
+                @foreach ($allActivity as $item )
+                     <option value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}
+                    </option>
+                @endforeach
+              </select>
+            </div>
+          </div>
+            @endfor
+            {{-- <div class="area area1">
               <label for="no1">編號1</label>
               <div class="select-area">
                 <span>必填</span>
@@ -105,13 +119,13 @@
                   <option value="1">1</option>
                 </select>
               </div>
-            </div>
+            </div> --}}
             <div class="area">
               <label for="no4">上架時間</label>
               <div class="select-area">
                 <span>必填</span>
                 <div class="input-area">
-                  <input type="text" class="input-box" name="start-time-input" id="start-time-input"
+                  <input type="text" class="input-box up-time" name="start-time-input" id="start-time-input"
                     autocomplete="off">
                   <div class="input-img"></div>
                   <div class="date-container">
@@ -180,7 +194,7 @@
               <div class="select-area">
                 <span class="hidden-span">　　</span>
                 <div class="input-area">
-                  <input type="text" class="input-box" name="end-time-input" id="end-time-input" autocomplete="off">
+                  <input type="text" class="input-box up-time" name="end-time-input" id="end-time-input" autocomplete="off">
                   <div class="input-img"></div>
                   <div class="date-container">
                     <div id="datePickerEnd" class="date-picker datePicker"></div>
@@ -247,14 +261,14 @@
         </div>
       </div>
       <div class="control-container">
-        <button type="submit" class="submit-button">修改後上架</button>
-        <button type="button" class="down-added-button">下架</button>
+        <button type="submit" class="submit-button">儲存</button>
+        <a  href={{route('activity')}} class="down-added-button">捨棄</a>
       </div>
     </form>
     <!-- 提示訊息 -->
     <div class="prompt-box-down">
       <div class="prompt">
-        <p class="size14">確定要下架嗎?</p>
+        <p class="size14">確定要捨棄嗎?</p>
         <div>
           <input class="border confirm" type="button" value="確認">
           <input class="border cancel" type="button" value="取消">
@@ -267,5 +281,7 @@
 @section('js')
 <script src={{asset("./thedatepicker-master/dist/the-datepicker.js")}}></script>
 <script src={{asset("./thedatepicker-master/dist/dataPicker.js")}}></script>
+{{-- 補上js去禁用 --}}
+@vite(['resources/js/activityChooseFixPattern.js'])
 
 @endsection

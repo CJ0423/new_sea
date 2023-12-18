@@ -52,6 +52,6 @@ class ActivityController extends Controller
         ]);
 
 
-        return redirect('/success-page');
+        return redirect(route('activity'));
     }
 }
