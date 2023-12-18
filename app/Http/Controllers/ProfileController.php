@@ -192,10 +192,15 @@ class ProfileController extends Controller
         $selectedPattern = $request->query('pattern'); //拿到需要的class
         $allActivity = DB::table('activity')->get();
 
-        $pattern_table = DB::table('pattern_table')->where('id', $id)->get();
+
         // dd($pattern_table);
 
         $pattern_table = DB::table('pattern_table')->where('id', $id)->get();
+
+        $chose_pattern = DB::table('chose_pattern')->where('id', $pattern_table[0]->chose_pattern_id)->get();
+
+        // dd($pattern_table[0]->chose_pattern_id);
+
         // dd($pattern_table[0]->chose_pattern_id);
         //一層一層最後把所需要的圖片全部抓出來
         $textData = DB::table('pattern_table')
@@ -216,7 +221,7 @@ class ProfileController extends Controller
 
         // dd($textData);
 
-        return view('seageat.ActivityPatternShow', compact('selectedPattern', 'allActivity', 'pattern_table', 'textData'));
+        return view('seageat.ActivityPatternShow', compact('selectedPattern', 'allActivity', 'pattern_table', 'textData', 'chose_pattern'));
     }
     //更新新版型完成時
     public function  ActivityPatternUpdate(Request $request)

@@ -3,6 +3,7 @@
 @section('title')
 建立活動-版型設定
 {{-- {{$pattern_table}} --}}
+{{-- {{dd($chose_pattern[0]->start_time)}} --}}
 @endsection
 
 @section('css')
@@ -158,7 +159,7 @@
                 <div class="select-area">
                     <span>必填</span>
                     <div class="input-area">
-                        <input type="text" class="input-box up-time" name="start-time-input" id="start-time-input" autocomplete="off">
+                        <input value='{{$chose_pattern[0]->start_time}}'  type="text" class="input-box up-time" name="start-time-input" id="start-time-input" autocomplete="off">
                         <div class="input-img"></div>
                         <div class="date-container">
                             <div id="datePickerStart" class="date-picker datePicker"></div>
@@ -226,7 +227,7 @@
                 <div class="select-area">
                     <span class="hidden-span">　　</span>
                     <div class="input-area">
-                        <input type="text" class="input-box up-time" name="end-time-input" id="end-time-input" autocomplete="off">
+                        <input {{$chose_pattern[0]->end_time}} type="text" class="input-box up-time" name="end-time-input" id="end-time-input" autocomplete="off">
                         <div class="input-img"></div>
                         <div class="date-container">
                             <div id="datePickerEnd" class="date-picker datePicker"></div>
