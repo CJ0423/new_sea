@@ -93,20 +93,18 @@ class ProfileController extends Controller
         //版型編號和裝態，是跟著選擇版型走的
         $chose_patterns = DB::table('pattern_table')
             ->join('chose_pattern', 'pattern_table.chose_pattern_id', '=', 'chose_pattern.id')
-            ->select('pattern_table.*', 'chose_pattern.whitch_pattern')
+            ->select(
+                'pattern_table.*',
+                'chose_pattern.whitch_pattern',
+                'chose_pattern.start_time',
+                'chose_pattern.end_time'
+            )
             ->get();
-        // dd($chose_patterns);
 
-        // dd($chose_patterns);
-        // $uniquePatterns = collect($chose_patterns)->unique(function ($item) {
-        //     return $item->activity_id . '-' . $item->whitch_pattern;
-        // });
-        $uniquePatterns = collect($chose_patterns)->unique('activity_id');
+        $uniquePatterns =  $chose_patterns;
 
 
         // $uniquePatterns 現在包含了每組唯一的記錄
-
-
 
         return view('seageat.Activity', compact('activities', 'uniquePatterns'));
     }
@@ -120,7 +118,6 @@ class ProfileController extends Controller
             // 處理找不到活動的情況，例如重定向回上一頁或顯示錯誤訊息
             return redirect()->back()->with('error', 'Activity not found.');
         }
-
         return view('seageat.ActivityRevise', compact('activity'));
     }
 
@@ -190,10 +187,10 @@ class ProfileController extends Controller
     public function  ActivityPatternShow(Request $request, $id)
     {
         $selectedPattern = $request->query('pattern'); //拿到需要的class
+
         $allActivity = DB::table('activity')->get();
 
-
-        // dd($pattern_table);
+        // dd($allActivity);
 
         $pattern_table = DB::table('pattern_table')->where('id', $id)->get();
 
@@ -219,19 +216,17 @@ class ProfileController extends Controller
             ->where('pattern_table.chose_pattern_id', $pattern_table[0]->chose_pattern_id)
             ->get();
 
-        // dd($textData);
-
         return view('seageat.ActivityPatternShow', compact('selectedPattern', 'allActivity', 'pattern_table', 'textData', 'chose_pattern'));
     }
     //更新新版型完成時
-    public function  ActivityPatternUpdate(Request $request)
-    {
-        $selectedPattern = $request->query('pattern'); //拿到需要的class
-        $allActivity = DB::table('activity')->get();
-        // dd($selectedPattern);
+    // public function  ActivityPatternUpdate(Request $request)
+    // {
+    //     $selectedPattern = $request->query('pattern'); //拿到需要的class
+    //     $allActivity = DB::table('activity')->get();
+    //     // dd($selectedPattern);
 
-        return view('seageat.ActivityPatternCreate', compact('selectedPattern', 'allActivity'));
-    }
+    //     return view('seageat.ActivityPatternCreate', compact('selectedPattern', 'allActivity'));
+    // }
     public function ActivityEstablishChosePattern()
     {
         return view('seageat.activityEstablishChosePattern');

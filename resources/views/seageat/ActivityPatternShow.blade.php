@@ -27,8 +27,9 @@
 @section('cut')
 <!-- 以下分割 -->
 <div class="text-wrapper-3">版型設定</div>
-<form action={{route('store_pattern')}} method="post">
+<form action="{{ route('store_patternUpdate', ['id' => $chose_pattern[0]->id]) }}" method="post">
     @csrf
+    <input type="hidden" name="_method" value="PUT">
     {{-- action={{route('ActivityPatternCreate')}} --}}
     <input type="hidden" name="whitch_pattern" value={{$selectedPattern}}>
     <div class="pattern">
