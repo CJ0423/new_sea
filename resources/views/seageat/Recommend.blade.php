@@ -1,6 +1,5 @@
 @extends('layouts.seagate-templete')
 
-{{-- {{dd($recommendData)}} --}}
 
 @section('title')
 後端管理-推薦通路管理
@@ -50,7 +49,7 @@
               <tbody>
                 @foreach ($recommendData as $index=>$item )
                 <tr class="border-bottom">
-                    <th scope="row">{{$index}}</th>
+                    <th scope="row">{{$index+1}}</th>
                     <td><img src='{{asset('storage/'.$item->logo_url)}}'alt=""></td>
                     <td>{{$item->logo_link}}</td>
                     <td>
@@ -67,6 +66,23 @@
             </table>
           </div>
         </form>
+        <div  class="prompt-box-down">
+            <div class="prompt">
+              <p class="size14">確定要捨棄嗎?</p>
+              <div>
+                <a class="border confirm" type="button"> 確認</a>
+                <input  class="border cancel" type="button" value="取消">
+              </div>
+            </div>
+          </div>
       </div>
       <!-- 以上分割 -->
+@endsection
+
+@section('js')
+<script src={{asset("./thedatepicker-master/dist/the-datepicker.js")}}></script>
+<script src={{asset("./thedatepicker-master/dist/dataPicker.js")}}></script>
+@vite(['resources/js/recommend.js',])
+
+
 @endsection

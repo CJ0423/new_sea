@@ -93,6 +93,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('seagate/recommend/recommendStore', [Recommend::class, 'store'])->name("newRecommend"); //訪問新建立的controller
 
+    Route::put('seagate/recommend/recommendUpdate/{id}', [Recommend::class, 'update'])->name("updateRecommend"); //訪問更新用的controller
+
     Route::get('seagate/recommend/recommendRevise/{id}', [ProfileController::class, 'RecommendRevise'])->name('RecommendRevise');
 });
 

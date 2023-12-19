@@ -38,13 +38,13 @@
               <div class="base">
                 <div class="frame-5">
                   <div class="label">桌機版檔案上傳</div>
-                  <div class="frame-6">
+                  {{-- <div class="frame-6">
                     <div class="text-wrapper-5">必填</div>
-                  </div>
+                  </div> --}}
                 </div>
                 <div class="input-field">
                     <label for="computer" class="border computer-label">更新檔案</label>
-                    <input required type="file" name="computer" id="computer" class="computer-input" value={{$activity->id}} accept="image/png, image/jpeg, image/gif">>
+                    <input type="file" name="computer" id="computer" class="computer-input" value={{$activity->id}} accept="image/png, image/jpeg, image/gif">
                     <img  src="{{ Storage::url($activity->img_pc_url) }}" alt="Activity Image" style=" position: absolute; right:1px;max-width: 100px; max-height: 100px;" />
                 </div>
               </div>
@@ -80,13 +80,13 @@
               <div class="base">
                 <div class="frame-5">
                   <div class="label">手機版檔案上傳</div>
-                  <div class="frame-6">
+                  {{-- <div class="frame-6">
                     <div class="text-wrapper-5">必填</div>
-                  </div>
+                  </div> --}}
                 </div>
                 <div class="input-field">
                     <label for="phone" class="border phone-label">更新檔案</label>
-                    <input required type="file" name="phone" id="phone" class="phone-input" accept="image/png, image/jpeg, image/gif">>
+                    <input  type="file" name="phone" id="phone" class="phone-input" accept="image/png, image/jpeg, image/gif">
                     <img  src="{{ Storage::url($activity->img_pad_url) }}" alt="Activity Image" style=" position: absolute; right:1px;max-width: 100px; max-height: 100px;" />
                 </div>
               </div>

@@ -248,8 +248,10 @@ class ProfileController extends Controller
     {
         return view('seageat.RecommendEstablish');
     }
-    public function RecommendRevise()
+    public function RecommendRevise($id)
     {
-        return view('seageat.RecommendRevise');
+        $recommendData = DB::table('recommend')->where("id", $id)->first();
+
+        return view('seageat.RecommendRevise', compact('recommendData'));
     }
 }
