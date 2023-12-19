@@ -87,7 +87,7 @@ class Front_page_menu extends Controller
     public function iconupdate(Request $request, $id)
     {
         if ($request->hasFile('upload' . $id)) {
-            $iconFile = $request->file('upload');
+            $iconFile = $request->file('upload' . $id);
             // 存储文件并获取存储路径，文件将保存在 'storage/app/public/files'
             $iconFilePath = $iconFile->store('public/img/icons');
             // 处理路径，以便在 Web 上使用
