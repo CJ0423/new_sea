@@ -16,8 +16,6 @@
     }
 </style>
 @endsection
-
-
 @section('cut')
 <div class="size16">首頁管理</div>
 <div class="border border-0 card">
@@ -95,7 +93,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ( $icons as $item )
+                    @foreach ( $icons as $index=>$item )
                     <tr class="border-bottom">
                         <th class="height-100" scope="row">1</th>
                         <td class="height-100"><textarea class="name">{{$item->icon_name}}</textarea></td>
@@ -111,7 +109,7 @@
                         <td class="height-100">
                             <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">
                         </td>
-                        <td class="height-100"><input type="button" class="border button-store" value="儲存"></td>
+                        <td class="height-100"><input data-key="" type="button" class="border button-store"  value="儲存"></td>
                     </tr>
                     @endforeach
 
@@ -175,6 +173,7 @@
             </table>
         </div>
     </form>
+    <form icon action=""></form>
 </div>
 @endsection
 @section('js')

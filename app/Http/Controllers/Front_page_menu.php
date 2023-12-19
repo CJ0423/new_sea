@@ -41,11 +41,7 @@ class Front_page_menu extends Controller
 
         return redirect(route('Front_page'));
     }
-    public function show()
-    {
-        $data = 1;
-        return view(route('Front_page'), compact('data'));
-    }
+
 
     public function update(Request $request, $id)
     {
@@ -82,6 +78,42 @@ class Front_page_menu extends Controller
                 'updated_at' => Carbon::now()
             ]);
         }
+
+
+        return redirect(route('Front_page'));
+    }
+
+
+    public function iconupdate(Request $request, $id)
+    {
+
+        if ($request->hasFile('computer')) {
+            $computerFile = $request->file('computer');
+            // 存储文件并获取存储路径，文件将保存在 'storage/app/public/files'
+            $computerFilePath = $computerFile->store('public/img/activity');
+            // 处理路径，以便在 Web 上使用
+            $validatedData['computer_file_path'] = substr($computerFilePath, 7); // 去除 'public/' 部分
+        }
+
+
+        $requestArray = $request->all();
+        // dd($requestArray);
+        $requestArrayLength = count($requestArray) - 2; //重複次數剛好減少4就是要存儲的資料數
+        // dd($requestArray);
+
+
+        // dd($requestArray);
+        // dd($requestArrayLength);
+        $chosePatternId = DB::table('icon')->where('id', $id)->update([
+            //開始
+            'icon_name' => $request->input('icon_name'),
+            //結尾
+            'icon_url' => $request->input('icon_url'),
+            'icon_img' => $request->input('icon_img'),
+            // 時間的部分...
+            // 'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
 
 
         return redirect(route('Front_page'));
