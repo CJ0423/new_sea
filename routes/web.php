@@ -23,11 +23,11 @@ use Illuminate\Support\Facades\Auth;
 */
 //前端區域
 Route::get('/', function () {
-    return view('front.index');
+    return view('fornt.index');
 });
 
 Route::get('/a1', function () {
-    return view('A1');
+    return view('fornt.A1');
 });
 Route::get('/a2', function () {
     return view('A2');
@@ -89,6 +89,8 @@ Route::middleware('auth')->group(function () {
     Route::post('seagate/front_page/Storemenu', [Front_page_menu::class, 'store'])->name("Storemenu"); //訪問新建立的controller
 
     Route::put('seagate/front_page/Updatemenu/{id}',  [Front_page_menu::class, 'update'])->name("updateMenu"); //訪問更新用的controller
+    // icon
+    Route::put('seagate/front_page/Updateicon/{id}',  [Front_page_menu::class, 'iconupdate'])->name("icon.update"); //訪問更新用的controller
 
 
 

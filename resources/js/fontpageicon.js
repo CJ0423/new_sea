@@ -5,10 +5,17 @@ let cisup = Array.from(document.querySelectorAll(".isup"))
 
 // let prompt = document.querySelector('.prompt-box-down')
 
-store.forEach((element, index) => {
-    console.log(index)
-})
-
+for (let i = 0; i < store.length; i++) {
+    cname[i].addEventListener("input", function () {
+        store[i].style.color = "red"
+    })
+    clink[i].addEventListener("input", function () {
+        store[i].style.color = "red"
+    })
+    cisup[i].addEventListener("input", function () {
+        store[i].style.color = "red"
+    })
+}
 
 
 
