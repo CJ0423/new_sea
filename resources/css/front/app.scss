@@ -181,6 +181,21 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     height: 100%;
 }
 
+.recommend-logo{
+    background-color: #ffffff;
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommend-logo img{
+    width: 100%;
+}
+
 .banner-pc .swiper .swiper-slide figure {
     margin: 0px;
 }
@@ -225,7 +240,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .banner-pc .swiper .swiper-slide figure figcaption a::after {
     content: "";
-    background-image: url("../img/mainImg/iconamoon_arrow-right-2.png");
+    background-image: url("{{ asset('front-img/mainImg/iconamoon_arrow-right-2.png') }}");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -442,10 +457,11 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .container-pc div .main-img figcaption a::after {
     content: "";
-    background-image: url("../img/arrow-right-2.png");
+    background-image: url("../../../public/front-img/mainImg/iconamoon_arrow-right-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+
     width: 1.4em;
     /* 設定箭頭圖片的寬度 */
     height: 1.4em;

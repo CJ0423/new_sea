@@ -157,7 +157,8 @@
                         .border-bottom {
 
                             img {
-                                height: 100px;
+                                max-width: 300px;
+                                max-height: 100px;
                             }
 
                             .version-id{
