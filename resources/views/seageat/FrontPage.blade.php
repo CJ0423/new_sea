@@ -18,7 +18,6 @@
 @endsection
 
 
-
 @section('cut')
 <div class="size16">首頁管理</div>
 <div class="border border-0 card">
