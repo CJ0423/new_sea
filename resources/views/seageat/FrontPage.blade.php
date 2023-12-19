@@ -109,7 +109,7 @@
                         <td class="height-100">
                             <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">
                         </td>
-                        <td class="height-100"><input data-key="" type="button" class="border button-store"  value="儲存"></td>
+                        <td class="height-100"><input data-key="{{}}" type="button" class="border button-store"  value="儲存"></td>
                     </tr>
                     @endforeach
 
