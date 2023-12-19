@@ -13,7 +13,7 @@
       <div class="size16">Banner列表</div>
       <div class="border border-0 card">
         <!-- 提示訊息 -->
-        <div class="prompt-box-down">
+        {{-- <div class="prompt-box-down">
           <div class="prompt">
             <p class="size14">確定要下架嗎?</p>
             <div>
@@ -21,7 +21,7 @@
               <input class="border cancel" type="button" value="取消">
             </div>
           </div>
-        </div>
+        </div> --}}
 
         <div class="border-bottom frame-2">
           <div class="size12"><input type="button" class="border border-0 border-bottom border-success-subtle input-all"
@@ -60,7 +60,7 @@
                         <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
 
                             {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
+                        <button class="border button-down" type="button">下架</button>
 
                     </div>
                   </td>
@@ -78,7 +78,7 @@
                         <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
 
                             {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
+                        <button href="" class="border button-delete" type="button">刪除</button>
 
                     </div>
                   </td>
@@ -96,119 +96,7 @@
                         <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
 
                             {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
-
-                    </div>
-                  </td>
-                </tr>
-
-
-                <tr class="border-bottom banner-superior">
-                  <th scope="row">1</th>
-                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                  <td>一指輕鬆備份 專為品味而生</td>
-                  <td>1</td>
-                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
-                  <td>已上架</td>
-                  <td>
-                    <div class="operate">
-                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
-                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
-
-                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
-
-                    </div>
-                  </td>
-                </tr>
-                <tr class="border-bottom banner-down">
-                  <th scope="row">2</th>
-                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                  <td>一指輕鬆備份 專為品味而生</td>
-                  <td>1</td>
-                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
-                  <td>已下架</td>
-                  <td>
-                    <div class="operate">
-                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
-                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
-
-                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
-
-                    </div>
-                  </td>
-                </tr>
-                <tr class="border-bottom banner-prepare">
-                  <th scope="row">3</th>
-                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                  <td>一指輕鬆備份 專為品味而生</td>
-                  <td>1</td>
-                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
-                  <td>未上架</td>
-                  <td>
-                    <div class="operate">
-                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
-                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
-
-                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
-
-                    </div>
-                  </td>
-                </tr>
-
-
-                <tr class="border-bottom banner-superior">
-                  <th scope="row">1</th>
-                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                  <td>一指輕鬆備份 專為品味而生</td>
-                  <td>1</td>
-                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
-                  <td>已上架</td>
-                  <td>
-                    <div class="operate">
-                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
-                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
-
-                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
-
-                    </div>
-                  </td>
-                </tr>
-                <tr class="border-bottom banner-down">
-                  <th scope="row">2</th>
-                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                  <td>一指輕鬆備份 專為品味而生</td>
-                  <td>1</td>
-                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
-                  <td>已下架</td>
-                  <td>
-                    <div class="operate">
-                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
-                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
-
-                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
-
-                    </div>
-                  </td>
-                </tr>
-                <tr class="border-bottom banner-prepare">
-                  <th scope="row">3</th>
-                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
-                  <td>一指輕鬆備份 專為品味而生</td>
-                  <td>1</td>
-                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
-                  <td>未上架</td>
-                  <td>
-                    <div class="operate">
-                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
-                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
-
-                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                        <a href="" class="border button-down">下架</a>
+                        <button href="" class="border button-delete" type="button">刪除</button>
 
                     </div>
                   </td>
@@ -216,9 +104,26 @@
               </tbody>
             </table>
           </div>
-
-
         </form>
+
+        <div class="prompt-box-down">
+            <div class="prompt">
+                <p class="size14">確定要下架嗎?</p>
+                <div>
+                    <input class="border confirm confirm-down" type="button" value="確認">
+                    <input class="border cancel cancel-down" type="button" value="取消">
+                </div>
+            </div>
+        </div>
+        <div class="prompt-box-delete">
+            <div class="prompt">
+                <p class="size14">確定要刪除嗎?</p>
+                <div>
+                    <input class="border confirm confirm-delete" type="button" value="確認">
+                    <input class="border cancel cancel-delete" type="button" value="取消">
+                </div>
+            </div>
+        </div>
       </div>
       <!-- 以上分割 -->
 @endsection

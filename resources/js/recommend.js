@@ -8,7 +8,7 @@ del.forEach(element => {
     element.addEventListener("click", delcheck)
 })
 
-let cnacel = document.querySelector(".cancel")
+let cancel = document.querySelector(".cancel")
 cancel.addEventListener("click", msgClose)
 
 let confirm = document.querySelector(".confirm")
