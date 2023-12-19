@@ -15,7 +15,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="./css/swiper.css"> -->
-    @vite(['resources/css/app.scss'])
+    @vite(['resources/css/front/app.scss'])
     {{-- <link rel="stylesheet" href="{{asset('css/mycss.css')}}"> --}}
     <!-- Demo styles -->
     @yield('css')
@@ -24,7 +24,7 @@
 <body>
     <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
-            <img src="./img/Logo.png" alt="">
+            <img src="{{ asset('front-img/Logo.png') }}" alt="">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -151,13 +151,13 @@
                         .banner-img {
                             width: 100%;
                             height: 100%;
-                            background-image: url("{{ asset('img/主視覺.png') }}");
+                            background-image: url("{{ asset('storage/img/banner/主視覺.png') }}");
                             background-position: center;
                             background-size: cover;
                             background-repeat: no-repeat;
 
                             @media (max-width:767px) {
-                                background-image: url("{{ asset('img/主視覺手機版.png') }}");
+                                background-image: url("{{ asset('storage/img/banner/主視覺手機版.png') }}");
                             }
                         }
                     </style>
@@ -174,13 +174,13 @@
                         .banner-img {
                             width: 100%;
                             height: 100%;
-                            background-image: url("{{ asset('img/主視覺.png') }}");
+                            background-image: url("{{ asset('storage/img/banner/主視覺.png') }}");
                             background-position: center;
                             background-size: cover;
                             background-repeat: no-repeat;
 
                             @media (max-width:767px) {
-                                background-image: url("{{ asset('img/主視覺手機版.png') }}");
+                                background-image: url("{{ asset('storage/img/banner/主視覺手機版.png') }}");
                             }
                         }
                     </style>
@@ -194,10 +194,10 @@
                 </div>
             </div>
             <div class="swiper-button-next">
-                <img src="{{ asset('img/arrow-left.png') }}" alt="">
+                <img src="{{ asset('front-img/arrow-left.png') }}" alt="">
             </div>
             <div class="swiper-button-prev">
-                <img src="{{ asset('img/arrow-right.png') }}" alt="">
+                <img src="{{ asset('front-img/arrow-right.png') }}" alt="">
             </div>
 
         </div>
@@ -209,19 +209,19 @@
                 <div class="grop1">
                     <div class="icon">
                         <a href="#">
-                            <img style="display: block;" src="{{ asset('img/icon/icon.svg') }}" alt="">
+                            <img style="display: block;" src="{{ asset('front-img/icon/icon.svg') }}" alt="">
                             <div>Game pass</div>
                         </a>
                     </div>
                     <div class="icon">
                         <a href="#">
-                            <img src="{{ asset('img/icon/icon1.svg') }}" alt="">
+                            <img src="{{ asset('front-img/icon/icon1.svg') }}" alt="">
                             <div>遊戲</div>
                         </a>
                     </div>
                     <div class="icon">
                         <a href="#">
-                            <img src="{{ asset('img/icon/icon2.svg') }}" alt="">
+                            <img src="{{ asset('front-img/icon/icon2.svg') }}" alt="">
                             <div>主機</div>
                         </a>
                     </div>
@@ -231,19 +231,19 @@
                 <div class="grop2">
                     <div class="icon">
                         <a href="#">
-                            <img src="{{ asset('img/icon/icon3.svg') }}" alt="">
+                            <img src="{{ asset('front-img/icon/icon3.svg') }}" alt="">
                             <div>配件</div>
                         </a>
                     </div>
                     <div class="icon">
                         <a href="#">
-                            <img src="{{ asset('img/icon/icon4.svg') }}" alt="">
+                            <img src="{{ asset('front-img/icon/icon4.svg') }}" alt="">
                             <div>特惠商品</div>
                         </a>
                     </div>
                     <div class="icon">
                         <a href="#">
-                            <img src="{{ asset('img/icon/icon5.svg') }}" alt="">
+                            <img src="{{ asset('front-img/icon/icon5.svg') }}" alt="">
                             <div>登入</div>
                         </a>
                     </div>
@@ -264,23 +264,31 @@
                 <div class="swiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href=""><img src="{{ asset('img/Frame 4412.png') }}" alt=""></a>
+                            <a href="" class="recommend-logo">
+                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href=""><img src="{{ asset('img/Frame 4413.png') }}" alt=""></a>
+                            <a href="" class="recommend-logo">
+                                <img src="{{ asset('storage/img/recommend/YJzdUF5UCrQFkvXMSKaRQnE91B7lyMfYyJVtVhdd.png') }}" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href=""><img src="{{ asset('img/Frame 4414.png') }}" alt=""></a>
+                            <a href="" class="recommend-logo">
+                                <img src="{{ asset('storage/img/recommend/qhud1FA0S42lJdd9sYjaHEGGIyVy5Pr0TLyf23Gy.png') }}" alt="">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href=""><img src="{{ asset('img/Frame 4412.png') }}" alt=""></a>
+                            <a href="" class="recommend-logo">
+                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-button-next">
-                        <img src="{{ asset('img/arrow-left2.png') }}" alt="">
+                        <img src="{{ asset('front-img/arrow-left2.png') }}" alt="">
                     </div>
                     <div class="swiper-button-prev">
-                        <img src="{{ asset('img/arrow-right2.png') }}" alt="">
+                        <img src="{{ asset('front-img/arrow-right2.png') }}" alt="">
                     </div>
                 </div>
             </div>
