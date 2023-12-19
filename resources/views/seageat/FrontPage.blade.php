@@ -33,15 +33,20 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    {{-- {{dd($menus)}} --}}
+                    @foreach ($menus as $index=> $item )
                     <tr class="border-bottom">
-                        <th scope="row">1</th>
-                        <td>限時主打活動</td>
+                        <th scope="row">{{$index+1}}</th>
+                        <td>{{$item->menu_name}}</td>
                         <td>
-                            https://www.pchomeec.tw/sites/seagate?utm_source=google&utm_medium=cpc&utm_campaign=fq2_cacafly_sem
+                            {{$item->menu_link}}
                         </td>
-                        <td><a href={{route("EditMenu")}} class="border border-0 button-revise" >修改</a></td>
+                        <td><a href={{route("EditMenu",['id'=>$item->id])}} class="border border-0 button-revise" >修改</a></td>
                     </tr>
-                    <tr class="border-bottom">
+                    @endforeach
+
+                    {{-- <tr class="border-bottom">
                         <th scope="row">2</th>
                         <td>限時主打活動</td>
                         <td>
@@ -56,7 +61,7 @@
                             https://www.pchomeec.tw/sites/seagate?utm_source=google&utm_medium=cpc&utm_campaign=fq2_cacafly_sem
                         </td>
                         <td><input type="button" class="border border-0 button-revise" value="修改"></td>
-                    </tr>
+                    </tr> --}}
                 </tbody>
             </table>
         </div>

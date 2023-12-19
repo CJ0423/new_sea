@@ -9,7 +9,8 @@
 @vite(['resources/css/editmenu.scss'])
 @endsection
 
-
+{{-- {{dd($child)}} --}}
+{{-- {{dd($menu)}} --}}
 
 @section('cut')
 <div class="size16">修改選單</div>
@@ -20,7 +21,10 @@
     <div class="frame-3">
         <div class="frame-4">
 
-            <form action="" method="post">
+
+            <form action={{ route('updateMenu', ['id'=>$menu[0]->id]) }} method="post">
+                @csrf
+                @method('put')
                 <div class="input">
                     <div class="base-wrapper">
                         <div class="base">
@@ -31,7 +35,7 @@
                                 </div>
                             </div>
                             <div class="input-field">
-                                <input  type="text" class="border">
+                                <input  name="menu_name" type="text" class="border" value="{{$menu[0]->menu_name}}">
                             </div>
                         </div>
                     </div>
@@ -46,119 +50,49 @@
                                 </div>
                             </div>
                             <div class="input-field">
-                                <input type="text" class="border">
+                                <input name="menu_link" type="text" class="border" value="{{$menu[0]->menu_link}}">
                             </div>
                         </div>
                     </div>
                 </div>
-
+                @for ($i=0;$i<4;$i++)
                 <hr>
+                <div class="input">
+                  <div class="base-wrapper">
+                    <div class="base">
+                      <div class="frame-5">
+                        <div class="label">子選單名稱</div>
+                      </div>
+                      <div class="input-field">
+                        @if ($i<count($child))
+                        <input name="child_menu_id{{$i}}" type="hidden" class="border" value="{{$child[$i]->id}}">
+                        <input name="child_menu{{$i}}" type="text" class="border" value="{{$child[$i]->menu_name}}">
+                        @else
+                        <input name="child_menu_id{{$i}}" type="hidden" class="border" value="insert">
+                        <input name="child_menu_new{{$i}}" type="text" class="border">
+                        @endif
 
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單名稱</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
                 <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單連結</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
+                  <div class="base-wrapper">
+                    <div class="base">
+                      <div class="frame-5">
+                        <div class="label">子選單連結</div>
+                      </div>
+                      <div class="input-field">
+                        @if ($i<count($child))
+                        <input name="menu_link{{$i}}" type="text" class="border"  value="{{$child[$i]->menu_link}}">
+                        @else
+                        <input name="menu_link_new{{$i}}" type="text" class="border">
+                        @endif
+                      </div>
                     </div>
+                  </div>
                 </div>
-
-                <hr>
-
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單名稱</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單連結</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單名稱</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單連結</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單名稱</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="input">
-                    <div class="base-wrapper">
-                        <div class="base">
-                            <div class="frame-5">
-                                <div class="label">子選單連結</div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" class="border">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endfor
 
                 <div class="frame-7">
                     <button class="border-0 button-2">

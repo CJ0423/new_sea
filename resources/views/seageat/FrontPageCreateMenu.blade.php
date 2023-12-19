@@ -21,7 +21,8 @@
     <div class="frame-3">
       <div class="frame-4">
 
-        <form action="" method="post">
+        <form action={{route(("Storemenu"))}} method="post">
+            @csrf
           <div class="input">
             <div class="base-wrapper">
               <div class="base">
@@ -79,10 +80,6 @@
             </div>
           </div>
           @endfor
-
-
-
-
           <div class="frame-7">
             <button class="border-0 button-2"><div class="text-4">儲存</div></button>
             <button class="border button-3"><div class="text-5">捨棄</div></button>

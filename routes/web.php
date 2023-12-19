@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\PatternController;
 use App\Http\Controllers\Recommend;
+use App\Http\Controllers\Front_page_menu;
+
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -40,7 +42,14 @@ Route::middleware('auth')->group(function () {
 
     Route::get('seagate/front_page/createmenu', [ProfileController::class, 'FrontPageCreateMenu'])->name('CreateMenu');
 
-    Route::get('seagate/front_page/editmenu', [ProfileController::class, 'FrontPageEditMenu'])->name('EditMenu');
+    Route::get('seagate/front_page/editmenu/{id}', [ProfileController::class, 'FrontPageEditMenu'])->name('EditMenu');
+
+    Route::post('seagate/front_page/Storemenu', [Front_page_menu::class, 'store'])->name("Storemenu"); //訪問新建立的controller
+
+    Route::put('seagate/front_page/Updatemenu/{id}',  [Front_page_menu::class, 'update'])->name("updateMenu"); //訪問更新用的controller
+
+
+
     // banner管理
     Route::get('seagate/banner', [ProfileController::class, 'Banner'])->name('Banner');
     Route::get('seagate/banner_estabilsh', [ProfileController::class, 'Banner_estabilsh'])->name('BannerEstabilsh');

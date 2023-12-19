@@ -63,15 +63,23 @@ class ProfileController extends Controller
     // 首頁管理
     public function front_page()
     {
-        return view('seageat.FrontPage');
+        $menus = DB::table('menu')->get();
+        // ->leftJoin('childmenu', 'menu.id', '=', 'childmenu.menu_id') // 使用 leftJoin 而不是 join
+        // ->select('menu.id as menuId', 'menu.menu_name', 'menu.menu_link', 'childmenu.id as childMenuId', 'childmenu.menu_name as childMenuName', 'childmenu.menu_link as childMenuLink')
+
+
+
+        return view('seageat.FrontPage', compact('menus'));
     }
     public function FrontPageCreateMenu()
     {
         return view('seageat.FrontPageCreateMenu');
     }
-    public function FrontPageEditMenu()
+    public function FrontPageEditMenu($id)
     {
-        return view('seageat.FrontPageEditMenu');
+        $child = DB::table('childmenu')->where('menu_id', $id)->get();
+        $menu = DB::table('menu')->where('id', $id)->get();
+        return view('seageat.FrontPageEditMenu', compact('child', 'menu'));
     }
     // Banner管理
     public function Banner()
