@@ -35,7 +35,7 @@
                     </div>
                     <div class="input-field">
                         <label for="computer" class="border computer-label">選擇檔案</label>
-                        <input required required type="file" name="computer" id="computer" class="computer-input" accept="image/png, image/jpeg, image/gif">>
+                        <input required required type="file" name="computer" id="computer" class="computer-input" accept="image/png, image/jpeg, image/gif">
                     </div>
                   </div>
                 </div>
