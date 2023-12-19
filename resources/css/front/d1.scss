@@ -1,0 +1,79 @@
+/* D-1 */
+// .container-pc-d1 {
+//     height: 160vw;
+//     max-height: 2019px;
+// }
+
+// @media (max-width: 767px) {
+//     .container-pc-b1 {
+//         height: 160vh;
+//     }
+// }
+
+.container-pc .d1 {
+    width: 50%;
+    height: 61vw;
+    float: left;
+}
+
+.container-pc .d2 {
+    width: 50%;
+    height: 30vw;
+    float: right;
+}
+
+.container-pc .d3 {
+    width: 50%;
+    height: 61vw;
+    float: right;
+}
+
+.container-pc .d4 {
+    width: 50%;
+    height: 30vw;
+    float: left;
+}
+
+.container-pc .d5 {
+    width: 50%;
+    height: 30vw;
+    float: left;
+}
+
+.container-pc .d6 {
+    width: 50%;
+    height: 30vw;
+    float: right;
+}
+
+.container-pc .d7 {
+    width: 100%;
+    height: 30vw;
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .container-pc .d1,
+    .container-pc .d2,
+    .container-pc .d3,
+    .container-pc .d4,
+    .container-pc .d5,
+    .container-pc .d6,
+    .container-pc .d7 {
+        width: 100%;
+    }
+}
+
+.container-pc .d1,
+.container-pc .d2,
+.container-pc .d3,
+.container-pc .d4,
+.container-pc .d5,
+.container-pc .d6,
+.container-pc .d7 {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 1000ms ease;
+}

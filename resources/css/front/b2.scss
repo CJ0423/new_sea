@@ -1,0 +1,63 @@
+/* B-2 */
+// .container-pc-b2 {
+//     height: 150vw;
+//     max-height: 1893px;
+// }
+
+// @media (max-width: 767px) {
+//     .container-pc-b2 {
+//         height: 150vh;
+//     }
+// }
+
+.container-pc .b1 {
+    width: 50%;
+    height: 46vw;
+    float: left;
+}
+
+.container-pc .b2 {
+    width: 50%;
+    height: 61vw;
+    float: right;
+}
+
+.container-pc .b3 {
+    width: 50%;
+    height: 30vw;
+    float: left;
+}
+
+.container-pc .b4 {
+    width: 50%;
+    height: 61vw;
+    float: right;
+}
+
+.container-pc .b5 {
+    width: 50%;
+    height: 46vw;
+    float: left;
+}
+
+@media (max-width: 767px) {
+    .container-pc .b1,
+    .container-pc .b2,
+    .container-pc .b3,
+    .container-pc .b4,
+    .container-pc .b5 {
+        width: 100%;
+    }
+}
+
+.container-pc .b1,
+.container-pc .b2,
+.container-pc .b3,
+.container-pc .b4,
+.container-pc .b5 {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 1000ms ease;
+}

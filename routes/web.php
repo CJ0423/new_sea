@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 */
 //前端區域
 Route::get('/', function () {
-    return view('index');
+    return view('front.index');
 });
 
 Route::get('/a1', function () {
