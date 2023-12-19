@@ -35,7 +35,13 @@
               </a>
           </div>
         </div>
-        <form action="" method="post">
+
+
+
+
+        <form id="delete-form" method="post">
+            @method('DELETE')
+            @csrf
           <div class="frame-3">
             <table class="table">
               <thead>
@@ -55,7 +61,9 @@
                     <td>
                       <div class="operate">
                           <a href=" {{ route('RecommendRevise',['id'=>$item->id])}}" class="border border-0 button-edit">編輯</a>
-                          <input type="button" class="border button-delete" value="刪除">
+                          <input data-key="{{route('destoryRecommend',['id'=>$item->id])}}" type="button" class="border button-delete" value="刪除">
+
+
                           {{-- 現在已經到了 可以更新的地方了 但是還沒有把資料傳過去 --}}
                       </div>
                   </td>
@@ -66,11 +74,11 @@
             </table>
           </div>
         </form>
-        <div  class="prompt-box-down">
+        <div class="prompt-box-down">
             <div class="prompt">
               <p class="size14">確定要捨棄嗎?</p>
               <div>
-                <a class="border confirm" type="button"> 確認</a>
+                <input class="border confirm" type="button" value="確認">
                 <input  class="border cancel" type="button" value="取消">
               </div>
             </div>

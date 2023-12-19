@@ -95,6 +95,8 @@ Route::middleware('auth')->group(function () {
 
     Route::put('seagate/recommend/recommendUpdate/{id}', [Recommend::class, 'update'])->name("updateRecommend"); //訪問更新用的controller
 
+    Route::delete('seagate/recommend/recommendDestory/{id}', [Recommend::class, 'destory'])->name("destoryRecommend"); //訪問更新用的controller
+
     Route::get('seagate/recommend/recommendRevise/{id}', [ProfileController::class, 'RecommendRevise'])->name('RecommendRevise');
 });
 

@@ -15,7 +15,6 @@
       <!-- 以下分割 -->
       <div class="size16">Banner列表</div>
       <div class="border border-0 card">
-
         <!-- 提示訊息 -->
         <div class="prompt-box-down">
           <div class="prompt">

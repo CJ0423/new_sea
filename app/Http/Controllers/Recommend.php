@@ -14,10 +14,6 @@ class Recommend extends Controller
         $validatedData = $request->validate([
             // 验证规则
         ]);
-
-
-
-
         // 处理 'computer' 文件上传
         if ($request->hasFile('logo_url')) {
             $logo_urlFile = $request->file('logo_url');
@@ -88,6 +84,15 @@ class Recommend extends Controller
                 'updated_at' => Carbon::now()
             ]);
         }
+        return redirect(route('Recommend'));
+    }
+
+    public function destory($id)
+    {
+        // 找到并删除资源
+        DB::table('recommend')->where('id', $id)->delete();
+
+        // 重定向到列表页面或返回响应
         return redirect(route('Recommend'));
     }
 }
