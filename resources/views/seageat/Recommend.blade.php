@@ -1,5 +1,6 @@
 @extends('layouts.seagate-templete')
 
+{{-- {{dd($recommendData)}} --}}
 
 @section('title')
 後端管理-推薦通路管理
@@ -28,6 +29,8 @@
           <div class="size12">推薦通路列表</div>
           <div>
               <a href={{route('RecommendEstablish')}}  class="button-establish">
+
+
                 <img class="icon-outline-plus" src={{asset("img/icon-outline-plus-22.svg")}} />
                 <div class="text-2"> 建立通路</div>
               </a>
@@ -45,17 +48,21 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($recommendData as $index=>$item )
                 <tr class="border-bottom">
-                  <th scope="row">1</th>
-                  <td><img src={{asset("./img/recommend01.png")}} alt=""></td>
-                  <td>https://www.pchomeec.tw/sites/seagate?utm_source=google&utm_medium=cpc&utm_campaign=fq2_cacafly_sem</td>
-                  <td>
-                    <div class="operate">
-                        <a href=" {{ route('RecommendRevise') }}" class="border border-0 button-edit">編輯</a>
-                        <input type="button" class="border button-delete" value="刪除">
-                    </div>
-                </td>
-                </tr>
+                    <th scope="row">{{$index}}</th>
+                    <td><img src='{{asset('storage/'.$item->logo_url)}}'alt=""></td>
+                    <td>{{$item->logo_link}}</td>
+                    <td>
+                      <div class="operate">
+                          <a href=" {{ route('RecommendRevise',['id'=>$item->id])}}" class="border border-0 button-edit">編輯</a>
+                          <input type="button" class="border button-delete" value="刪除">
+                          {{-- 現在已經到了 可以更新的地方了 但是還沒有把資料傳過去 --}}
+                      </div>
+                  </td>
+                  </tr>
+                @endforeach
+
               </tbody>
             </table>
           </div>

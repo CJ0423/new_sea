@@ -240,7 +240,9 @@ class ProfileController extends Controller
     // 通路管理
     public function Recommend()
     {
-        return view('seageat.Recommend');
+        $recommendData = DB::table('recommend')->get();
+
+        return view('seageat.Recommend', compact('recommendData'));
     }
     public function RecommendEstablish()
     {

@@ -1,6 +1,5 @@
 @extends('layouts.seagate-templete')
 
-
 @section('title')
 後端管理-建立通路
 @endsection
@@ -14,7 +13,7 @@
 @section('cut')
       <!-- 以下分割 -->
    <!-- 以下分割 -->
-   <div class="size16">建立通路</div>
+   <div class="size16">建立通路1</div>
    <div class="border border-0 card">
      <div class="frame-2">
        <div class="size12">推薦通路資訊</div>
@@ -22,7 +21,8 @@
      <div class="frame-3">
        <div class="frame-4">
 
-         <form action="" method="post">
+         <form action={{route("newRecommend")}} method="post" enctype="multipart/form-data">
+            @csrf
            <div class="input">
              <div class="base-wrapper">
                <div class="base">
@@ -34,7 +34,7 @@
                  </div>
                  <div class="input-field">
                      <label for="logo" class="border logo-label">選擇檔案</label>
-                     <input type="file" name="logo" id="logo" class="logo-input">
+                     <input type="file" name="logo_url" id="logo" class="logo-input" accept="image/png, image/jpeg, image/gif">
                  </div>
                </div>
              </div>
@@ -49,7 +49,7 @@
                    </div>
                  </div>
                  <div class="input-field">
-                   <input type="text" class="border">
+                   <input name="logo_name" type="text" class="border">
                  </div>
                </div>
              </div>
@@ -64,7 +64,7 @@
                    </div>
                  </div>
                  <div class="input-field">
-                   <input type="text" class="border">
+                   <input name="logo_link" type="text" class="border">
                  </div>
                </div>
              </div>

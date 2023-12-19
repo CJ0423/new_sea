@@ -25,8 +25,13 @@
               <div class="input">
                 <div class="base-wrapper">
                   <div class="base">
+                    {{-- 這是額外捕的 --}}
+                    <img style="max-height: 100px;
+                    position:absolute;
+                    right:10px;" src={{asset("./img/banner01.png")}} alt="">
                     <div class="frame-5">
                       <div class="label">Logo上傳</div>
+
                       <div class="frame-6">
                         <div class="text-wrapper-5">必填</div>
                       </div>

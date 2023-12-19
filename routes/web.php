@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\PatternController;
+use App\Http\Controllers\Recommend;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -90,7 +91,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('seagate/recommend/recommendEstablish', [ProfileController::class, 'RecommendEstablish'])->name('RecommendEstablish');
 
-    Route::get('seagate/recommend/recommendRevise', [ProfileController::class, 'RecommendRevise'])->name('RecommendRevise');
+    Route::post('seagate/recommend/recommendStore', [Recommend::class, 'store'])->name("newRecommend"); //訪問新建立的controller
+
+    Route::get('seagate/recommend/recommendRevise/{id}', [ProfileController::class, 'RecommendRevise'])->name('RecommendRevise');
 });
 
 
