@@ -95,6 +95,7 @@
                 <tbody>
                     @foreach ( $icons as $index=>$item )
                     <tr class="border-bottom">
+                        <input type="hidden" name="id">
                         <th class="height-100" scope="row">1</th>
                         <td class="height-100"><textarea class="name">{{$item->icon_name}}</textarea></td>
                         <td  class="height-100"><textarea style="height: 75px" name="" id=""
@@ -109,7 +110,7 @@
                         <td class="height-100">
                             <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">
                         </td>
-                        <td class="height-100"><input data-key="{{}}" type="button" class="border button-store"  value="儲存"></td>
+                        <td class="height-100"><input data-key="{{route('icon.update', $item->id) }}" type="button" class="border button-store"  value="儲存"></td>
                     </tr>
                     @endforeach
 
