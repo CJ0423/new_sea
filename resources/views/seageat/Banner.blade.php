@@ -8,9 +8,6 @@
 @section('css')
 @vite(['resources/css/banner.scss'])
 @endsection
-
-
-
 @section('cut')
       <!-- 以下分割 -->
       <div class="size16">Banner列表</div>
