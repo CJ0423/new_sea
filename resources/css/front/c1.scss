@@ -1,0 +1,71 @@
+/* C-1 */
+// .container-pc-c1 {
+//     height: 130vw;
+//     max-height: 1641px;
+// }
+
+// @media (max-width: 767px) {
+//     .container-pc-b1 {
+//         height: 130vh;
+//     }
+// }
+
+.container-pc .c1 {
+    width: 50%;
+    height: 61vw;
+    float: left;
+}
+
+.container-pc .c2 {
+    width: 50%;
+    height: 30.5vw;
+    float: right;
+}
+
+.container-pc .c3 {
+    width: 50%;
+    height: 61vw;
+    float: right;
+}
+
+.container-pc .c4 {
+    width: 50%;
+    height: 30.5vw;
+    float: left;
+}
+
+.container-pc .c5 {
+    width: 50%;
+    height: 30.5vw;
+    float: left;
+}
+
+.container-pc .c6 {
+    width: 50%;
+    height: 30.5vw;
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .container-pc .c1,
+    .container-pc .c2,
+    .container-pc .c3,
+    .container-pc .c4,
+    .container-pc .c5,
+    .container-pc .c6 {
+        width: 100%;
+    }
+}
+
+.container-pc .c1,
+.container-pc .c2,
+.container-pc .c3,
+.container-pc .c4,
+.container-pc .c5,
+.container-pc .c6 {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 1000ms ease;
+}

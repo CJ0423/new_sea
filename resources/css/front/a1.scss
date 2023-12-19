@@ -1,0 +1,42 @@
+.a1 {
+    width: 50%;
+    height: 56vw;
+    float: left;
+    // 100:112
+}
+.a2 {
+    width: 50%;
+    height: 27vw;
+
+    float: right;
+    // 100:54
+}
+.a3 {
+    width: 50%;
+    height: 56vw;
+
+    float: right;
+    // 100:112
+}
+.a4 {
+    width: 50%;
+    height: 27vw;
+
+    float: left;
+    // 100:54
+}
+
+.a1,
+.a2,
+.a3,
+.a4 {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 1500ms ease;
+
+    // &:hover .main-img {
+    //   background-size: 110% 110%;
+    // }
+}
