@@ -77,9 +77,10 @@
     <div class="frame-2">
         <div class="size12">ICON設定</div>
     </div>
-    <form action="" method="post">
+    <form id="my-form" action="" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
+        <input class="idicon" type="hidden" name="id" >
         <div class="frame-3">
             <table class="table">
                 <thead>
@@ -95,86 +96,39 @@
                 <tbody>
                     @foreach ( $icons as $index=>$item )
                     <tr class="border-bottom">
-                        <input type="hidden" name="id">
+                        {{-- <input type="hidden" name="id"> --}}
                         <th class="height-100" scope="row">1</th>
-                        <td class="height-100"><textarea class="name">{{$item->icon_name}}</textarea></td>
-                        <td  class="height-100"><textarea style="height: 75px" name="" id=""
+                        <td class="height-100">
+                            <textarea name="icon_name{{$item->id}}" class="name">{{$item->icon_name}}</textarea></td>
+                        <td  class="height-100">
+
+                            <textarea style="height: 75px" name="icon_url{{$item->id}}" id=""
                                 class="link">{{$item->icon_url}}</textarea>
                         </td>
                         <td class="upload-td height-100">
                             <label style="position: relative;
                             top: 20px;" for="upload01" class="border upload-label">選擇檔案</label>
+
                             <input style="position: relative;
-                            top: 0px;" sty type="file" name="upload" id="upload01" class="upload-input isup" accept="image/png, image/jpeg, image/gif">
+                            top: 0px;" sty type="file" name="upload{{$item->id}}" id="upload01" class="upload-input isup" accept="image/png, image/jpeg, image/gif">
                         </td>
                         <td class="height-100">
                             <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">
                         </td>
-                        <td class="height-100"><input data-key="{{route('icon.update', $item->id) }}" type="button" class="border button-store"  value="儲存"></td>
+
+                        <td class="height-100">
+
+                            <button  data-key="{{route('icon.update', $item->id) }}" type="button" disabled  class="border button-store"  >儲存
+                        </button>
+                        </td>
+
                     </tr>
                     @endforeach
-
-                    {{-- <tr class="border-bottom">
-                        <th scope="row">2</th>
-                        <td>IronWolf Pro NT launch</td>
-                        <td><textarea name="" id=""
-                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
-                        <td class="upload-td">
-                            <label for="upload02" class="border upload-label">選擇檔案</label>
-                            <input type="file" name="upload" id="upload02" class="upload-input">
-                        </td>
-                        <td><input type="button" class="border button-store" value="儲存"></td>
-                    </tr>
-                    <tr class="border-bottom">
-                        <th scope="row">3</th>
-                        <td>IronWolf Pro NT launch</td>
-                        <td><textarea name="" id=""
-                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
-                        <td class="upload-td">
-                            <label for="upload02" class="border upload-label">選擇檔案</label>
-                            <input type="file" name="upload" id="upload02" class="upload-input">
-                        </td>
-                        <td><input type="button" class="border button-store" value="儲存"></td>
-                    </tr>
-                    <tr class="border-bottom">
-                        <th scope="row">4</th>
-                        <td>IronWolf Pro NT launch</td>
-                        <td><textarea name="" id=""
-                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
-                        <td class="upload-td">
-                            <label for="upload02" class="border upload-label">選擇檔案</label>
-                            <input type="file" name="upload" id="upload02" class="upload-input">
-                        </td>
-                        <td><input type="button" class="border button-store" value="儲存"></td>
-                    </tr>
-                    <tr class="border-bottom">
-                        <th scope="row">5</th>
-                        <td>IronWolf Pro NT launch</td>
-                        <td><textarea name="" id=""
-                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
-                        <td class="upload-td">
-                            <label for="upload02" class="border upload-label">選擇檔案</label>
-                            <input type="file" name="upload" id="upload02" class="upload-input">
-                        </td>
-                        <td><input type="button" class="border button-store" value="儲存"></td>
-                    </tr>
-                    <tr class="border-bottom">
-                        <th scope="row">6</th>
-                        <td>IronWolf Pro NT launch</td>
-                        <td><textarea name="" id=""
-                                class="link">https://www.seagate-disty.com/tw/zh/firecuda/</textarea></td>
-                        <td class="upload-td">
-                            <label for="upload02" class="border upload-label">選擇檔案</label>
-                            <input type="file" name="upload" id="upload02" class="upload-input">
-                        </td>
-                        <td><input type="button" class="border button-store" value="儲存"></td>
-                    </tr> --}}
-                    {{-- 這個要六個 --}}
                 </tbody>
             </table>
         </div>
     </form>
-    <form icon action=""></form>
+
 </div>
 @endsection
 @section('js')

@@ -7,17 +7,33 @@ let cisup = Array.from(document.querySelectorAll(".isup"))
 
 for (let i = 0; i < store.length; i++) {
     cname[i].addEventListener("input", function () {
+        cname[i].style
         store[i].style.color = "red"
+        store[i].disabled = false
+
+
     })
     clink[i].addEventListener("input", function () {
         store[i].style.color = "red"
+        store[i].disabled = false
+
     })
     cisup[i].addEventListener("input", function () {
         store[i].style.color = "red"
+        store[i].disabled = false
+
     })
+    store[i].addEventListener("click", send)
 }
+console.log(store[0])
 
-
+function send () {
+    let myForm = document.getElementById('my-form')
+    console.log(this.dataset.key)
+    myForm.action = this.dataset.key
+    console.log(myForm.action)
+    myForm.submit()
+}
 
 // console.log(prompt)
 // del.forEach(element => {

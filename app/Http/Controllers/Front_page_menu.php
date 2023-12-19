@@ -86,34 +86,43 @@ class Front_page_menu extends Controller
 
     public function iconupdate(Request $request, $id)
     {
-
-        if ($request->hasFile('upload')) {
-            $iconFile = $request->file('upload');
+        if ($request->hasFile('upload' . $id)) {
+            $iconFile = $request->file('upload' . $id);
             // 存储文件并获取存储路径，文件将保存在 'storage/app/public/files'
             $iconFilePath = $iconFile->store('public/img/icons');
             // 处理路径，以便在 Web 上使用
             $validatedData['upload'] = substr($iconFilePath, 7); // 去除 'public/' 部分
+            $requestArray = $request->all();
+            // dd($requestArray);
+            $requestArrayLength = count($requestArray) - 2; //重複次數剛好減少4就
+            $chosePatternId = DB::table('icon')->where('id', $id)->update([
+                //開始
+
+                'icon_name' => $request->input('icon_name' . $id),
+                //結尾
+                'icon_url' => $request->input('icon_url' . $id),
+                'icon_img' => $validatedData['upload'],
+                // 時間的部分...
+                // 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]);
+        } else {
+            $requestArray = $request->all();
+            // dd($requestArray);
+            $requestArrayLength = count($requestArray) - 2; //重複次數剛好減少4就
+            $chosePatternId = DB::table('icon')->where('id', $id)->update([
+                //開始
+
+                'icon_name' => $request->input('icon_name' . $id),
+                //結尾
+                'icon_url' => $request->input('icon_url' . $id),
+                // 時間的部分...
+                // 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
+            ]);
         }
 
 
-        $requestArray = $request->all();
-        // dd($requestArray);
-        $requestArrayLength = count($requestArray) - 2; //重複次數剛好減少4就是要存儲的資料數
-        // dd($requestArray);
-
-
-        // dd($requestArray);
-        // dd($requestArrayLength);
-        $chosePatternId = DB::table('icon')->where('id', $id)->update([
-            //開始
-            'icon_name' => $request->input('icon_name'),
-            //結尾
-            'icon_url' => $request->input('icon_url'),
-            'icon_img' => $request->input('icon_img'),
-            // 時間的部分...
-            // 'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
 
 
         return redirect(route('Front_page'));
