@@ -7,8 +7,15 @@
 
 @section('css')
 @vite(['resources/css/frontpage.scss'])
+<style>
+    *{
+      /* vertical-align: 10% */
+    }
+    .height-100{
+        vertical-align:middle;
+    }
+</style>
 @endsection
-
 
 
 @section('cut')
@@ -73,6 +80,8 @@
         <div class="size12">ICON設定</div>
     </div>
     <form action="" method="post">
+        @csrf
+        @method('PUT')
         <div class="frame-3">
             <table class="table">
                 <thead>
@@ -81,23 +90,32 @@
                         <th scope="col">ICON名稱</th>
                         <th scope="col">主選單連結</th>
                         <th scope="col">主選單連結</th>
+                        <th scope="col">圖片預覽</th>
                         <th scope="col">操作</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ( $icons as $item )
                     <tr class="border-bottom">
-                        <th scope="row">1</th>
-                        <td>Internal HDD</td>
-                        <td><textarea name="" id=""
-                                class="link">https://www.pchomeec.tw/sites/seagate?utm_source=google&utm_medium=cpc&utm_campaign=fq2_cacafly_se</textarea>
+                        <th class="height-100" scope="row">1</th>
+                        <td class="height-100"><textarea class="name">{{$item->icon_name}}</textarea></td>
+                        <td  class="height-100"><textarea style="height: 75px" name="" id=""
+                                class="link">{{$item->icon_url}}</textarea>
                         </td>
-                        <td class="upload-td">
-                            <label for="upload01" class="border upload-label">選擇檔案</label>
-                            <input type="file" name="upload" id="upload01" class="upload-input">
+                        <td class="upload-td height-100">
+                            <label style="position: relative;
+                            top: 20px;" for="upload01" class="border upload-label">選擇檔案</label>
+                            <input style="position: relative;
+                            top: 0px;" sty type="file" name="upload" id="upload01" class="upload-input isup" accept="image/png, image/jpeg, image/gif">
                         </td>
-                        <td><input type="button" class="border button-store" value="儲存"></td>
+                        <td class="height-100">
+                            <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">
+                        </td>
+                        <td class="height-100"><input type="button" class="border button-store" value="儲存"></td>
                     </tr>
-                    <tr class="border-bottom">
+                    @endforeach
+
+                    {{-- <tr class="border-bottom">
                         <th scope="row">2</th>
                         <td>IronWolf Pro NT launch</td>
                         <td><textarea name="" id=""
@@ -151,7 +169,7 @@
                             <input type="file" name="upload" id="upload02" class="upload-input">
                         </td>
                         <td><input type="button" class="border button-store" value="儲存"></td>
-                    </tr>
+                    </tr> --}}
                     {{-- 這個要六個 --}}
                 </tbody>
             </table>
@@ -159,3 +177,8 @@
     </form>
 </div>
 @endsection
+@section('js')
+@vite(['resources/js/fontpageicon.js',])
+
+@endsection
+

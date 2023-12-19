@@ -67,9 +67,9 @@ class ProfileController extends Controller
         // ->leftJoin('childmenu', 'menu.id', '=', 'childmenu.menu_id') // 使用 leftJoin 而不是 join
         // ->select('menu.id as menuId', 'menu.menu_name', 'menu.menu_link', 'childmenu.id as childMenuId', 'childmenu.menu_name as childMenuName', 'childmenu.menu_link as childMenuLink')
 
+        $icons = DB::table('icon')->get();
 
-
-        return view('seageat.FrontPage', compact('menus'));
+        return view('seageat.FrontPage', compact('menus', 'icons'));
     }
     public function FrontPageCreateMenu()
     {

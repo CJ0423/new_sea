@@ -21,6 +21,48 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//前端區域
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/a1', function () {
+    return view('A1');
+});
+Route::get('/a2', function () {
+    return view('A2');
+});
+Route::get('/a3', function () {
+    return view('A3');
+});
+
+Route::get('/b1', function () {
+    return view('B1');
+});
+Route::get('/b2', function () {
+    return view('B2');
+});
+Route::get('/b3', function () {
+    return view('B3');
+});
+
+Route::get('/c1', function () {
+    return view('C1');
+});
+Route::get('/c2', function () {
+    return view('C2');
+});
+
+Route::get('/d1', function () {
+    return view('D1');
+});
+Route::get('/d2', function () {
+    return view('D2');
+});
+//前端區域
+
+
+
 
 Route::get('/login', function () {
     if (Auth::check()) {
