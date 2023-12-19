@@ -47,7 +47,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="border-bottom">
+                <tr class="border-bottom banner-superior">
                   <th scope="row">1</th>
                   <td><img src={{asset("./img/banner01.png")}} alt=""></td>
                   <td>一指輕鬆備份 專為品味而生</td>
@@ -63,7 +63,155 @@
                         <a href="" class="border button-down">下架</a>
 
                     </div>
-                </td>
+                  </td>
+                </tr>
+                <tr class="border-bottom banner-down">
+                  <th scope="row">2</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>已下架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-bottom banner-prepare">
+                  <th scope="row">3</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>未上架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr class="border-bottom banner-superior">
+                  <th scope="row">1</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>已上架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-bottom banner-down">
+                  <th scope="row">2</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>已下架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-bottom banner-prepare">
+                  <th scope="row">3</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>未上架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr class="border-bottom banner-superior">
+                  <th scope="row">1</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>已上架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-bottom banner-down">
+                  <th scope="row">2</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>已下架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-bottom banner-prepare">
+                  <th scope="row">3</th>
+                  <td><img src={{asset("./img/banner01.png")}} alt=""></td>
+                  <td>一指輕鬆備份 專為品味而生</td>
+                  <td>1</td>
+                  <td>2023/11/08 17:00/<br>2023/11/22 00:00</td>
+                  <td>未上架</td>
+                  <td>
+                    <div class="operate">
+                        {{-- <input type="button" class="border border-0 button-edit" value="編輯"> --}}
+                        <a href={{route('BannerRevise')}} class="border border-0 button-edit">編輯</a>
+
+                            {{--這個a標籤要先取消預設功能 接著在進行判斷 --}}
+                        <a href="" class="border button-down">下架</a>
+
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -73,4 +221,9 @@
         </form>
       </div>
       <!-- 以上分割 -->
+@endsection
+
+@section('js')
+@vite(['resources/js/banner.js'])
+
 @endsection
