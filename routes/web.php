@@ -27,7 +27,7 @@ Route::get('/', function () {
 });
 
 Route::get('/a1', function () {
-    return view('fornt.A1');
+    return view('front.A1');
 });
 Route::get('/a2', function () {
     return view('A2');
