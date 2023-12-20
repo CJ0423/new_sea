@@ -287,10 +287,10 @@
 
 
                     <div class="frame-7">
-                        <button class="border button-3">
+                        <button type="button" class="border button-3">
                             <div class="text-5">捨棄修改</div>
                         </button>
-                        <button class="border-0 button-2">
+                        <button type="submit" class="border-0 button-2">
                             <div class="text-4">儲存</div>
                         </button>
                     </div>

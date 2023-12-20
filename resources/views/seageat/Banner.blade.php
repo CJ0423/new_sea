@@ -32,7 +32,9 @@
                 <div class="text-2">建立選單</div>
             </a>
         </div>
-        <form action="" method="post">
+        <form class="my-form" action="" method="post">
+            @csrf
+            @method('PUT')
             <div class="frame-3">
                 <table class="table">
                     <thead>
@@ -92,11 +94,15 @@
                                         {{-- 這個a標籤要先取消預設功能 接著在進行判斷 --}}
 
                                         @if ($isOnSale)
-                                            <button class="border button-down" type="button">下架</button>
+                                            <button class="border button-down" type="button"
+                                                data-key={{ route('Updatebanner_down', [$item->id]) }}>下架</button>
                                         @elseif ($isScheduledToSale)
-                                            <button class="border button-down" type="button">下架</button>
+                                            <button data-key={{ route('Updatebanner_down', [$item->id]) }}
+                                                class="border button-down" type="button">下架</button>
                                         @else
-                                            <button class="border button-down" type="button">刪除</button>
+                                            <button class="border button-delete "
+                                                data-key={{ route('destorybanner', [$item->id]) }}
+                                                type="button">刪除</button>
                                         @endif
 
 
@@ -146,6 +152,11 @@
                 </table>
             </div>
         </form>
+        <form id="delete-form" action="" method="POST">
+            @csrf
+            @method('DELETE')
+
+        </form>
 
         <div class="prompt-box-down">
             <div class="prompt">
@@ -171,4 +182,5 @@
 
 @section('js')
     @vite(['resources/js/banner.js'])
+    <script></script>
 @endsection

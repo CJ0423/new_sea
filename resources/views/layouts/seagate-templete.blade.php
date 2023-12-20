@@ -10,10 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-{{-- 這是vite呼喚 --}}
-    @vite([ 'resources/css/styleguide.css'])
+    {{-- 這是vite呼喚 --}}
+    @vite(['resources/css/styleguide.css'])
     @vite(['resources/css/globals.css'])
-    @vite([ 'resources/css/style.scss',])
+    @vite(['resources/css/style.scss'])
     <!-- 這個是特別的 -->
     @yield('css')
 
@@ -25,7 +25,7 @@
         <div class="menu">
             <div class="div">
                 <ul class="ul-navigation">
-                    <a href={{route('Front_page')}} class="text-wrapper">
+                    <a href={{ route('Front_page') }} class="text-wrapper">
                         <li class="view viewhover item1">首頁管理</li>
                     </a>
 
@@ -34,18 +34,19 @@
                             href="#banner" role="button" aria-expanded="false" aria-controls="banner"
                             style="width: 100%;">
                             <div class="text-wrapper" style="position: relative; left: -10px;">Banner管理 <img
-                                    class="iconamoon-arrow-down-1" src={{ asset('img/iconamoon-arrow-down-2-thin.svg') }} /></div>
+                                    class="iconamoon-arrow-down-1"
+                                    src={{ asset('img/iconamoon-arrow-down-2-thin.svg') }} /></div>
 
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
                     <div class="collapse" id="banner">
-                        <a href={{route('Banner')}} class="link-light">
+                        <a href={{ route('Banner') }} class="link-light">
                             <div class="div-wrapper viewhover  item3">
                                 <div class="text-wrapper">Banner列表</div>
                             </div>
                         </a>
-                        <a href={{route('BannerEstabilsh')}} class="link-light">
+                        <a href={{ route('BannerEstabilsh') }} class="link-light">
                             <div class="div-wrapper viewhover  item4">
                                 <div class="text-wrapper">建立Banner</div>
                             </div>
@@ -57,7 +58,8 @@
                             href="#activity" role="button" aria-expanded="false" aria-controls="activity"
                             style="width: 100%;">
                             <div class="text-wrapper" style="position: relative; left: -10px;">活動管理 <img
-                                    class="iconamoon-arrow-down-2" src={{asset("img/iconamoon-arrow-down-2-thin.svg")}} /></div>
+                                    class="iconamoon-arrow-down-2"
+                                    src={{ asset('img/iconamoon-arrow-down-2-thin.svg') }} /></div>
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                     </li>
@@ -67,31 +69,32 @@
                                 <div class="text-wrapper">活動列表</div>
                             </div>
                         </a>
-                        <a href={{route('ActivityEstablish')}} class="link-light">
+                        <a href={{ route('ActivityEstablish') }} class="link-light">
                             <div class="div-wrapper viewhover item7">
                                 <div class="text-wrapper">建立活動</div>
                             </div>
                         </a>
                     </div>
 
-                    <a href={{route('Recommend')}} class="text-wrapper">
+                    <a href={{ route('Recommend') }} class="text-wrapper">
                         <li class="view viewhover  item8">推薦通路管理</li>
                     </a>
                 </ul>
             </div>
             <div class="logo">
-                <img class="img" src={{asset("img/logo.png")}} />
+                <img class="img" src={{ asset('img/logo.png') }} />
                 <div class="text-wrapper-2">後台管理</div>
             </div>
         </div>
 
         <header class="header">
             <button class="border border-0 bread-sticks">
-                <img class="menu-2" src={{asset("img/menu.svg")}} />
+                <img class="menu-2" src={{ asset('img/menu.svg') }} />
             </button>
             <button class="button sign-out">
                 <div>
-                    <a  class="text" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">登出</a>
+                    <a class="text" href="#"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">登出</a>
 
                     {{-- <a href="{{route('logout')}}" class="text">登出</a> --}}
                 </div>
@@ -109,7 +112,7 @@
     @yield('js')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-        </script>
+    </script>
     <script>
         var sticks = document.querySelector('.bread-sticks')
         var menu = document.querySelector('.menu')
@@ -117,7 +120,7 @@
         var frame = document.querySelector('.frame')
         var a = 0
 
-        sticks.onclick = function () {
+        sticks.onclick = function() {
             if (a == 0) {
                 menu.style.display = "none"
                 header.style.width = "100%"
@@ -137,24 +140,7 @@
     </script>
 
     {{-- 來自下架的js --}}
-    <script>
-        var edit = document.querySelector('.button-edit'); //編輯
-        var down = document.querySelector('.button-down'); //下架
-        var box_down = document.querySelector('.prompt-box-down'); //下架提示
-        var confirm = document.querySelector('.confirm'); //確認
-        var cancel = document.querySelector('.cancel'); //取消
 
-        down.onclick = function () {
-          box_down.style.display = "flex";
-        }
-        confirm.onclick = function () {
-          box_down.style.display = "none";
-        }
-        cancel.onclick = function () {
-          box_down.style.display = "none";
-        }
-
-      </script>
 </body>
 
 </html>

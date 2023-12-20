@@ -1,26 +1,26 @@
-var input_all = document.querySelector('.input-all'); //全部
-var input_down = document.querySelector('.input-down'); //下架
+var input_all = document.querySelector('.input-all') //全部
+var input_down = document.querySelector('.input-down') //下架
 
-var banner_superior = document.querySelectorAll('.banner-superior'); //已上架
-var banner_down = document.querySelectorAll('.banner-down'); //已下架
-var banner_prepare = document.querySelectorAll('.banner-prepare'); //未上架
+var banner_superior = document.querySelectorAll('.banner-superior') //已上架
+var banner_down = document.querySelectorAll('.banner-down') //已下架
+var banner_prepare = document.querySelectorAll('.banner-prepare') //未上架
 
 
 input_all.onclick = function () {
-    input_all.style.color = "#6ebe49";
-    input_down.style.color = "#000";
+    input_all.style.color = "#6ebe49"
+    input_down.style.color = "#000"
 
-    banner_superior.forEach((element) => { element.style.display = "" });
-    banner_down.forEach((element) => { element.style.display = "" });
-    banner_prepare.forEach((element) => { element.style.display = "" });
+    banner_superior.forEach((element) => { element.style.display = "" })
+    banner_down.forEach((element) => { element.style.display = "" })
+    banner_prepare.forEach((element) => { element.style.display = "" })
 }
 input_down.onclick = function () {
-    input_all.style.color = "#000";
-    input_down.style.color = "#6ebe49";
+    input_all.style.color = "#000"
+    input_down.style.color = "#6ebe49"
 
-    banner_superior.forEach((element) => { element.style.display = "none" });
-    banner_down.forEach((element) => { element.style.display = "" });
-    banner_prepare.forEach((element) => { element.style.display = "none" });
+    banner_superior.forEach((element) => { element.style.display = "none" })
+    banner_down.forEach((element) => { element.style.display = "" })
+    banner_prepare.forEach((element) => { element.style.display = "none" })
 }
 
 
@@ -67,4 +67,32 @@ function Sendmsg () {
     console.log(myForm)
     myForm.submit()
     // prompt.style.display = 'none'
+}
+
+//更新版
+
+var edit = document.querySelector('.button-edit') //編輯
+var down = document.querySelector('.button-down') //下架
+var box_down = document.querySelector('.prompt-box-down') //下架提示
+var confirm = document.querySelector('.confirm') //確認
+var cancel = document.querySelector('.cancel') //取消
+
+let downTarget = 0
+down.onclick = function () {
+    console.log(this)
+    console.log(this.dataset.key)
+    box_down.style.display = "flex"
+    downTarget = this.dataset.key
+}
+confirm.onclick = function () {
+    let myForm = document.querySelector(".my-form")
+    myForm.action = downTarget
+
+    console.log(myForm)
+    myForm.submit()
+
+    box_down.style.display = "none"
+}
+cancel.onclick = function () {
+    box_down.style.display = "none"
 }

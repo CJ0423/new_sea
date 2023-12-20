@@ -104,12 +104,17 @@ Route::middleware('auth')->group(function () {
 
     Route::get('seagate/banner_revise/{id}', [ProfileController::class, 'Banner_revise'])->name('BannerRevise');
 
+
+
     //創建
     Route::post('seagate/banner_estabilsh/Store', [Banner::class, 'store'])->name("Storebanner"); //訪問新建立的controller
     //update
+    // 更新
     Route::put('seagate/banner_estabilsh/Update/{id}', [Banner::class, 'update'])->name("Updatebanner"); //訪問新建立的controller
+    Route::put('seagate/banner_estabilsh/Update2/{id}', [Banner::class, 'update_down'])->name("Updatebanner_down"); //訪問新建立的controller
+    // 刪除
 
-
+    Route::delete('seagate/banner_estabilsh/Destory/{id}', [Banner::class, 'destory'])->name("destorybanner");
 
 
 

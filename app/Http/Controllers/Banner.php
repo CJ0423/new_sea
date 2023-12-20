@@ -61,16 +61,17 @@ class Banner extends Controller
 
     public function update(Request $request, $id)
     {
+        // dd($id);
         $validatedData = $request->validate([
             // 验证规则
         ]);
 
         // 檢查活動是否存在
-        $activity = DB::table('activity')->where('id', $id)->first();
-        if (!$activity) {
-            // dd("測試");
-            // return redirect()->back()->with('error', 'Activity not found.');
-        }
+        // $activity = DB::table('activity')->where('id', $id)->first();
+        // if (!$activity) {
+        //     // dd("測試");
+        //     // return redirect()->back()->with('error', 'Activity not found.');
+        // }
 
         // 處理 'computer' 文件上傳
         if ($request->hasFile('computer')) {
@@ -78,7 +79,7 @@ class Banner extends Controller
             $computerFile = $request->file('computer');
             $computerFilePath = $computerFile->store('public/img/banner');
             $validatedData['computer_file_path'] = substr($computerFilePath, 7);
-            DB::table('banner_table')->update([
+            DB::table('banner_table')->where('id', $id)->update([
                 'img_pc_url' => $validatedData['computer_file_path']
             ]);
         }
@@ -88,16 +89,14 @@ class Banner extends Controller
             $phoneFile = $request->file('phone');
             $phoneFilePath = $phoneFile->store('public/img/banner');
             $validatedData['phone_file_path'] = substr($phoneFilePath, 7);
-            DB::table('banner_table')->update([
+            DB::table('banner_table')->where('id', $id)->update([
                 'img_pad_url' => $validatedData['phone_file_path'],
             ]);
         }
 
         // 更新資料庫
         // dd($request->all());
-        DB::table('banner_table')->update([
-
-
+        DB::table('banner_table')->where('id', $id)->update([
             'title' => $request->input('title'),
             'subtitle' => $request->input('subtitle'),
 
@@ -111,6 +110,26 @@ class Banner extends Controller
             // 時間的部分...
             'updated_at' => Carbon::now()
         ]);
+
+        return redirect(route('Banner'));
+    }
+    public function update_down(Request $request, $id)
+    {
+        // 更新資料庫
+        // dd($request->all());
+        DB::table('banner_table')->where('id', $id)->update([
+
+            // 時間的部分...
+            'end_time' => Carbon::now()
+        ]);
+
+        return redirect(route('Banner'));
+    }
+    public function destory(Request $request, $id)
+    {
+        // 更新資料庫
+        // dd($request->all());
+        DB::table('banner_table')->where('id', $id)->delete();
 
         return redirect(route('Banner'));
     }
