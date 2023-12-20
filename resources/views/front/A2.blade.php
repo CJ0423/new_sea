@@ -1,4 +1,4 @@
-{{ dd($activities) }}
+{{-- {{ dd($activities) }} --}}
 @extends('front.index')
 
 @section('title')
@@ -6,61 +6,47 @@
 @endsection
 
 @section('css')
-    @vite(['resources/css/a2.scss'])
+    @vite(['resources/css/front/a2.scss'])
     <style>
+        /* @media (max-width:767px) {
+                                                     .a1-3 {
+                                                                    background-image: url("{{ asset('img/mainImg/a1/3-3.png') }}") !important;
+                                                                }
+
+                                                                .a1-4 {
+                                                                    background-image: url("{{ asset('img/mainImg/a1/4-4.png') }}") !important;
+                                                                }
+                                                            } */
+        /* @foreach ($activities as $index => $item)
+
+
+        .a1-{{ $index + 1 }} {
+            background-image: url('{{ asset('storage/' . $item->img_pc_url) }}');
+        }
+
         @media (max-width:767px) {
-
-            .a1-3 {
-                background-image: url("{{ asset('img/mainImg/a1/3-3.png') }}") !important;
-            }
-
-            .a1-4 {
-                background-image: url("{{ asset('img/mainImg/a1/4-4.png') }}") !important;
+            .a1-{{ $index + 1 }} {
+                background-image: url('{{ asset('storage/' . $item->img_pad_url) }}');
             }
         }
+        @endforeach
+        */
     </style>
 @endsection
 
 @section('version')
     <div class="container-pc container-pc-a2">
-        <div data-aos="custom-animation-up" class="a1 column-img">
-
-            <figure class="main-img a1-1" style="background-image: url('{{ asset('img/mainImg/a1/1-1.png') }}');">
-                <figcaption>
-                    <h2>主標題文字1</h2>
-                    <h3>副標題文字1</h3>
-                    <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                </figcaption>
-            </figure>
-        </div>
-        <div data-aos="custom-animation-up" class="a2 column-img">
-            <figure class="main-img a1-2" style="background-image: url('{{ asset('img/mainImg/a1/2-2.png') }}');">
-                <figcaption>
-                    <h2>主標題文字2</h2>
-                    <h3>副標題文字2</h3>
-                    <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                </figcaption>
-
-            </figure>
-        </div>
-        <div data-aos="custom-animation-up" class="a3 column-img">
-            <figure class="main-img a1-3" style="background-image: url('{{ asset('img/mainImg/a1/2-2.png') }}');">
-                <figcaption>
-                    <h2>主標題文字3</h2>
-                    <h3>副標題文字3</h3>
-                    <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                </figcaption>
-            </figure>
-        </div>
-        <div data-aos="custom-animation-up" class="a4 column-img">
-            <figure class="main-img a1-4" style="background-image: url('{{ asset('img/mainImg/a1/2-2.png') }}');">
-                <figcaption>
-                    <h2>主標題文字4</h2>
-                    <h3>副標題文字4</h3>
-                    <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                </figcaption>
-            </figure>
-        </div>
+        @foreach ($activities as $index => $item)
+            <div data-aos="custom-animation-up" class="a{{ $index + 1 }}{{ $item->img_size_pad }} ">
+                <figure class="main-img a1-{{ $index }}">
+                    <figcaption>
+                        <h2>{{ $item->title }}</h2>
+                        <h3>{{ $item->subtitle }}</h3>
+                        <a href="{{ $item->button_link }}" class="buy-now-button">{{ $item->button_name }}</a>
+                    </figcaption>
+                </figure>
+            </div>
+        @endforeach
     </div>
     <div style="clear: both"></div>
 @endsection

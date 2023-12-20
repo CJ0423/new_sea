@@ -41,18 +41,7 @@
                 </div>
                 <div class="offcanvas-body justify-content-end">
                     <ul class="navbar-nav justify-content-end flex-grow pe-3">
-                        {{-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動1
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li> --}}
+
                         @foreach ($menus as $item)
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle fw-bold" href="{{ $item->menu_link }}" role="button"
