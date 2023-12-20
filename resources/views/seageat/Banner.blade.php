@@ -90,7 +90,17 @@
                                             class="border border-0 button-edit">編輯</a>
 
                                         {{-- 這個a標籤要先取消預設功能 接著在進行判斷 --}}
-                                        <button class="border button-down" type="button">下架</button>
+
+                                        @if ($isOnSale)
+                                            <button class="border button-down" type="button">下架</button>
+                                        @elseif ($isScheduledToSale)
+                                            <button class="border button-down" type="button">下架</button>
+                                        @else
+                                            <button class="border button-down" type="button">刪除</button>
+                                        @endif
+
+
+
 
                                     </div>
                                 </td>
