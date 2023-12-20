@@ -30,7 +30,7 @@
                 <div class="base-wrapper">
                   <div class="base">
                     {{-- 這是額外捕的 --}}
-                    <img style="max-height: 100px;
+                    <img style="max-height: 100px; max-width:200px;
                     position:absolute;
                     right:10px;" src='{{ Storage::url($recommendData->logo_url)}} 'alt="">
                     <div class="frame-5">

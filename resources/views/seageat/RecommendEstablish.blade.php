@@ -13,7 +13,7 @@
 @section('cut')
       <!-- 以下分割 -->
    <!-- 以下分割 -->
-   <div class="size16">建立通路1</div>
+   <div class="size16">建立通路</div>
    <div class="border border-0 card">
      <div class="frame-2">
        <div class="size12">推薦通路資訊</div>
@@ -34,7 +34,7 @@
                  </div>
                  <div class="input-field">
                      <label for="logo" class="border logo-label">選擇檔案</label>
-                     <input type="file" name="logo_url" id="logo" class="logo-input" accept="image/png, image/jpeg, image/gif">
+                     <input type="file" name="logo_url" id="logo" class="logo-input" accept="image/png, image/jpeg, image/gif" required>
                  </div>
                </div>
              </div>
@@ -49,7 +49,7 @@
                    </div>
                  </div>
                  <div class="input-field">
-                   <input name="logo_name" type="text" class="border">
+                   <input name="logo_name" type="text" class="border" required>
                  </div>
                </div>
              </div>
@@ -64,15 +64,15 @@
                    </div>
                  </div>
                  <div class="input-field">
-                   <input name="logo_link" type="text" class="border">
+                   <input name="logo_link" type="text" class="border" required>
                  </div>
                </div>
              </div>
            </div>
 
            <div class="frame-7">
-               <button class="border button-3"><div class="text-5">捨棄修改</div></button>
-             <button class="border-0 button-2"><div class="text-4">儲存</div></button>
+                <button type="button" onclick="window.history.back();" class="border button-3"><div class="text-5">捨棄修改</div></button>
+                <button class="border-0 button-2"><div class="text-4">儲存</div></button>
            </div>
          </form>
        </div>

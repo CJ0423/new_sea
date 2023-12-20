@@ -95,10 +95,10 @@
                 @endfor
 
                 <div class="frame-7">
-                    <button class="border-0 button-2">
+                    <button class="border-0 button-2" type="submit">
                         <div class="text-4">儲存</div>
                     </button>
-                    <button class="border button-3">
+                    <button href="" class="border button-3" type="button" onclick="window.history.back();">
                         <div class="text-5">捨棄</div>
                     </button>
                 </div>

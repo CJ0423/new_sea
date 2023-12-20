@@ -35,7 +35,7 @@
                     </div>
                     <div class="input-field">
                         <label for="computer" class="border computer-label">選擇檔案</label>
-                        <input required required type="file" name="computer" id="computer" class="computer-input" accept="image/png, image/jpeg, image/gif">
+                        <input required type="file" name="computer" id="computer" class="computer-input" accept="image/png, image/jpeg, image/gif" >
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="input-field">
                         <label for="phone" class="border phone-label">選擇檔案</label>
-                        <input required type="file" name="phone" id="phone" class="phone-input" accept="image/png, image/jpeg, image/gif">>
+                        <input required type="file" name="phone" id="phone" class="phone-input" accept="image/png, image/jpeg, image/gif">
                     </div>
                   </div>
                 </div>
