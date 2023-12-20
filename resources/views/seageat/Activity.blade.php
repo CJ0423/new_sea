@@ -17,14 +17,14 @@
 
         <!-- 提示訊息 -->
         <!-- <div class="prompt-box-down">
-                     <div class="prompt">
-                       <p class="size14">確定要下架嗎?</p>
-                       <div>
-                         <input class="border confirm" type="button" value="確認">
-                         <input class="border cancel" type="button" value="取消">
-                       </div>
-                     </div>
-                   </div> -->
+                         <div class="prompt">
+                           <p class="size14">確定要下架嗎?</p>
+                           <div>
+                             <input class="border confirm" type="button" value="確認">
+                             <input class="border cancel" type="button" value="取消">
+                           </div>
+                         </div>
+                       </div> -->
 
         <div class="frame-2">
             <div class="size12">活動資訊</div>
@@ -83,8 +83,8 @@
                                         $nowTime = \Carbon\Carbon::now();
 
                                         // 假设 $items 包含 start_time 和 end_time
-                                        $start_time = \Carbon\Carbon::parse($items->start_time);
-                                        $end_time = \Carbon\Carbon::parse($items->end_time);
+                                        $start_time = \Carbon\Carbon::parse($item->start_time);
+                                        $end_time = \Carbon\Carbon::parse($item->end_time);
 
                                         $isOnSale = $start_time->lte($nowTime) && $end_time->gt($nowTime);
                                         $isOffSale = $end_time->lte($nowTime);
