@@ -17,14 +17,14 @@
 
         <!-- 提示訊息 -->
         <!-- <div class="prompt-box-down">
-                                                             <div class="prompt">
-                                                               <p class="size14">確定要下架嗎?</p>
-                                                               <div>
-                                                                 <input class="border confirm" type="button" value="確認">
-                                                                 <input class="border cancel" type="button" value="取消">
-                                                               </div>
-                                                             </div>
-                                                           </div> -->
+                                                                                             <div class="prompt">
+                                                                                               <p class="size14">確定要下架嗎?</p>
+                                                                                               <div>
+                                                                                                 <input class="border confirm" type="button" value="確認">
+                                                                                                 <input class="border cancel" type="button" value="取消">
+                                                                                               </div>
+                                                                                             </div>
+                                                                                           </div> -->
 
         <div class="frame-2">
             <div class="size12">活動資訊</div>
@@ -78,8 +78,11 @@
                                 </td>
                                 <td>
 
-                                    @foreach ($uniquePatterns as $item)
-                                        <div> {{ $item->status }}</div>
+                                    @foreach ($uniquePatterns as $item2)
+                                        {{-- {{ dd($uniquePatterns) }} --}}
+                                        @if ($item2->activity_id == $item->id)
+                                            <div> {{ $item2->status }}</div>
+                                        @endif
                                     @endforeach
 
 
