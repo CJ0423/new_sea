@@ -28,10 +28,9 @@ use function PHPUnit\Framework\isEmpty;
 */
 //前端區域
 Route::get('/', function () {
+    //取得版型開始
     $now = Carbon::now();
     // $now = 2022;
-
-
     $results = DB::table('chose_pattern')
         ->where(function ($query) use ($now) {
             // 當前時間在start_time和end_time之間
@@ -48,6 +47,8 @@ Route::get('/', function () {
     }
     // $target = $results->whitch_pattern;
     $target = str_replace('-', '', $results->whitch_pattern);
+    //取得版型結束
+
 
     return view("front.$target");
 });
