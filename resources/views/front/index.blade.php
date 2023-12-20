@@ -142,7 +142,7 @@
                     @if ($index < 3)
                         <div class="icon">
                             <a href="{{ $item->icon_url }}">
-                                <img style="display: block;" src="{{ asset('storage/' . $item->icon_img) }}"
+                                <img style="display: block; max-width:100%;" src="{{ asset('storage/' . $item->icon_img) }}"
                                     alt="">
                                 <div>{{ $item->icon_name }}</div>
                             </a>
@@ -155,7 +155,7 @@
                 @if ($index > 2)
                     <div class="icon">
                         <a href="{{ $item->icon_url }}">
-                            <img style="display: block;" src="{{ asset('storage/' . $item->icon_img) }}"
+                            <img style="display: block; max-width:100%;" src="{{ asset('storage/' . $item->icon_img) }}"
                                 alt="">
                             <div>{{ $item->icon_name }}</div>
                         </a>
