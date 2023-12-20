@@ -14,7 +14,7 @@
 
 @section('cut')
     <!-- 以下分割 -->
-    <div class="size16">建立Banner1</div>
+    <div class="size16">建立Banner</div>
     <div class="border border-0 card">
         <div class="frame-2">
             <div class="size12"></div>
@@ -275,7 +275,7 @@
 
 
                     <div class="frame-7">
-                        <button class="border button-3">
+                        <button class="border button-3" type="button" onclick="window.history.back();">
                             <div class="text-5">捨棄修改</div>
                         </button>
                         <button type="submit" class="border-0 button-2">
