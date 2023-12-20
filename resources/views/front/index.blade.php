@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-{{-- {{ dd($menu) }} --}}
-
 <html lang="en">
+{{-- {{ dd($swiper) }} --}}
 
 <head>
     <meta charset="utf-8" />
@@ -42,37 +41,43 @@
                 </div>
                 <div class="offcanvas-body justify-content-end">
                     <ul class="navbar-nav justify-content-end flex-grow pe-3">
-
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                @if ($menu->childMenus->isEmpty()) data-bs-toggle="dropdown" @endif
-                                aria-expanded="false">
-                                {{ $menu->menu_name }}
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                限時主打活動1
                             </a>
-                            @if ($menu->childMenus && $menu->childMenus->isNotEmpty())
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    @foreach ($menu->childMenus as $childMenu)
-                                        <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </li>
-
-
-                        {{--
-                        <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                        <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                        <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li> --}}
-
-
-
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
+                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
+                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
+                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
+                            </ul>
+                        </li> --}}
+                        @foreach ($menus as $item)
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fw-bold" href="{{ $item->menu_link }}" role="button"
+                                    @if ($item->childMenus != null) data-bs-toggle="dropdown" @endif
+                                    aria-expanded="false">
+                                    {{ $item->menu_name }}
+                                </a>
+                                @if ($item->childMenus && $item->childMenus != null)
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        @foreach ($item->childMenus as $itemChild)
+                                            <li><a class="dropdown-item"
+                                                    href="{{ $itemChild->menu_link }}">{{ $itemChild->menu_name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </li>
+                        @endforeach
 
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-
+    {{-- 超連結怪怪的 --}}
     <!-- Swiper -->
     <section class="banner-pc">
         <div class="swiper mySwiper">
@@ -100,29 +105,33 @@
                         </figcaption> --}}
                     </figure>
                 </div>
-                <div class="swiper-slide">
-                    <style>
-                        .banner-img {
-                            width: 100%;
-                            height: 100%;
-                            background-image: url("{{ asset('storage/img/banner/主視覺.png') }}");
-                            background-position: center;
-                            background-size: cover;
-                            background-repeat: no-repeat;
+                @foreach ($swiper as $item)
+                    <div class="swiper-slide">
+                        <style>
+                            .banner-img {
+                                width: 100%;
+                                height: 100%;
+                                background-image: url({{ asset('storage/' . $item->img_pc_url) }});
 
-                            @media (max-width:767px) {
-                                background-image: url("{{ asset('storage/img/banner/主視覺手機版.png') }}");
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+
+                                @media (max-width:767px) {
+                                    background-image: url({{ asset('storage/' . $item->img_pad_url) }});
+                                }
                             }
-                        }
-                    </style>
-                    <figure class="banner-img">
-                        {{-- <figcaption>
+                        </style>
+                        <figure class="banner-img">
+                            {{-- <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
                             <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
                         </figcaption> --}}
-                    </figure>
-                </div>
+                        </figure>
+                    </div>
+                @endforeach
+
             </div>
             <div class="swiper-button-next">
                 <img src="{{ asset('front-img/arrow-left.png') }}" alt="">
@@ -137,49 +146,33 @@
     <section>
         <div class="icons-control">
             <div class="icons">
-                <div class="grop1">
+                @foreach ($icon as $index => $item)
+                    @if ($index == 0)
+                        <div class="grop1">
+                    @endif
+                    @if ($index < 3)
+                        <div class="icon">
+                            <a href="{{ $item->icon_url }}">
+                                <img style="display: block;" src="{{ asset('storage/' . $item->icon_img) }}"
+                                    alt="">
+                                <div>{{ $item->icon_name }}</div>
+                            </a>
+                        </div>
+                    @endif
+                    @if ($index == 2)
+            </div>
+            <div class="grop2">
+                @endif
+                @if ($index > 2)
                     <div class="icon">
-                        <a href="#">
-                            <img style="display: block;" src="{{ asset('front-img/icon/icon.svg') }}" alt="">
-                            <div>Game pass</div>
+                        <a href="{{ $item->icon_url }}">
+                            <img style="display: block;" src="{{ asset('storage/' . $item->icon_img) }}"
+                                alt="">
+                            <div>{{ $item->icon_name }}</div>
                         </a>
                     </div>
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{ asset('front-img/icon/icon1.svg') }}" alt="">
-                            <div>遊戲</div>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{ asset('front-img/icon/icon2.svg') }}" alt="">
-                            <div>主機</div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="grop2">
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{ asset('front-img/icon/icon3.svg') }}" alt="">
-                            <div>配件</div>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{ asset('front-img/icon/icon4.svg') }}" alt="">
-                            <div>特惠商品</div>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="#">
-                            <img src="{{ asset('front-img/icon/icon5.svg') }}" alt="">
-                            <div>登入</div>
-                        </a>
-                    </div>
-                </div>
-
+                @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -194,30 +187,14 @@
             <div class="swiper-control">
                 <div class="swiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/YJzdUF5UCrQFkvXMSKaRQnE91B7lyMfYyJVtVhdd.png') }}"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/qhud1FA0S42lJdd9sYjaHEGGIyVy5Pr0TLyf23Gy.png') }}"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}"
-                                    alt="">
-                            </a>
-                        </div>
+                        {{-- {{ dd($recommend) }} --}}
+                        @foreach ($recommend as $item)
+                            <div class="swiper-slide">
+                                <a href={{ $item->logo_link }} class="recommend-logo">
+                                    <img src="{{ asset('storage/' . $item->logo_url) }}" alt="">
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next">
                         <img src="{{ asset('front-img/arrow-left2.png') }}" alt="">
@@ -234,8 +211,7 @@
                 </div>
                 <div class="icons">
                     <div class="icon">
-                        <a href=""><img src="{{ asset('img/icon/icon-bottom/Link.png') }}"
-                                alt=""></a>
+                        <a href=""><img src="{{ asset('img/icon/icon-bottom/Link.png') }}" alt=""></a>
                     </div>
                     <div class="icon">
                         <a href=""><img src="{{ asset('img/icon/icon-bottom/Link (1).png') }}"
