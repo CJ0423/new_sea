@@ -74,7 +74,6 @@ class Banner extends Controller
 
         // 處理 'computer' 文件上傳
         if ($request->hasFile('computer')) {
-            dd("測試");
 
             $computerFile = $request->file('computer');
             $computerFilePath = $computerFile->store('public/img/banner');
@@ -95,6 +94,7 @@ class Banner extends Controller
         }
 
         // 更新資料庫
+        // dd($request->all());
         DB::table('banner_table')->update([
 
 

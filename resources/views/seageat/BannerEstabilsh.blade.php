@@ -1,5 +1,4 @@
 @extends('layouts.seagate-templete')
-{{ dd($banner) }}
 
 @section('title')
     後端管理-建立Banner

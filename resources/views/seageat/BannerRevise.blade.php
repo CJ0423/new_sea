@@ -194,7 +194,7 @@
                         </div>
                         <div class="select-area">
                             <div class="input-area">
-                                <input type="text" class="input-box" name="end_time_" id="end-time-input"
+                                <input type="text" class="input-box" name="end_time" id="end-time-input"
                                     autocomplete="off" value="{{ $banner[0]->end_time }}">
                                 <div class="input-img"></div>
                                 <div class="date-container">
@@ -268,7 +268,7 @@
                                     </div>
                                 </div>
                                 <div class="input-field-2">
-                                    <select name="order" id="order" class="order">
+                                    <select name="rank" id="order" class="order">
 
 
                                         @for ($i = 1; $i < 10; $i++)

@@ -49,10 +49,10 @@
                     <tbody>
                         @foreach ($banner as $index => $item)
                             <tr class="border-bottom banner-superior">
-                                <th scope="row">{{ $index }}</th>
+                                <th scope="row">{{ $item->id }}</th>
                                 <td><img src='{{ asset("storage/$item->img_pc_url") }}' alt=""></td>
                                 <td>{{ $item->title }}</td>
-                                <td>{{ $index }}</td>
+                                <td>{{ $item->Rank }}</td>
                                 <td>{{ $item->start_time }}<br>{{ $item->end_time }}</td>
                                 <td>
                                     @php
