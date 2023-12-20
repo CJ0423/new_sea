@@ -17,14 +17,14 @@
 
         <!-- 提示訊息 -->
         <!-- <div class="prompt-box-down">
-                     <div class="prompt">
-                       <p class="size14">確定要下架嗎?</p>
-                       <div>
-                         <input class="border confirm" type="button" value="確認">
-                         <input class="border cancel" type="button" value="取消">
-                       </div>
-                     </div>
-                   </div> -->
+                                                             <div class="prompt">
+                                                               <p class="size14">確定要下架嗎?</p>
+                                                               <div>
+                                                                 <input class="border confirm" type="button" value="確認">
+                                                                 <input class="border cancel" type="button" value="取消">
+                                                               </div>
+                                                             </div>
+                                                           </div> -->
 
         <div class="frame-2">
             <div class="size12">活動資訊</div>
@@ -62,7 +62,6 @@
                                 <td>{{ $item->title }}</td>
                                 <td>
 
-                                    {{-- {{dd($uniquePatterns)}} --}}
                                     @foreach ($uniquePatterns as $items)
                                         @if ($items->activity_id == $item->id)
                                             <a href="{{ route('store_patternShow', ['id' => $items->id, 'pattern' => 'block' . $items->whitch_pattern]) }}"
@@ -78,29 +77,11 @@
                                     {{-- 後面要補上id或者該說這個是不對，這邊之後要變成是編輯 --}}
                                 </td>
                                 <td>
-                                    @php
 
-                                        $nowTime = \Carbon\Carbon::now();
-
-                                        // 假设 $items 包含 start_time 和 end_time
-                                        $start_time = \Carbon\Carbon::parse($items->start_time);
-                                        $end_time = \Carbon\Carbon::parse($items->end_time);
-
-                                        $isOnSale = $start_time->lte($nowTime) && $end_time->gt($nowTime);
-                                        $isOffSale = $end_time->lte($nowTime);
-                                    @endphp
-
-                                    @foreach ($uniquePatterns as $items)
-                                        @if ($items->activity_id == $item->id)
-                                            @if ($isOnSale)
-                                                <p>已经上架</p>
-                                            @elseif ($isOffSale)
-                                                <p>已下架</p>
-                                            @else
-                                                <p>排程上架</p>
-                                            @endif
-                                        @endif
+                                    @foreach ($uniquePatterns as $item)
+                                        <div> {{ $item->status }}</div>
                                     @endforeach
+
 
                                 </td>
                                 <td>

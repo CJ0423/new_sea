@@ -102,10 +102,10 @@ class ProfileController extends Controller
     // 活動管理
     public function Activity()
     {
-        $now = Carbon::now()->timezone('Asia/Taipei'); //讀取現在時間
+        $now = Carbon::now()->timezone('Asia/Taipei'); // 读取现在时间
 
         $activities = DB::table('activity')->get();
-        //版型編號和裝態，是跟著選擇版型走的
+        // 版型编号和状态，是跟着选择版型走的
         $chose_patterns = DB::table('pattern_table')
             ->join('chose_pattern', 'pattern_table.chose_pattern_id', '=', 'chose_pattern.id')
             ->select(
@@ -116,11 +116,23 @@ class ProfileController extends Controller
             )
             ->get();
 
-        $uniquePatterns =  $chose_patterns;
+        // 处理 uniquePatterns 集合
+        foreach ($chose_patterns as $pattern) {
+            $start_time = Carbon::parse($pattern->start_time);
+            $end_time = Carbon::parse($pattern->end_time);
 
+            if ($now->isBetween($start_time, $end_time)) {
+                $pattern->status = '已上架';
+            } elseif ($now->gt($end_time)) {
+                $pattern->status = '已下架';
+            } else {
+                $pattern->status = '排程上架';
+            }
+        }
 
-        // $uniquePatterns 現在包含了每組唯一的記錄
+        $uniquePatterns = $chose_patterns;
 
+        // $uniquePatterns 现在包含了每组唯一的记录和它们的状态
         return view('seageat.Activity', compact('activities', 'uniquePatterns', 'now'));
     }
     // 活動編輯
