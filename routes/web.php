@@ -90,11 +90,19 @@ Route::get('/', function () {
     $recommend = DB::table('recommend')->get();
 
 
-    $activity = DB::table('pattern_table')->where('chose_pattern_id', $results)->get();
+    $activity = DB::table('pattern_table')->where('chose_pattern_id', $results->id)->get();
 
-    dd($activity);
+    $activityIds = $activity->pluck('activity_id'); // 從集合中提取所有的 activity_id
 
-    return view("front.$target", compact('menus', 'swiper', 'icon', 'recommend'));
+    $activities = DB::table('activity')
+        ->join('pattern_table', 'activity.id', '=', 'pattern_table.activity_id')
+        ->whereIn('activity.id', $activityIds)
+        ->select('activity.title', 'activity.subtitle', 'activity.button_name', 'activity.button_link', 'activity.img_pc_url', 'activity.img_pad_url', 'activity.img_size_pc', 'activity.img_size_pad')->where('chose_pattern_id', $results->id)
+        ->get();
+
+
+
+    return view("front.$target", compact('menus', 'swiper', 'icon', 'recommend', 'activities'));
 });
 
 Route::get('/a1', function () {

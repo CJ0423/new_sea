@@ -1,3 +1,4 @@
+{{ dd($activities) }}
 @extends('front.index')
 
 @section('title')
