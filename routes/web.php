@@ -3,8 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\PatternController;
+use App\Http\Controllers\Banner;
 use App\Http\Controllers\Recommend;
 use App\Http\Controllers\Front_page_menu;
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -79,6 +81,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
     // 這是首頁的區域
     Route::get('seagate/front_page', [ProfileController::class, 'Front_page'])->name('Front_page');
 
@@ -96,8 +99,20 @@ Route::middleware('auth')->group(function () {
 
     // banner管理
     Route::get('seagate/banner', [ProfileController::class, 'Banner'])->name('Banner');
+
     Route::get('seagate/banner_estabilsh', [ProfileController::class, 'Banner_estabilsh'])->name('BannerEstabilsh');
-    Route::get('seagate/banner_revise', [ProfileController::class, 'Banner_revise'])->name('BannerRevise');
+
+    Route::get('seagate/banner_revise/{id}', [ProfileController::class, 'Banner_revise'])->name('BannerRevise');
+
+    //創建
+    Route::post('seagate/banner_estabilsh/Store', [Banner::class, 'store'])->name("Storebanner"); //訪問新建立的controller
+    //update
+    Route::put('seagate/banner_estabilsh/Update/{id}', [Banner::class, 'update'])->name("Updatebanner"); //訪問新建立的controller
+
+
+
+
+
     // 活動管理
     Route::get('seagate/activity', [ProfileController::class, 'Activity'])->name('activity');
     // 建立新的活動

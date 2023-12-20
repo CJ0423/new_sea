@@ -84,15 +84,20 @@ class ProfileController extends Controller
     // Banner管理
     public function Banner()
     {
-        return view('seageat.Banner');
+        $banner = DB::table('banner_table')->get();
+
+        return view('seageat.Banner', compact('banner'));
     }
     public function Banner_estabilsh()
     {
+
         return view('seageat.BannerEstabilsh');
     }
-    public function Banner_revise()
+    public function Banner_revise($id)
     {
-        return view('seageat.BannerRevise');
+        $banner = DB::table('banner_table')->where("id", $id)->get();
+
+        return view('seageat.BannerRevise', compact("banner"));
     }
     // 活動管理
     public function Activity()
