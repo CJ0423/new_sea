@@ -48,27 +48,36 @@
                     </thead>
                     <tbody>
                         @foreach ($banner as $index => $item)
-                            <tr class="border-bottom banner-superior">
+                            @php
+                                $nowTime = \Carbon\Carbon::now();
+                                // 假设 $items 包含 start_time 和 end_time
+                                $start_time = \Carbon\Carbon::parse($item->start_time);
+                                $end_time = \Carbon\Carbon::parse($item->end_time);
+
+                                $isOnSale = $start_time->lte($nowTime) && $end_time->gt($nowTime);
+                                $isOffSale = $end_time->lte($nowTime);
+                                $isScheduledToSale = $start_time->gt($nowTime);
+                            @endphp
+
+
+                            <tr
+                                class="border-bottom
+                                  @if ($isOnSale) banner-superior
+                                    @elseif ($isScheduledToSale)
+                                        banner-prepare
+                                    @else
+                                     banner-down @endif">
                                 <th scope="row">{{ $item->id }}</th>
                                 <td><img src='{{ asset("storage/$item->img_pc_url") }}' alt=""></td>
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->Rank }}</td>
                                 <td>{{ $item->start_time }}<br>{{ $item->end_time }}</td>
                                 <td>
-                                    @php
-                                        $nowTime = \Carbon\Carbon::now();
-                                        // 假设 $items 包含 start_time 和 end_time
-                                        $start_time = \Carbon\Carbon::parse($item->start_time);
-                                        $end_time = \Carbon\Carbon::parse($item->end_time);
 
-                                        $isOnSale = $start_time->lte($nowTime) && $end_time->gt($nowTime);
-                                        $isOffSale = $end_time->lte($nowTime);
-                                        $isScheduledToSale = $start_time->gt($nowTime);
-                                    @endphp
                                     @if ($isOnSale)
                                         <p>已上架</p>
                                     @elseif ($isScheduledToSale)
-                                        <p>排程上架</p>
+                                        <p>未上架</p>
                                     @else
                                         <p>已下架</p>
                                     @endif
