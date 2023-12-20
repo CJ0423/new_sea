@@ -33,7 +33,7 @@
                     <img class="icon-outline-plus" src={{ asset('img/icon-outline-plus-22.svg') }}>
                     <div class="text-2">建立活動</div>
                 </a>
-                <a href={{ route('ChosePattern') }} class="button-establish">
+                <a href={{ route('ChosePattern') }} class="button-establish choose">
                     <img class="icon-outline-plus" src={{ asset('img/icon-outline-plus-22.svg') }}>
                     <div class="text-2">選擇版型</div>
                 </a>
@@ -103,4 +103,16 @@
 
         </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var trElements = document.querySelectorAll("tr");
+        var trCount = trElements.length;
+
+        var choose = document.querySelector('.choose') //選擇版型
+        if(trCount >= 5){
+            choose.style = "pointer-events:auto"
+        }
+    });
+    </script>
 @endsection

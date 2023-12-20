@@ -125,6 +125,10 @@
                     font-weight: bold;
                 }
             }
+
+            .choose{
+                pointer-events: none;
+            }
         }
 
         form {
