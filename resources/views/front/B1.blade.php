@@ -9,12 +9,12 @@
     @vite(['resources/css/front/b1.scss'])
     <style>
         @foreach ($activities as $index => $item)
-            .b1-{{ $index + 1 }} {
+            .a1-{{ $index + 1 }} {
                 background-image: url("{{ asset('storage/' . $item->img_pc_url) }}");
             }
 
             @media (max-width:767px) {
-                .b1-{{ $index + 1 }} {
+                .a1-{{ $index + 1 }} {
                     background-image: url("{{ asset('storage/' . $item->img_pad_url) }}");
                 }
 
