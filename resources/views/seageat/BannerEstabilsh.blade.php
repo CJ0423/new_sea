@@ -293,5 +293,5 @@
     <script src={{ asset('./thedatepicker-master/dist/the-datepicker.js') }}></script>
     <script src={{ asset('./thedatepicker-master/dist/dataPicker.js') }}></script>
 
-    @vite(['resources/js/label.js'])
+    {{-- @vite(['resources/js/label.js']) --}}
 @endsection

@@ -99,7 +99,7 @@
                         @foreach ($icons as $index => $item)
                             <tr class="border-bottom">
                                 {{-- <input type="hidden" name="id"> --}}
-                                <th class="height-100" scope="row">1</th>
+                                <th class="height-100" scope="row">{{$index+1}}</th>
                                 <td class="height-100">
                                     <textarea name="icon_name{{ $item->id }}" class="name" style="resize:none;">{{ $item->icon_name }}</textarea>
                                 </td>
