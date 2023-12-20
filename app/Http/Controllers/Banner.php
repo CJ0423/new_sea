@@ -95,7 +95,6 @@ class Banner extends Controller
         }
 
         // 更新資料庫
-        dd($request);
         DB::table('banner_table')->update([
 
 
