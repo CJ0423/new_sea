@@ -11,7 +11,10 @@ use App\Http\Controllers\Front_page_menu;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
+use function PHPUnit\Framework\isEmpty;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +28,28 @@ use Illuminate\Support\Facades\Auth;
 */
 //前端區域
 Route::get('/', function () {
-    return view('front.index');
+    $now = Carbon::now();
+    // $now = 2022;
+
+
+    $results = DB::table('chose_pattern')
+        ->where(function ($query) use ($now) {
+            // 當前時間在start_time和end_time之間
+            $query->where('start_time', '<=', $now)
+                ->where('end_time', '>=', $now);
+        })
+        ->get();
+    if (isEmpty($results)) {
+        $results = DB::table('chose_pattern')
+            ->whereNull('end_time')
+            ->where('start_time', '<=', $now)
+            ->orderBy('start_time', 'desc') // 確保最接近現在的記錄在最前面
+            ->first(); // 只選擇一筆記錄
+    }
+    // $target = $results->whitch_pattern;
+    $target = str_replace('-', '', $results->whitch_pattern);
+
+    return view("front.$target");
 });
 
 Route::get('/a1', function () {
