@@ -71,29 +71,6 @@
     <section class="banner-pc">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <style>
-                        .banner-img {
-                            width: 100%;
-                            height: 100%;
-                            background-image: url("{{ asset('storage/img/banner/主視覺.png') }}");
-                            background-position: center;
-                            background-size: cover;
-                            background-repeat: no-repeat;
-
-                            @media (max-width:767px) {
-                                background-image: url("{{ asset('storage/img/banner/主視覺手機版.png') }}");
-                            }
-                        }
-                    </style>
-                    <figure class="banner-img">
-                        {{-- <figcaption>
-                            <h2>主標題文字</h2>
-                            <h3>副標題文字</h3>
-                            <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                        </figcaption> --}}
-                    </figure>
-                </div>
                 @foreach ($swiper as $item)
                     <div class="swiper-slide">
                         <style>
@@ -142,8 +119,8 @@
                     @if ($index < 3)
                         <div class="icon">
                             <a href="{{ $item->icon_url }}">
-                                <img style="display: block; max-width:100%;" src="{{ asset('storage/' . $item->icon_img) }}"
-                                    alt="">
+                                <img style="display: block; max-width:100%;"
+                                    src="{{ asset('storage/' . $item->icon_img) }}" alt="">
                                 <div>{{ $item->icon_name }}</div>
                             </a>
                         </div>
@@ -155,8 +132,8 @@
                 @if ($index > 2)
                     <div class="icon">
                         <a href="{{ $item->icon_url }}">
-                            <img style="display: block; max-width:100%;" src="{{ asset('storage/' . $item->icon_img) }}"
-                                alt="">
+                            <img style="display: block; max-width:100%;"
+                                src="{{ asset('storage/' . $item->icon_img) }}" alt="">
                             <div>{{ $item->icon_name }}</div>
                         </a>
                     </div>
