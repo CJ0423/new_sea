@@ -75,30 +75,9 @@
         </form>
     </div>
 
-                            <textarea style="height: 75px" name="icon_url{{$item->id}}" id=""
-                                class="link">{{$item->icon_url}}</textarea>
-                        </td>
-                        <td class="upload-td height-100">
-                            <label style="position: relative;
-                            top: 20px;" for="upload{{$item->id}}" class="border upload-label">選擇檔案</label>
-
-                            <input style="position: relative;
-                            top: 0px;" sty type="file" name="upload{{$item->id}}" id="upload{{$item->id}}" class="upload-input isup" accept="image/png, image/jpeg, image/gif">
-                        </td>
-                        <td class="height-100">
-                            <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">
-                        </td>
-
-                        <td class="height-100">
-
-                            <button  data-key="{{route('icon.update', $item->id) }}" type="button" disabled  class="border button-store"  >儲存
-                        </button>
-                        </td>
-
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+    <div class="border border-0 card">
+        <div class="frame-2">
+            <div class="size12">ICON設定</div>
         </div>
         <form id="my-form" action="" method="post" enctype="multipart/form-data">
             @csrf
