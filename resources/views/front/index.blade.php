@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{{-- {{ dd($menu) }} --}}
+
 <html lang="en">
 
 <head>
@@ -40,102 +42,31 @@
                 </div>
                 <div class="offcanvas-body justify-content-end">
                     <ul class="navbar-nav justify-content-end flex-grow pe-3">
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動1
+                                @if ($menu->childMenus->isEmpty()) data-bs-toggle="dropdown" @endif
+                                aria-expanded="false">
+                                {{ $menu->menu_name }}
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
+                            @if ($menu->childMenus && $menu->childMenus->isNotEmpty())
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    @foreach ($menu->childMenus as $childMenu)
+                                        <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
+                                    @endforeach
+                                </ul>
+                            @endif
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動2
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動3
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動4
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動5
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動6
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動7
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                限時主打活動8
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">配對找真愛 > 尋找你的命定硬碟</a></li>
-                                <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                                <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
-                            </ul>
-                        </li>
+
+
+                        {{--
+                        <li><a class="dropdown-item" href="#">備份知多少 > 快問快答立即測驗</a></li>
+                        <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li>
+                        <li><a class="dropdown-item" href="#">希捷愛地球 > 攜手減少電子垃圾</a></li> --}}
+
+
+
+
                     </ul>
                 </div>
             </div>
@@ -265,22 +196,26 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}" alt="">
+                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}"
+                                    alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/YJzdUF5UCrQFkvXMSKaRQnE91B7lyMfYyJVtVhdd.png') }}" alt="">
+                                <img src="{{ asset('storage/img/recommend/YJzdUF5UCrQFkvXMSKaRQnE91B7lyMfYyJVtVhdd.png') }}"
+                                    alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/qhud1FA0S42lJdd9sYjaHEGGIyVy5Pr0TLyf23Gy.png') }}" alt="">
+                                <img src="{{ asset('storage/img/recommend/qhud1FA0S42lJdd9sYjaHEGGIyVy5Pr0TLyf23Gy.png') }}"
+                                    alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="" class="recommend-logo">
-                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}" alt="">
+                                <img src="{{ asset('storage/img/recommend/56NTurRi8OQBFClRg3HIVazALEo4741d8a7ojdsm.png') }}"
+                                    alt="">
                             </a>
                         </div>
                     </div>
