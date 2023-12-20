@@ -45,12 +45,51 @@ Route::get('/', function () {
             ->orderBy('start_time', 'desc') // 確保最接近現在的記錄在最前面
             ->first(); // 只選擇一筆記錄
     }
-    // $target = $results->whitch_pattern;
+
+    $target = $results->whitch_pattern;
     $target = str_replace('-', '', $results->whitch_pattern);
     //取得版型結束
 
+    //取得menu
+    // 首先，獲取所有 menu 項目
+    $menus = DB::table('menu')->get();
 
-    return view("front.$target");
+
+    // 現在，對每個 menu 項目進行迭代，獲取其對應的 child_menu 項目
+    foreach ($menus as $menu) {
+        $childMenus = DB::table('childmenu')
+            ->where('menu_id', '=', $menu->id) // 確定外鍵和 menu 的 id 匹配
+            ->get();
+
+        // 將 childMenus 附加到 menu 物件
+        $menu->childMenus = $childMenus;
+    }
+
+    // 現在 $menus 包含所有 menu 項目，以及其對應的 child_menu 項目
+
+    // 取得swiper
+    $swiper = DB::table('banner_table')
+        ->where(function ($query) use ($now) {
+            // 當前時間在start_time和end_time之間
+            $query->where('start_time', '<=', $now)
+                ->where('end_time', '>=', $now)->orderBy('Rank', 'desc');
+        })
+        ->get();
+    // if (isEmpty($swiper)) {
+    //     dd($swiper);
+
+    //     $swiper = DB::table('banner_table')
+    //         ->whereNull('end_time')
+    //         ->where('start_time', '<=', $now)
+    //         ->orderBy('start_time', 'desc') // 確保最接近現在的記錄在最前面
+    //         ->first(); // 只選擇一筆記錄
+    // }
+
+    $icon = DB::table('icon')->get();
+
+    $recommend = DB::table('recommend')->get();
+
+    return view("front.$target", compact('menus', 'swiper', 'icon', 'recommend'));
 });
 
 Route::get('/a1', function () {
