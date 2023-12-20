@@ -90,7 +90,9 @@ Route::get('/', function () {
     $recommend = DB::table('recommend')->get();
 
 
-    $activity = DB::table('pattern_table')->get();
+    $activity = DB::table('pattern_table')->where('chose_pattern_id', $results)->get();
+
+    dd($activity);
 
     return view("front.$target", compact('menus', 'swiper', 'icon', 'recommend'));
 });
