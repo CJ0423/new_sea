@@ -107,10 +107,10 @@
                         </td>
                         <td class="upload-td height-100">
                             <label style="position: relative;
-                            top: 20px;" for="upload01" class="border upload-label">選擇檔案</label>
+                            top: 20px;" for="upload{{$item->id}}" class="border upload-label">選擇檔案</label>
 
                             <input style="position: relative;
-                            top: 0px;" sty type="file" name="upload{{$item->id}}" id="upload01" class="upload-input isup" accept="image/png, image/jpeg, image/gif">
+                            top: 0px;" sty type="file" name="upload{{$item->id}}" id="upload{{$item->id}}" class="upload-input isup" accept="image/png, image/jpeg, image/gif">
                         </td>
                         <td class="height-100">
                             <img style="max-height:100px;max-width:100px;" src="{{asset('storage/'.$item->icon_img)}}" alt="">

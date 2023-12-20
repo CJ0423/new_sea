@@ -10,8 +10,6 @@ for (let i = 0; i < store.length; i++) {
         cname[i].style
         store[i].style.color = "red"
         store[i].disabled = false
-
-
     })
     clink[i].addEventListener("input", function () {
         store[i].style.color = "red"
