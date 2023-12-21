@@ -73,7 +73,7 @@
 
                             @if(count($textData)>$i)
                                  @if(($textData[$i-1]->activity_id) ==$item->id)
-                                     <option selected value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}特別的
+                                     <option selected value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}預設
                                     </option>
                                  @else
                                      <option value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}
