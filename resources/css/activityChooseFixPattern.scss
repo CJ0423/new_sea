@@ -421,10 +421,58 @@ button,
 
                                 .item1 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 70%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
+                                }
+                                .item2 {
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 70%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 70%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
+                                }
+                                .item4 {
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 70%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5,
@@ -461,19 +509,63 @@ button,
 
                                 .item1 {
                                     grid-row: span 13;
+                                    &::before {
+                                        content: "37X60";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 8;
+                                    &::before {
+                                        content: "37X40";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 5;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 4;
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5,
@@ -510,19 +602,63 @@ button,
 
                                 .item1 {
                                     grid-row: span 10;
+                                    &::before {
+                                        content: "37X40";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 17;
+                                    &::before {
+                                        content: "37X60";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 7;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 6;
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5,
@@ -559,22 +695,77 @@ button,
 
                                 .item1 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6,
@@ -609,22 +800,77 @@ button,
 
                                 .item1 {
                                     grid-row: span 7;
+                                    &::before {
+                                        content: "37X34";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 9;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 4;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 9;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-row: span 7;
+                                    &::before {
+                                        content: "37X34";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6,
@@ -659,22 +905,77 @@ button,
 
                                 .item1 {
                                     grid-row: span 17;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 13;
+                                    &::before {
+                                        content: "37X34";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 8;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 17;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-row: span 13;
+                                    &::before {
+                                        content: "37X34";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6,
@@ -709,26 +1010,92 @@ button,
 
                                 .item1 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item7 {
@@ -761,27 +1128,93 @@ button,
 
                                 .item1 {
                                     grid-row: span 18;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 13;
+                                    &::before {
+                                        content: "37X34";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 10;
+                                    &::before {
+                                        content: "185X112";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 18;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-row: span 13;
+                                    &::before {
+                                        content: "37X34";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6 {
                                     grid-row: span 10;
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item7 {
@@ -814,31 +1247,108 @@ button,
 
                                 .item1 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 2;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6 {
                                     grid-row: span 1;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item7 {
                                     grid-row: span 1;
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
                             }
                         }
@@ -864,28 +1374,94 @@ button,
 
                                 .item1 {
                                     grid-row: span 20;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item2 {
                                     grid-row: span 20;
+                                    &::before {
+                                        content: "185X226";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item3 {
                                     grid-row: span 9;
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item4 {
                                     grid-row: span 9;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item5 {
                                     grid-row: span 9;
+                                    &::before {
+                                        content: "185X96";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item6 {
                                     grid-row: span 9;
                                     grid-column: 1 / -1;
+                                    &::before {
+                                        content: "185X55";
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 80%;
+                                        font-size: 1rem;
+                                        color: rgb(8, 30, 223);
+                                        transform: translateX(-50%)
+                                            translateY(-50%);
+                                    }
                                 }
 
                                 .item7 {
