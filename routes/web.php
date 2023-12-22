@@ -47,7 +47,7 @@ Route::get('/', function () {
             ->where('start_time', '<=', $now)
             ->orderBy('start_time', 'desc') // 確保最接近現在的記錄在最前面
             ->first(); // 只選擇一筆記錄
-        dd('錯誤');
+        // dd('錯誤');
     }
 
     $target = $results->whitch_pattern;
