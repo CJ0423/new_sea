@@ -70,67 +70,40 @@ function Sendmsg () {
 }
 
 
+
 let down = Array.from(document.querySelectorAll(".button-down")) //下架
 console.log(down)
-let prompt_down = document.querySelector('.prompt-box-down') //刪除提示框
-console.log(prompt_del)
+let prompt_down = document.querySelector('.prompt-box-down') //下架提示框
+console.log(prompt_down)
 
-del.forEach(element => {
-    element.addEventListener("click", delcheck)
+down.forEach(element => {
+    element.addEventListener("click", downcheck)
 })
 
-let cancel_del = document.querySelector(".button-down")
-cancel_del.addEventListener("click", msgClose)
+let cancel_down = document.querySelector(".cancel-down")
+cancel_down.addEventListener("click", msgClose_down)
 
-let confirm_del = document.querySelector(".confirm-delete")
+let confirm_down = document.querySelector(".confirm-down")
 
-confirm_del.addEventListener("click", Sendmsg)
-
-let delTarget = 0
-function delcheck () {
-    console.log(this.dataset.key)
-    delTarget = this.dataset.key
-    prompt_del.style.display = 'flex'
-}
-function msgClose () {
-
-    console.log("text")
-    prompt_del.style.display = 'none'
-}
-function Sendmsg () {
-    console.log(this)
-    let myForm = document.getElementById("delete-form")
-    console.log(delTarget)
-    myForm.action = delTarget
-
-    console.log(myForm)
-    myForm.submit()
-    // prompt.style.display = 'none'
-}
-
-//更新版
-
-var down = document.querySelectorAll('.button-down') //下架
-var box_down = document.querySelector('.prompt-box-down') //下架提示
-var confirm = document.querySelector('.confirm') //確認
-var cancel = document.querySelector('.cancel') //取消
+confirm_down.addEventListener("click", Sendmsg_down)
 
 let downTarget = 0
-down.onclick = function () {
-    console.log(this)
+function downcheck () {
     console.log(this.dataset.key)
-    box_down.style.display = "flex"
     downTarget = this.dataset.key
+    prompt_down.style.display = 'flex'
 }
-confirm.onclick = function () {
-    let myForm = document.querySelector(".my-form")
-    myForm.action = downTarget
+function msgClose_down () {
 
-    console.log(myForm)
-    myForm.submit()
-
-    box_down.style.display = "none"
+    console.log("text")
+    prompt_down.style.display = 'none'
 }
-cancel.onclick = function () {
-    box_down.style.display = "none"
+function Sendmsg_down () {
+    console.log(this)
+    let myForm_down = document.getElementById("down-form")
+    console.log(downTarget)
+    myForm_down.action = downTarget
+
+    console.log(myForm_down)
+    myForm_down.submit()
 }

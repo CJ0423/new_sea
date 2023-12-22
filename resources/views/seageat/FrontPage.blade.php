@@ -22,7 +22,7 @@
     <div class="border border-0 card">
         <div class="frame-2">
             <div class="size12">選單管理列表</div>
-            <a href={{ route('CreateMenu') }} class="button-establish">
+            <a href={{ route('CreateMenu') }} class="button-establish choose">
                 <img class="icon-outline-plus" src={{ asset('img/icon-outline-plus-22.svg') }} />
                 <div class="text-2">建立選單</div>
             </a>
@@ -135,8 +135,19 @@
                 </table>
             </div>
         </form>
-
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var trElements = document.querySelectorAll("tr");
+        var trCount = trElements.length;
+
+        var choose = document.querySelector('.choose')
+        if(trCount >= 16){
+            choose.style = "pointer-events:none"
+        }
+    });
+    </script>
 @endsection
 @section('js')
     @vite(['resources/js/fontpageicon.js'])
