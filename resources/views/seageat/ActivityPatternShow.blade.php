@@ -303,7 +303,7 @@
         <button type="button"  class="down-added-button del">{{$uniquePatterns[0]->status}}</button>
 
         @else
-        <button type="button"  class="down-added-button del">{{$uniquePatterns[0]->status}}</button>
+        <button type="button"  class="down-added-button delete">{{$uniquePatterns[0]->status}}</button>
 
         @endif
 
@@ -317,6 +317,15 @@
         <div>
             <button  class="border confirm center">確認</button>
             <button class="border cancel" type="button" >取消</button>
+        </div>
+    </div>
+</div>
+<div class="prompt-box-delete">
+    <div class="prompt">
+        <p class="size14">確定要刪除嗎?</p>
+        <div>
+            <input class="border confirm confirm-delete" type="button" value="確認">
+            <input class="border cancel cancel-delete" type="button" value="取消">
         </div>
     </div>
 </div>
