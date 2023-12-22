@@ -20,6 +20,11 @@
     {{-- <link rel="stylesheet" href="{{asset('css/mycss.css')}}"> --}}
     <!-- Demo styles -->
     @yield('css')
+    <style>
+        .close::after{
+            content: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,28 +46,27 @@
                 </div>
                 <div class="offcanvas-body justify-content-end">
                     <ul class="navbar-nav justify-content-end flex-grow pe-3">
+                        {{-- {{ dd($menus)}} --}}
 
-                        {{-- {{dd($menus[2]->childMenus[0]->menu_name)}} --}}
-                        @foreach ($menus as $item)
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fw-bold" href="{{ $item->menu_link }}" role="button"
-                                @foreach ($item as $childCheck )
-                                @if ($item->childMenus != null) data-bs-toggle="dropdown"       aria-expanded="false"> {{ $item->menu_name }}
-                                @break @endif
-                                @endforeach
+                        {{-- {{dd($menus)}} --}}
+
+                        @foreach ($menus as $item )
+                        <li class="nav-item dropdown">
+                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
+
+                              @endif
                             </a>
-                                @if ($item->childMenus && $item->childMenus != null)
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        @foreach ($item->childMenus as $itemChild)
-                                            <li><a class="dropdown-item"
-                                                    href="{{ $itemChild->menu_link }}">{{ $itemChild->menu_name }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                @endif
-                            </li>
-                        @endforeach
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    @foreach ($item->childMenus as $data)
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="{{$data->menu_link}}">{{$data->menu_name}}</a>
+                                    </li>
+                                    @endforeach
 
+                                </ul>
+                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
