@@ -51,13 +51,13 @@
                     </div>
                     <div class="input-field">
                     <select required name="img_size_pc" id="">
-                        <option value="37:34">37:34</option>
-                        <option value="37:40">37:40</option>
-                        <option value="37:60">37:60</option>
-                        <option value="185:96">185:96</option>
-                        <option value="185:112">185:112</option>
-                        <option value="185:226">185:226</option>
-                        <option value="186:55">186:55</option>
+                        <option value="925:480">寬:925 高:480</option>
+                        <option value="925:550">寬:925 高:550</option>
+                        <option value="925:850">寬:925 高:850</option>
+                        <option value="925:1000">寬:925 高:1000</option>
+                        <option value="925:1130">寬:925 高:1130</option>
+                        <option value="925:1500">寬:925 高:1500</option>
+                        <option value="1860:550">寬:1860 高:550</option>
                     </select>
                     </div>
                   </div>
@@ -90,8 +90,8 @@
                     </div>
                     <div class="input-field">
                     <select required name="img_size_pad" id="">
-                      <option value="column-img">直向 173:196</option>
-                      <option value="row-img">橫向 692:369</option>
+                      <option value="column-img">方型</option>
+                      <option value="row-img">長型</option>
                     </select>
                     </div>
                   </div>

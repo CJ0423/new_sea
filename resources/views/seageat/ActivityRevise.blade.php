@@ -61,15 +61,14 @@
                 </div>
                 <div class="input-field">
                 <select required name="img_size_pc" id="">
-                        <option value="37:34" {{ $activity->img_size_pc == '37:34' ? 'selected' : '' }}>37:34</option>
-                        <option value="37:40" {{ $activity->img_size_pc == '37:40' ? 'selected' : '' }}>37:40</option>
-                        <option value="37:60" {{ $activity->img_size_pc == '37:60' ? 'selected' : '' }}>37:60</option>
-                        <option value="185:96" {{ $activity->img_size_pc == '185:96' ? 'selected' : '' }}>185:96</option>
-                        <option value="185:112" {{ $activity->img_size_pc == '185:112' ? 'selected' : '' }}>185:112</option>
-                        <option value="185:226" {{ $activity->img_size_pc == '185:226' ? 'selected' : '' }}>185:226</option>
-                        <option value="186:55" {{ $activity->img_size_pc == '186:55' ? 'selected' : '' }}>186:55</option>
+                        <option value="925:480" {{ $activity->img_size_pc == '925:480' ? 'selected' : '' }}>寬:925 高:480</option>
+                        <option value="925:550" {{ $activity->img_size_pc == '925:550' ? 'selected' : '' }}>寬:925 高:550</option>
+                        <option value="925:850" {{ $activity->img_size_pc == '925:850' ? 'selected' : '' }}>寬:925 高:850</option>
+                        <option value="925:1000" {{ $activity->img_size_pc == '925:1000' ? 'selected' : '' }}>寬:925 高:1000</option>
+                        <option value="925:1130" {{ $activity->img_size_pc == '925:1130' ? 'selected' : '' }}>寬:925 高:1130</option>
+                        <option value="925:1500" {{ $activity->img_size_pc == '925:1500' ? 'selected' : '' }}>寬:925 高:1500</option>
+                        <option value="1860:550" {{ $activity->img_size_pc == '1860:550' ? 'selected' : '' }}>寬:1860 高:550</option>
                     </select>
-
                 </select>
                 </div>
               </div>
@@ -103,8 +102,8 @@
                 </div>
                 <div class="input-field">
                 <select required name="img_size_pad" id="">
-                  <option value="column-img" {{ $activity->img_size_pad == 'column-img' ? 'selected' : '' }}>直向 173:196</option>
-                  <option value="row-img" {{ $activity->img_size_pc == 'row-img' ? 'selected' : '' }}>橫向 692:369</option>
+                  <option value="column-img" {{ $activity->img_size_pad == 'column-img' ? 'selected' : '' }}>方型</option>
+                  <option value="row-img" {{ $activity->img_size_pc == 'row-img' ? 'selected' : '' }}>長型</option>
                 </select>
                 </div>
               </div>
