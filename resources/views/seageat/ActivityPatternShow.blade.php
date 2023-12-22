@@ -82,7 +82,7 @@
                             @else
                             <option value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}
                                 {{count($textData)}}
-                                {{$i}}
+                                {{-- {{$i}} --}}
                             </option>
                             @endif
 
