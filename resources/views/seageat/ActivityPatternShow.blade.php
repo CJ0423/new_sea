@@ -65,13 +65,10 @@
                     <label for="no{{$i}}">編號{{$i}}</label>
                     <div class="select-area">
                         <span>必填</span>
-
                         <select required name="no{{$i}}" id="no{{$i}}">
-
-
                             @foreach ($allActivity as $item )
 
-                            @if(count($textData)>$i)
+                            @if(count($textData)>=$i)
                                  @if(($textData[$i-1]->activity_id) ==$item->id)
                                      <option selected value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}預設
                                     </option>
@@ -79,11 +76,10 @@
                                      <option value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}
                                     </option>
                                  @endif
-                            @else
-                            <option value={{$item->id}}>{{$item->title}} 比例:{{$item->img_size_pc}}
-                                {{-- {{count($textData)}} --}}
-                                {{-- {{$i}} --}}
-                            </option>
+                            {{-- @else
+                            <option value={{$item->id}}>{{$item->title}}
+                            比例:{{$item->img_size_pc}}
+                            </option> --}}
                             @endif
 
                             @endforeach
