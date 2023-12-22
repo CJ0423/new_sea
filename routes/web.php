@@ -37,8 +37,8 @@ Route::get('/', function () {
             $query->where('start_time', '<=', $now)
                 ->where('end_time', '>=', $now);
         })
-        ->get();
-    if ($results->isEmpty()) {
+        ->first();
+    if (empty($results)) {
         $results = DB::table('chose_pattern')
             ->whereNull('end_time')
             ->where('start_time', '<=', $now)
