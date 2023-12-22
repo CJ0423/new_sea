@@ -91,6 +91,8 @@ class PatternController extends Controller
             $data[$index] = $item->id;
         }
 
+        $requestArrayLength = $requestArrayLength + 1;
+        // dd($request->all());
         // dd($data);
         for ($i = 0; $i < $requestArrayLength; $i++) {
             $activityId = $request->input('no' . ($i + 1));
