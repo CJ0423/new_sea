@@ -302,7 +302,11 @@
         @if ($uniquePatterns[0]->status=="下架")
         <button type="button"  class="down-added-button del">{{$uniquePatterns[0]->status}}</button>
 
+        <button style="display: none" type="button"  class="down-added-button delete">{{$uniquePatterns[0]->status}}</button>
+
         @else
+        <button style="display: none" type="button"  class="down-added-button del">{{$uniquePatterns[0]->status}}</button>
+
         <button type="button"  class="down-added-button delete">{{$uniquePatterns[0]->status}}</button>
 
         @endif
@@ -310,6 +314,13 @@
         {{-- {{dd($uniquePatterns[0]->status)}} --}}
     </div>
 </form>
+
+<form id="kill-data"  action="{{ route('destoryPattern', ['id' => $chose_pattern[0]->id]) }}" method="post">
+@csrf
+@method('DELETE')
+
+</form>
+
 <!-- 提示訊息 -->
 <div class="prompt-box-down">
     <div class="prompt">

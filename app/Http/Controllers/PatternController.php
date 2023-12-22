@@ -95,6 +95,7 @@ class PatternController extends Controller
         for ($i = 0; $i < $requestArrayLength; $i++) {
             $activityId = $request->input('no' . ($i + 1));
 
+            // dd($activityId);
             // 定位到特定顺序的记录并更新
             DB::table('pattern_table')
                 ->where('chose_pattern_id', $id)
@@ -105,6 +106,15 @@ class PatternController extends Controller
                 ]);
         }
 
+
+        return redirect(route('activity'));
+    }
+
+    public function destory(Request $request, $id)
+    {
+        // 更新資料庫
+        // dd($request->all());
+        DB::table('chose_pattern')->where('id', $id)->delete();
 
         return redirect(route('activity'));
     }

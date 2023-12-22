@@ -152,12 +152,17 @@
                 </table>
             </div>
         </form>
-        <form id="delete-form" action="" method="POST">
+        <form id="down-form" action="" method="POST">
             @csrf
-            @method('DELETE')
+            @method("PUT")
 
         </form>
 
+        <form id="delete-form" action="" method="POST">
+            @csrf
+            @method("DELETE")
+
+        </form>
         <div class="prompt-box-down">
             <div class="prompt">
                 <p class="size14">確定要下架嗎?</p>

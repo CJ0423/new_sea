@@ -99,9 +99,10 @@ function msgClose_down () {
     prompt_down.style.display = 'none'
 }
 function Sendmsg_down () {
-    console.log(this)
+    console.log("下架")
     let myForm_down = document.getElementById("down-form")
     console.log(downTarget)
+    console.log(myForm_down)
     myForm_down.action = downTarget
 
     console.log(myForm_down)

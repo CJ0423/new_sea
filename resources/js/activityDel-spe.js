@@ -2,7 +2,6 @@ let del = document.querySelector(".del")
 let cancel = document.querySelector(".cancel")
 
 let promptBoxDown = document.querySelector(".prompt-box-down")
-console.log(del)
 del.addEventListener("click", masbox)
 cancel.addEventListener("click", masboxClose)
 function masbox () {
@@ -35,5 +34,42 @@ function send () {
     document.getElementById("end-time-input").value = formattedDateTime
 
     document.getElementById('send').submit()
+
+}
+
+//上面是上架
+
+//下面是下架
+
+let deleteBtn = document.querySelector(".delete")
+console.log(deleteBtn)
+let cancel2 = document.querySelector(".cancel-delete")
+let deleteConfirm = document.querySelector(".confirm-delete")
+
+
+let promptBoxDelete = document.querySelector(".prompt-box-delete")
+
+deleteBtn.addEventListener("click", masboxDle)
+cancel2.addEventListener("click", masboxCloseDel)
+
+deleteConfirm.addEventListener("click", delPattern)
+
+function masboxDle () {
+    console.log("text")
+    promptBoxDelete.style.display = "block"
+
+}
+function masboxCloseDel () {
+    promptBoxDelete.style.display = "none"
+}
+
+function delPattern () {
+
+    // document.getElementById("end-time-input").value = formattedDateTime
+    let action = document.getElementById('kill-data')
+    action.submit()
+    console.log(action)
+    console.log(action.action)
+
 
 }
