@@ -69,10 +69,48 @@ function Sendmsg () {
     // prompt.style.display = 'none'
 }
 
+
+let down = Array.from(document.querySelectorAll(".button-down")) //下架
+console.log(down)
+let prompt_down = document.querySelector('.prompt-box-down') //刪除提示框
+console.log(prompt_del)
+
+del.forEach(element => {
+    element.addEventListener("click", delcheck)
+})
+
+let cancel_del = document.querySelector(".button-down")
+cancel_del.addEventListener("click", msgClose)
+
+let confirm_del = document.querySelector(".confirm-delete")
+
+confirm_del.addEventListener("click", Sendmsg)
+
+let delTarget = 0
+function delcheck () {
+    console.log(this.dataset.key)
+    delTarget = this.dataset.key
+    prompt_del.style.display = 'flex'
+}
+function msgClose () {
+
+    console.log("text")
+    prompt_del.style.display = 'none'
+}
+function Sendmsg () {
+    console.log(this)
+    let myForm = document.getElementById("delete-form")
+    console.log(delTarget)
+    myForm.action = delTarget
+
+    console.log(myForm)
+    myForm.submit()
+    // prompt.style.display = 'none'
+}
+
 //更新版
 
-var edit = document.querySelector('.button-edit') //編輯
-var down = document.querySelector('.button-down') //下架
+var down = document.querySelectorAll('.button-down') //下架
 var box_down = document.querySelector('.prompt-box-down') //下架提示
 var confirm = document.querySelector('.confirm') //確認
 var cancel = document.querySelector('.cancel') //取消
