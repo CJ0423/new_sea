@@ -42,13 +42,15 @@
                 <div class="offcanvas-body justify-content-end">
                     <ul class="navbar-nav justify-content-end flex-grow pe-3">
 
+                        {{-- {{dd($menus[2]->childMenus[0]->menu_name)}} --}}
                         @foreach ($menus as $item)
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle fw-bold" href="{{ $item->menu_link }}" role="button"
-                                    @if ($item->childMenus != null) data-bs-toggle="dropdown" @endif
-                                    aria-expanded="false">
-                                    {{ $item->menu_name }}
-                                </a>
+                                @foreach ($item as $childCheck )
+                                @if ($item->childMenus != null) data-bs-toggle="dropdown"       aria-expanded="false"> {{ $item->menu_name }}
+                                @break @endif
+                                @endforeach
+                            </a>
                                 @if ($item->childMenus && $item->childMenus != null)
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         @foreach ($item->childMenus as $itemChild)
