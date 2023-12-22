@@ -243,7 +243,43 @@ class ProfileController extends Controller
             ->where('pattern_table.chose_pattern_id', $pattern_table[0]->chose_pattern_id)
             ->get();
 
-        return view('seageat.ActivityPatternShow', compact('selectedPattern', 'allActivity', 'pattern_table', 'textData', 'chose_pattern'));
+        //為了獲得時間
+        $now = Carbon::now()->timezone('Asia/Taipei'); // 读取现在时间
+
+        $activities = DB::table('activity')->get();
+        // 版型编号和状态，是跟着选择版型走的
+        $chose_patterns = DB::table('pattern_table')
+            ->join('chose_pattern', 'pattern_table.chose_pattern_id', '=', 'chose_pattern.id')
+            ->select(
+                'pattern_table.*',
+                'chose_pattern.whitch_pattern',
+                'chose_pattern.start_time',
+                'chose_pattern.end_time'
+            )->where('chose_pattern_id', $chose_pattern[0]->id)
+            ->get();
+
+        // 处理 uniquePatterns 集合
+        foreach ($chose_patterns as $pattern) {
+            $start_time = Carbon::parse($pattern->start_time);
+            $end_time = Carbon::parse($pattern->end_time);
+
+            if ($now->isBetween($start_time, $end_time)) {
+                $pattern->status = '下架';
+            } elseif ($now->gt($end_time)) {
+                $pattern->status = '刪除版型';
+            } else {
+                $pattern->status = '刪除版型';
+            }
+        }
+
+        $uniquePatterns = $chose_patterns;
+
+
+        // dd($uniquePatterns);
+        // dd($chose_pattern[0]->id);
+
+
+        return view('seageat.ActivityPatternShow', compact('selectedPattern', 'allActivity', 'pattern_table', 'textData', 'chose_pattern', 'uniquePatterns'));
     }
     //更新新版型完成時
     // public function  ActivityPatternUpdate(Request $request)
