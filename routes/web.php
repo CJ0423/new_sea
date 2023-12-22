@@ -105,40 +105,40 @@ Route::get('/', function () {
     return view("front.$target", compact('menus', 'swiper', 'icon', 'recommend', 'activities'));
 });
 
-Route::get('/a1', function () {
-    return view('front.A1');
-});
-Route::get('/a2', function () {
-    return view('front.A2');
-});
-Route::get('/a3', function () {
-    return view('front.A3');
-});
+// Route::get('/a1', function () {
+//     return view('front.A1');
+// });
+// Route::get('/a2', function () {
+//     return view('front.A2');
+// });
+// Route::get('/a3', function () {
+//     return view('front.A3');
+// });
 
-Route::get('/b1', function () {
-    return view('front.B1');
-});
-Route::get('/b2', function () {
-    return view('front.B2');
-});
-Route::get('/b3', function () {
-    return view('front.B3');
-});
+// Route::get('/b1', function () {
+//     return view('front.B1');
+// });
+// Route::get('/b2', function () {
+//     return view('front.B2');
+// });
+// Route::get('/b3', function () {
+//     return view('front.B3');
+// });
 
-Route::get('/c1', function () {
-    return view('front.C1');
-});
-Route::get('/c2', function () {
-    return view('front.C2');
-});
+// Route::get('/c1', function () {
+//     return view('front.C1');
+// });
+// Route::get('/c2', function () {
+//     return view('front.C2');
+// });
 
-Route::get('/d1', function () {
-    return view('front.D1');
-});
-Route::get('/d2', function () {
-    return view('front.D2');
-});
-//前端區域
+// Route::get('/d1', function () {
+//     return view('front.D1');
+// });
+// Route::get('/d2', function () {
+//     return view('front.D2');
+// });
+// //前端區域
 
 
 
