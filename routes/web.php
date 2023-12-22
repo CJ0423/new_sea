@@ -36,9 +36,10 @@ Route::get('/', function () {
         ->where(function ($query) use ($now) {
             // 當前時間在start_time和end_time之間
             $query->where('start_time', '<=', $now)
-                ->where('end_time', '>=', $now)->orderBY('end_tims', 'desc');
-        })
-        ->get();
+                ->where('end_time', '>=', $now);
+        })->orderBY('end_time', 'asc')
+        ->first();
+    // ->get();
     // dd("正確", $results);
     if (empty($results)) {
         $results = DB::table('chose_pattern')

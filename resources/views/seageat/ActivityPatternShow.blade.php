@@ -294,9 +294,20 @@
         </div>
     </div>
     </div>
+
     <div class="control-container">
         <button type="submit" class="submit-button">儲存</button>
-        <button type="button"  class="down-added-button del">下架</button>
+        {{--  --}}
+                {{-- {{dd($uniquePatterns)}} --}}
+        @if ($uniquePatterns[0]->status=="下架")
+        <button type="button"  class="down-added-button del">{{$uniquePatterns[0]->status}}</button>
+
+        @else
+        <button type="button"  class="down-added-button del">{{$uniquePatterns[0]->status}}</button>
+
+        @endif
+
+        {{-- {{dd($uniquePatterns[0]->status)}} --}}
     </div>
 </form>
 <!-- 提示訊息 -->
