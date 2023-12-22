@@ -53,7 +53,6 @@
                         @foreach ($menus as $item )
                         <li class="nav-item dropdown">
                             <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
-
                               @endif
                             </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -63,7 +62,6 @@
                                             href="{{$data->menu_link}}">{{$data->menu_name}}</a>
                                     </li>
                                     @endforeach
-
                                 </ul>
                         </li>
                         @endforeach

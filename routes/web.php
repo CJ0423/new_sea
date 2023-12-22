@@ -31,19 +31,22 @@ Route::get('/', function () {
     //取得版型開始
     $now = Carbon::now();
     // $now = 2022;
+
     $results = DB::table('chose_pattern')
         ->where(function ($query) use ($now) {
             // 當前時間在start_time和end_time之間
             $query->where('start_time', '<=', $now)
-                ->where('end_time', '>=', $now);
+                ->where('end_time', '>=', $now)->orderBY('end_tims', 'desc');
         })
-        ->first();
+        ->get();
+    // dd("正確", $results);
     if (empty($results)) {
         $results = DB::table('chose_pattern')
             ->whereNull('end_time')
             ->where('start_time', '<=', $now)
             ->orderBy('start_time', 'desc') // 確保最接近現在的記錄在最前面
             ->first(); // 只選擇一筆記錄
+        // dd('錯誤');
     }
 
     $target = $results->whitch_pattern;
@@ -215,9 +218,13 @@ Route::middleware('auth')->group(function () {
     // 版型設定 確定版型之後的事情
     Route::get('seagate/activityPatternCreate', [ProfileController::class, 'ActivityPatternCreate'])->name('PatternSetting-create');
 
+    // 可能在這
     Route::post('seagate/store_PatternCreate', [PatternController::class, 'store'])->name('store_pattern');
 
     Route::get('seagate/store_PatternCreate/{id}', [ProfileController::class, 'ActivityPatternShow'])->name('store_patternShow');
+
+    // 可能在這
+
 
     // 版型設定 更新版型之後的事情
     Route::put('seagate/store_PatternCreate/{id}', [PatternController::class, 'update'])->name('store_patternUpdate');

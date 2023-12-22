@@ -56,7 +56,7 @@
                     <div class="item item7"></div> --}}
                 </div>
                 <a style="position: relative;
-                top: 40px;" href="./createActivities.html">
+                top: 40px;" href="{{route('activity')}}">
                     捨棄修改</a>
             </div>
             <div class="setting-container">

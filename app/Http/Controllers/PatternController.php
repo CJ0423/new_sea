@@ -60,12 +60,23 @@ class PatternController extends Controller
         $requestArrayLength = count($requestArray) - 5;
 
         // 假设 $id 是 chose_pattern 的 ID
-        DB::table('chose_pattern')->where('id', $id)->update([
-            'start_time' => $request->input('start-time-input'),
-            'end_time' => $request->input('end-time-input'),
-            // 其他需要更新的字段...
-            'updated_at' => Carbon::now()
-        ]);
+
+        if ($request->has('start-time-input')) {
+            DB::table('chose_pattern')->where('id', $id)->update([
+                'start_time' => $request->input('start-time-input'),
+                'end_time' => $request->input('end-time-input'),
+                // 其他需要更新的字段...
+                'updated_at' => Carbon::now()
+            ]);
+        } else {
+            DB::table('chose_pattern')->where('id', $id)->update([
+                'end_time' => $request->input('end-time-input'),
+                // 其他需要更新的字段...
+                'updated_at' => Carbon::now()
+            ]);
+        }
+
+
 
         // dd($id);
 

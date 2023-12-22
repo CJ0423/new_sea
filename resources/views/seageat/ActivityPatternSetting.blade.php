@@ -38,8 +38,8 @@
               <div class="item item6"></div>
               <div class="item item7"></div>
             </div>
-            <a href="./createActivities.html">
-              捨棄修改</a>
+            <a href="{{route('activity')}}">
+              捨棄修改1</a>
           </div>
           <div class="setting-container">
             <h3>版型編號：<span></span></h3>
