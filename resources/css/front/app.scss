@@ -183,8 +183,8 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .recommend-logo{
     background-color: #ffffff;
-    width: 320px;
-    height: 200px;
+    max-width: 320px;
+    max-height: 200px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -445,15 +445,14 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .container-pc div .main-img figcaption a {
     font-size: 1.5em;
-    padding: 8px 20px 8px 20px;
+    padding: 0px 2px 8px 20px;
     color: white;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     background-color: #6ebe49;
     border-radius: 8px;
     margin-top: 20px;
     position: relative;
-    width: 160px;
 }
 
 .container-pc div .main-img figcaption a::after {
@@ -469,17 +468,17 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     /* 設定箭頭圖片的高度 */
     display: inline-block;
     /* 讓元素以內聯區塊方式顯示 */
-    position: absolute;
+    position: relative;
     /* 相對於 .button 進行絕對定位 */
-    top: calc(50% - 0.8em);
-    left: calc(50% + 1.2em);
+    top: 5.5px;
+    left: -10px;
     /* 距離右邊的距離，根據需要調整 */
 }
 
 .container-pc div .main-img figcaption a:hover::after {
-    left: calc(50% + 1.6em);
-    /* 距離右邊的距離，根據需要調整 */
     transition: left 0.3s ease, transform 0.3s ease;
+    left: -5px;
+    /* 距離右邊的距離，根據需要調整 */
     /* 添加過渡效果 */
 }
 
@@ -515,8 +514,14 @@ footer .swiper-control {
     width: 90%;
 }
 
-@media (max-width: 767px) {
-    footer .swiper-control {
+@media (max-width: 465px) {
+    footer .swiper-button-next {
+        display: none;
+    }
+}
+
+@media (max-width: 465px) {
+    footer .swiper-button-prev {
         display: none;
     }
 }
