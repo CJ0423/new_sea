@@ -271,9 +271,6 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 }
 
 @media (max-width: 767px) {
-  .banner-pc {
-    height: 148vw;
-  }
   .banner-pc .swiper .swiper-button-next {
     right: var(--swiper-navigation-sides-offset, 10px);
   }
