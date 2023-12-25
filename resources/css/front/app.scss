@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 // 要特別注意
 * {
     box-sizing: border-box;
@@ -31,7 +32,7 @@ body {
 //     }
 // }
 
-.dropdown-item{
+.dropdown-item {
     display: flex;
     justify-content: center;
 }
@@ -155,7 +156,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
     position: relative;
     width: 100%;
-    height: 36vw;
+    // height: 36vw;
     // min-height: 520px;
     font-family: Noto Sans TC;
     font-size: 14px;
@@ -163,9 +164,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 }
 
 .banner-pc .swiper {
-    // max-width: 1440px;
     width: 100%;
-    height: 100%;
 }
 
 .banner-pc .swiper .swiper-slide {
@@ -179,9 +178,38 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     align-items: center;
     // max-height: 100vh;
     height: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    video {
+        pointer-events: none;
+    }
+
+    .video-slide-pc {
+        display: block;
+    }
+
+    .video-slide-pad {
+        display: none;
+    }
+
+    @media screen and (max-width:767px) {
+        .video-slide-pc {
+            display: none;
+        }
+
+        .video-slide-pad {
+            display: block;
+        }
+    }
 }
 
-.recommend-logo{
+.recommend-logo {
     background-color: #ffffff;
     max-width: 320px;
     max-height: 200px;
@@ -192,7 +220,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     align-items: center;
 }
 
-.recommend-logo img{
+.recommend-logo img {
     width: 100%;
 }
 
@@ -281,6 +309,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
         // height: 100vw;
         // max-height: calc(100vh - 54px);
     }
+
     .banner-pc .swiper .swiper-button-next {
         right: var(--swiper-navigation-sides-offset, 10px);
     }
@@ -680,12 +709,14 @@ div[data-aos="custom-animation-up"].aos-animate {
 
 @media (max-width: 767px) {
     .container-pc {
+
         // height: 305vh;
         .column-img {
             float: initial !important;
             width: 100% !important;
             height: 112vw !important;
         }
+
         .row-img {
             float: initial !important;
 
