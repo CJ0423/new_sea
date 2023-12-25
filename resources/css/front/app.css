@@ -270,7 +270,21 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
   right: var(--swiper-navigation-sides-offset, 50px);
 }
 
+.banner-pc .swiper .swiper-slide .banner-img.banner-img-pc {
+  display: block;
+}
+
+.banner-pc .swiper .swiper-slide .banner-img.banner-img-pad {
+  display: none;
+}
+
 @media (max-width: 767px) {
+  .banner-pc .swiper .swiper-slide .banner-img.banner-img-pc {
+    display: none;
+  }
+  .banner-pc .swiper .swiper-slide .banner-img.banner-img-pad {
+    display: block;
+  }
   .banner-pc .swiper .swiper-button-next {
     right: var(--swiper-navigation-sides-offset, 10px);
   }

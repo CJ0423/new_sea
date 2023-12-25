@@ -100,7 +100,8 @@
                         </figcaption> --}}
                         {{-- </figure> --}}
                         @if (pathinfo($item->img_pc_url, PATHINFO_EXTENSION) == 'png')
-                            <img src="{{ asset('storage/' . $item->img_pc_url) }}" class="banner-img">
+                            <img src="{{ asset('storage/' . $item->img_pc_url) }}" class="banner-img banner-img-pc">
+                            <img src="{{ asset('storage/' . $item->img_pad_url) }}" class="banner-img banner-img-pad">
                         @elseif (pathinfo($item->img_pc_url, PATHINFO_EXTENSION) == 'mp4')
                             <video src="{{ asset('storage/' . $item->img_pc_url) }}" type="video/mp4" muted playsinline
                                 class="video-slide-pc"></video>
