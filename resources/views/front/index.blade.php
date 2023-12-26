@@ -76,7 +76,8 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 @foreach ($swiper as $item)
-                    <div class="swiper-slide">
+
+                    <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
                         <style>
                             .banner-img {
                                 width: 100%;
@@ -263,7 +264,7 @@
             let direction = 0
 
             if (window.innerWidth <= 900) {
-                direction = 1
+                direction = 2
                 console.log(1)
             } else if (window.innerWidth <= 1200) {
                 direction = 2

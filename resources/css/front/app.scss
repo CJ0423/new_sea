@@ -195,6 +195,11 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 .recommend-logo img {
     width: 100%;
 }
+@media (max-width: 900px) {
+    .recommend-logo {
+        width: 70%;
+    }
+}
 
 .banner-pc .swiper .swiper-slide figure {
     margin: 0px;
