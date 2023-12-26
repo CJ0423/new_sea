@@ -13,7 +13,7 @@ class MakeMenuNameAndMenuLinkNullable extends Migration
     {
         Schema::table('childmenu', function (Blueprint $table) {
             $table->string('menu_name')->nullable()->change();
-            $table->string('menu_link')->nullable()->change();
+            $table->text('menu_link')->nullable()->change();
         });
     }
 

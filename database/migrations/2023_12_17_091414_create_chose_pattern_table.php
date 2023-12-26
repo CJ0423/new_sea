@@ -19,10 +19,10 @@ return new class extends Migration
             $table->integer('how_many_space'); //共有幾格
             $table->string("whitch_pattern"); //哪一個版型
             $table->integer('number_of_pattern'); //第幾格
-            //外鍵對應對方activity的id與主標題//
-            $table->unsignedBigInteger('activity_id');
+            // //外鍵對應對方activity的id與主標題//
+            // $table->unsignedBigInteger('activity_id');
 
-            $table->foreign('activity_id')->references('id')->on('activity')->onDelete('cascade'); //外鍵中的活動的id可以直接用這個把圖片給抓取
+            // $table->foreign('activity_id')->references('id')->on('activity')->onDelete('cascade'); //外鍵中的活動的id可以直接用這個把圖片給抓取
         });
     }
 

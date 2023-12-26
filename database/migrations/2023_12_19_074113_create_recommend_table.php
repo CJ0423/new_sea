@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('recommend', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("logo_url");
+            $table->text("logo_url");
             $table->string("logo_name");
-            $table->string("logo_link");
+            $table->text("logo_link");
         });
     }
 

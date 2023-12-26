@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('menu_name');
-            $table->string('menu_link');
+            $table->text('menu_link');
         });
     }
 

@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string("subtitle")->nullable(); //小標題
 
             $table->string("button_name")->nullable(); //按鈕的字
-            $table->string("button_link")->nullable(); //按鈕連結
+            $table->text("button_link")->nullable(); //按鈕連結
 
-            $table->string("img_pc_url"); //電腦圖片網址
-            $table->string("img_pad_url"); //手機圖片網址
+            $table->text("img_pc_url"); //電腦圖片網址
+            $table->text("img_pad_url"); //手機圖片網址
             $table->string("img_size_pc"); //直向、橫向、專門給電腦
             $table->string("img_size_pad"); //直向、橫向、專門給手機的 column-img row-img
         });

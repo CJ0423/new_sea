@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('banner_table', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("img_pc_url"); //電腦圖片網址
-            $table->string("img_pad_url"); //手機圖片網址
+            $table->text("img_pc_url"); //電腦圖片網址
+            $table->text("img_pad_url"); //手機圖片網址
             $table->string("title"); //主標題
             $table->string("subtitle")->nullable(); //小標題
             $table->string("button_name")->nullable(); //按鈕的字
-            $table->string("button_link")->nullable(); //按鈕連結
+            $table->text("button_link")->nullable(); //按鈕連結
 
             $table->timestamp('start_time')->nullable(); // 如果活動的開始時間是可選的
             $table->timestamp('end_time')->nullable();
