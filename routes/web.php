@@ -76,8 +76,8 @@ Route::get('/', function () {
         ->where(function ($query) use ($now) {
             // 當前時間在start_time和end_time之間
             $query->where('start_time', '<=', $now)
-                ->where('end_time', '>=', $now)->orderBy('Rank', 'desc');
-        })
+                ->where('end_time', '>=', $now);
+        })->orderBy('Rank', 'asc')
         ->get();
     // if (isEmpty($swiper)) {
     //     dd($swiper);
