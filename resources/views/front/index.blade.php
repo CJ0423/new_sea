@@ -76,7 +76,7 @@
         <div class="swiper bannerSwiper">
             <div class="swiper-wrapper">
                 @foreach ($swiper as $item)
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
                         <style>
                             .banner-img {
                                 width: 100%;

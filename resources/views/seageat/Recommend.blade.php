@@ -57,7 +57,7 @@
                             <tr class="border-bottom">
                                 <th scope="row">{{ $index + 1 }}</th>
                                 <td><img src='{{ asset('storage/' . $item->logo_url) }}'alt=""></td>
-                                <td>{{ $item->logo_link }}</td>
+                                <td><a href="{{ $item->logo_link }}" target="_blank">{{ substr($item->logo_link, 0, 100) }}{{ (strlen($item->logo_link) > 100) ? "......" : "" }}</a></td>
                                 <td>
                                     <div class="operate">
                                         <a href=" {{ route('RecommendRevise', ['id' => $item->id]) }}"
