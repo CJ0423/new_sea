@@ -73,10 +73,10 @@
     {{-- 超連結怪怪的 --}}
     <!-- Swiper -->
     <section class="banner-pc">
-        <div class="swiper bannerSwiper">
+        <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 @foreach ($swiper as $item)
-                    <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
+                    <div class="swiper-slide">
                         <style>
                             .banner-img {
                                 width: 100%;
@@ -92,22 +92,13 @@
                                 }
                             }
                         </style>
-                        {{-- <figure class="banner-img"> --}}
-                        {{-- <figcaption>
+                        <figure class="banner-img">
+                            <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
                             <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                        </figcaption> --}}
-                        {{-- </figure> --}}
-                        @if (pathinfo($item->img_pc_url, PATHINFO_EXTENSION) == 'png')
-                            <img src="{{ asset('storage/' . $item->img_pc_url) }}" class="banner-img banner-img-pc">
-                            <img src="{{ asset('storage/' . $item->img_pad_url) }}" class="banner-img banner-img-pad">
-                        @elseif (pathinfo($item->img_pc_url, PATHINFO_EXTENSION) == 'mp4')
-                            <video src="{{ asset('storage/' . $item->img_pc_url) }}" type="video/mp4" muted playsinline
-                                class="video-slide-pc"></video>
-                            <video src="{{ asset('storage/' . $item->img_pad_url) }}" type="video/mp4" muted
-                                playsinline class="video-slide-pad"></video>
-                        @endif
+                        </figcaption>
+                        </figure>
                     </div>
                 @endforeach
 
@@ -235,7 +226,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
+    {{-- <script>
         let second = 3000;
         let version;
         let timerId;
@@ -386,6 +377,22 @@
             });
         }
         window.addEventListener('resize', resizeImg);
+    </script> --}}
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
     </script>
     <script>
         var swiper = new Swiper('.swiper2', {
