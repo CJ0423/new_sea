@@ -26,7 +26,6 @@
         }
     </style>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
@@ -75,24 +74,37 @@
     <section class="banner-pc">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+
+                <style>
+                    .banner-img {
+                        width: 100%;
+                        height: 100%;
+
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                </style>
+
                 @foreach ($swiper as $item)
+
                     <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
+
                         <style>
-                            .banner-img {
-                                width: 100%;
-                                height: 100%;
+                            #a{{$item->id}}{
                                 background-image: url({{ asset('storage/' . $item->img_pc_url) }});
 
-                                background-position: center;
-                                background-size: cover;
-                                background-repeat: no-repeat;
-
-                                @media (max-width:767px) {
-                                    background-image: url({{ asset('storage/' . $item->img_pad_url) }});
-                                }
                             }
+
+                                                @media (max-width:767px) {
+                                                    #{{$item->id}}{
+                                                        background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
+
+                                                    }
+
                         </style>
-                        <figure class="banner-img">
+                        <figure id="a{{$item->id}}" class="banner-img">
                             {{-- <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
