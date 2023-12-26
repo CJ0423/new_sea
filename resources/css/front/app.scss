@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 // 要特別注意
 * {
     box-sizing: border-box;
@@ -31,7 +32,7 @@ body {
 //     }
 // }
 
-.dropdown-item{
+.dropdown-item {
     display: flex;
     justify-content: center;
 }
@@ -155,7 +156,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
     position: relative;
     width: 100%;
-    height: 36vw;
+    // height: 36vw;
     // min-height: 520px;
     font-family: Noto Sans TC;
     font-size: 14px;
@@ -163,9 +164,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 }
 
 .banner-pc .swiper {
-    // max-width: 1440px;
     width: 100%;
-    height: 100%;
 }
 
 .banner-pc .swiper .swiper-slide {
@@ -179,12 +178,41 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     align-items: center;
     // max-height: 100vh;
     height: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    video {
+        pointer-events: none;
+    }
+
+    .video-slide-pc {
+        display: block;
+    }
+
+    .video-slide-pad {
+        display: none;
+    }
+
+    @media screen and (max-width:767px) {
+        .video-slide-pc {
+            display: none;
+        }
+
+        .video-slide-pad {
+            display: block;
+        }
+    }
 }
 
-.recommend-logo{
+.recommend-logo {
     background-color: #ffffff;
-    width: 320px;
-    height: 200px;
+    max-width: 320px;
+    max-height: 200px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -192,7 +220,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     align-items: center;
 }
 
-.recommend-logo img{
+.recommend-logo img {
     width: 100%;
 }
 
@@ -272,15 +300,32 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     right: var(--swiper-navigation-sides-offset, 50px);
 }
 
+.banner-pc .swiper .swiper-slide .banner-img.banner-img-pc {
+    display: block;
+}
+
+.banner-pc .swiper .swiper-slide .banner-img.banner-img-pad {
+    display: none;
+}
+
 @media (max-width: 767px) {
+    .banner-pc .swiper .swiper-slide .banner-img.banner-img-pc {
+        display: none;
+    }
+
+    .banner-pc .swiper .swiper-slide .banner-img.banner-img-pad {
+        display: block;
+    }
+
     .banner-pc {
         // 要特別注意
         // 最理想 690 1021
         // height: 158vw;
-        height: 148vw;
+        // height: 148vw;
         // height: 100vw;
         // max-height: calc(100vh - 54px);
     }
+
     .banner-pc .swiper .swiper-button-next {
         right: var(--swiper-navigation-sides-offset, 10px);
     }
@@ -445,15 +490,14 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .container-pc div .main-img figcaption a {
     font-size: 1.5em;
-    padding: 8px 20px 8px 20px;
+    padding: 0px 2px 8px 20px;
     color: white;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     background-color: #6ebe49;
     border-radius: 8px;
     margin-top: 20px;
     position: relative;
-    width: 160px;
 }
 
 .container-pc div .main-img figcaption a::after {
@@ -469,17 +513,17 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     /* 設定箭頭圖片的高度 */
     display: inline-block;
     /* 讓元素以內聯區塊方式顯示 */
-    position: absolute;
+    position: relative;
     /* 相對於 .button 進行絕對定位 */
-    top: calc(50% - 0.8em);
-    left: calc(50% + 1.2em);
+    top: 5.5px;
+    left: -10px;
     /* 距離右邊的距離，根據需要調整 */
 }
 
 .container-pc div .main-img figcaption a:hover::after {
-    left: calc(50% + 1.6em);
-    /* 距離右邊的距離，根據需要調整 */
     transition: left 0.3s ease, transform 0.3s ease;
+    left: -5px;
+    /* 距離右邊的距離，根據需要調整 */
     /* 添加過渡效果 */
 }
 
@@ -500,11 +544,11 @@ footer .title {
     font-size: 32px;
 }
 
-@media (max-width: 767px) {
-    footer .title {
-        display: none;
-    }
-}
+// @media (max-width: 767px) {
+//     footer .title {
+//         display: none;
+//     }
+// }
 
 footer .swiper-control {
     position: relative;
@@ -515,8 +559,14 @@ footer .swiper-control {
     width: 90%;
 }
 
-@media (max-width: 767px) {
-    footer .swiper-control {
+@media (max-width: 465px) {
+    footer .swiper-button-next {
+        display: none;
+    }
+}
+
+@media (max-width: 465px) {
+    footer .swiper-button-prev {
         display: none;
     }
 }
@@ -675,12 +725,14 @@ div[data-aos="custom-animation-up"].aos-animate {
 
 @media (max-width: 767px) {
     .container-pc {
+
         // height: 305vh;
         .column-img {
             float: initial !important;
             width: 100% !important;
             height: 112vw !important;
         }
+
         .row-img {
             float: initial !important;
 

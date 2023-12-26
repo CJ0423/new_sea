@@ -31,7 +31,9 @@
                     <figcaption>
                         <h2>{{ $item->title }}</h2>
                         <h3>{{ $item->subtitle }}</h3>
-                        <a href="{{ $item->button_link }}" class="buy-now-button">{{ $item->button_name }}</a>
+                        <a href="{{ $item->button_link }}" class="buy-now-button">
+                            {{ $item->button_name }}
+                        </a>
                     </figcaption>
                 </figure>
             </div>
