@@ -92,13 +92,6 @@
                                 }
                             }
                         </style>
-                        {{-- <figure class="banner-img"> --}}
-                        {{-- <figcaption>
-                            <h2>主標題文字</h2>
-                            <h3>副標題文字</h3>
-                            <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                        </figcaption> --}}
-                        {{-- </figure> --}}
                         @if (pathinfo($item->img_pc_url, PATHINFO_EXTENSION) == 'png')
                             <img src="{{ asset('storage/' . $item->img_pc_url) }}" class="banner-img banner-img-pc">
                             <img src="{{ asset('storage/' . $item->img_pad_url) }}" class="banner-img banner-img-pad">
@@ -248,25 +241,33 @@
         let videoWidth;
         let videoHeight;
         let radio = window.innerWidth;
-        firstVideo.addEventListener('loadedmetadata', function () {
-            videoWidth = firstVideo.videoWidth;
-            videoHeight = firstVideo.videoHeight;
-            let allSlide = document.querySelectorAll('.swiper-slide');
-            allSlide.forEach(item => {
-                for (let i = 0; i < item.children.length; i++) {
-                    if (item.children[i].tagName === "IMG") {
-                        item.children[i].style.width = `${radio}px`;
-                        item.children[i].style.height = `${radio / videoWidth * videoHeight}px`;
-                    } else if (item.children[i].tagName === "VIDEO") {
-                        if (item.children[i].classList.contains(version)) {
-                            item.children[i].setAttribute("width", `${radio}`);
-                            item.children[i].setAttribute("height", `${radio / videoWidth * videoHeight}`);
+        if (firstVideo) {
+
+            firstVideo.addEventListener('loadedmetadata', function() {
+                videoWidth = firstVideo.videoWidth;
+                videoHeight = firstVideo.videoHeight;
+                let allSlide = document.querySelectorAll('.swiper-slide');
+                allSlide.forEach(item => {
+                    for (let i = 0; i < item.children.length; i++) {
+                        if (item.children[i].tagName === "IMG") {
+                            item.children[i].style.width = `${radio}px`;
+                            item.children[i].style.height = `${radio / videoWidth * videoHeight}px`;
+                        } else if (item.children[i].tagName === "VIDEO") {
+                            if (item.children[i].classList.contains(version)) {
+                                item.children[i].setAttribute("width", `${radio}`);
+                                item.children[i].setAttribute("height",
+                                    `${radio / videoWidth * videoHeight}`);
+                            }
                         }
                     }
-                }
-                item.style.width = `${radio}px`;
+                    item.style.width = `${radio}px`;
+                });
             });
-        });
+
+        } else {
+            videoWidth = window.innerWidth;
+            videoHeight = window.innerWidth * 0.36;
+        }
         var bannerSwiper = new Swiper(".bannerSwiper", {
             autoplay: false,
             navigation: {
@@ -275,7 +276,7 @@
             },
             slidesPerView: "auto",
             on: {
-                init: function () {
+                init: function() {
                     let firstSwiperSlide = document.querySelector('.bannerSwiper .swiper-slide');
                     let isVideo = false;
                     for (let i = 0; i < firstSwiperSlide.children.length; i++) {
@@ -283,7 +284,7 @@
                             isVideo = true;
                             break;
                         } else if (firstSwiperSlide.children[i].tagName === "IMG") {
-                            timerId = setTimeout(function () {
+                            timerId = setTimeout(function() {
                                 bannerSwiper.slideNext();
                             }, second);
                             break;
@@ -298,7 +299,7 @@
                         }
                     }
                 },
-                slideChange: function () {
+                slideChange: function() {
                     let allSwiperSlide = document.querySelectorAll('.bannerSwiper .swiper-slide');
                     allSwiperSlide.forEach(item => {
                         for (let i = 0; i < item.children.length; i++) {
@@ -319,7 +320,8 @@
                     }
                     for (let i = 0; i < item.children.length; i++) {
                         tagType = item.children[i].tagName;
-                        if (item.children[i].tagName === "VIDEO" && item.children[i].classList.contains(version)) {
+                        if (item.children[i].tagName === "VIDEO" && item.children[i].classList.contains(
+                                version)) {
                             nowVideo = item.children[i];
                         }
                     }
@@ -330,7 +332,7 @@
                                 nowVideo.addEventListener('ended', videoNext);
                             }
                         } else if (tagType === "IMG") {
-                            timerId = setTimeout(function () {
+                            timerId = setTimeout(function() {
                                 bannerSwiper.slideNext();
                             }, second);
                         }
@@ -339,12 +341,12 @@
                             if (nowVideo) {
                                 nowVideo.play();
                                 nowVideo.addEventListener('ended', videoNext);
-                                nowVideo.addEventListener('ended', function () {
+                                nowVideo.addEventListener('ended', function() {
                                     bannerSwiper.slideTo(0, 500);
                                 });
                             }
                         } else if (tagType === "IMG") {
-                            timerId = setTimeout(function () {
+                            timerId = setTimeout(function() {
                                 bannerSwiper.slideTo(0, 500);
                                 lastOne = false;
                             }, second);
@@ -353,11 +355,13 @@
                 },
             },
         });
+
         function videoNext() {
             bannerSwiper.slideNext();
             this.removeEventListener('ended', videoNext);
         }
         resizeImg();
+
         function resizeImg() {
 
             if (window.innerWidth >= 768) {
@@ -366,24 +370,35 @@
                 version = "video-slide-pad";
             }
             firstVideo = document.querySelector(`.${version}`);
-            videoWidth = firstVideo.videoWidth;
-            videoHeight = firstVideo.videoHeight;
-            radio = window.innerWidth;
-            let allSlide = document.querySelectorAll('.bannerSwiper .swiper-slide');
-            allSlide.forEach(item => {
-                for (let i = 0; i < item.children.length; i++) {
-                    if (item.children[i].tagName === "IMG") {
-                        item.children[i].style.width = `${radio}px`;
-                        item.children[i].style.height = `${radio / videoWidth * videoHeight}px`;
-                    } else if (item.children[i].tagName === "VIDEO") {
-                        if (item.children[i].classList.contains(version)) {
-                            item.children[i].setAttribute("width", `${radio}`);
-                            item.children[i].setAttribute("height", `${radio / videoWidth * videoHeight}`);
+            if (firstVideo) {
+
+                videoWidth = firstVideo.videoWidth;
+                videoHeight = firstVideo.videoHeight;
+                radio = window.innerWidth;
+                let allSlide = document.querySelectorAll('.bannerSwiper .swiper-slide');
+                allSlide.forEach(item => {
+                    for (let i = 0; i < item.children.length; i++) {
+                        if (item.children[i].tagName === "IMG") {
+                            item.children[i].style.width = `${radio}px`;
+                            item.children[i].style.height = `${radio / videoWidth * videoHeight}px`;
+                        } else if (item.children[i].tagName === "VIDEO") {
+                            if (item.children[i].classList.contains(version)) {
+                                item.children[i].setAttribute("width", `${radio}`);
+                                item.children[i].setAttribute("height", `${radio / videoWidth * videoHeight}`);
+                            }
                         }
                     }
-                }
-                item.style.width = `${radio}px`;
-            });
+                    item.style.width = `${radio}px`;
+                });
+            } else {
+                let allSlide = document.querySelectorAll('.swiper-slide');
+                allSlide.forEach(item => {
+                    videoWidth = window.innerWidth;
+                    videoHeight = window.innerWidth * 0.36;
+                    item.style.width = videoWidth;
+                    item.style.height = videoHeight;
+                });
+            }
         }
         window.addEventListener('resize', resizeImg);
     </script>
