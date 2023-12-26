@@ -409,7 +409,7 @@
             let direction = 0
 
             if (window.innerWidth <= 900) {
-                direction = 1
+                direction = 2
                 // console.log(1)
             } else if (window.innerWidth <= 1200) {
                 direction = 2

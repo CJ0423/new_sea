@@ -198,7 +198,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
         display: none;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         .video-slide-pc {
             display: none;
         }
@@ -222,6 +222,15 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .recommend-logo img {
     width: 100%;
+}
+
+@media (max-width: 900px) {
+    .recommend-logo {
+        width: 80%;
+
+        img {
+        }
+    }
 }
 
 .banner-pc .swiper .swiper-slide figure {
@@ -725,7 +734,6 @@ div[data-aos="custom-animation-up"].aos-animate {
 
 @media (max-width: 767px) {
     .container-pc {
-
         // height: 305vh;
         .column-img {
             float: initial !important;
