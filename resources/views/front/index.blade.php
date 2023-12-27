@@ -49,6 +49,7 @@
 
                         {{-- {{dd($menus)}} --}}
 
+                        {{-- {{dd($menus)}} --}}
                         @foreach ($menus as $item )
                         <li class="nav-item dropdown">
                             <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
@@ -105,11 +106,11 @@
 
                         </style>
                         <figure id="a{{$item->id}}" class="banner-img">
-                            {{-- <figcaption>
+                            <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
                             <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                        </figcaption> --}}
+                        </figcaption>
                         </figure>
                     </div>
                 @endforeach

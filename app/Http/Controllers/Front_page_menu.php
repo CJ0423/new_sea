@@ -24,6 +24,7 @@ class Front_page_menu extends Controller
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
+
         for ($i = 0; $i < $requestArrayLength / 2; $i++) {
             $menuName = $request->input('child_menu' . $i);
             $menuLink = $request->input('menu_link' . $i);
@@ -62,7 +63,7 @@ class Front_page_menu extends Controller
             // 'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $menuName = $request->input('child_menu' . $i);
             $menuLink = $request->input('menu_link' . $i);
             $menuId = $request->input('child_menu_id' . $i);

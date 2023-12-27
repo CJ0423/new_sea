@@ -53,13 +53,13 @@
               </div>
             </div>
           </div>
-          @for ($i=0;$i<4;$i++)
+          @for ($i=0;$i<10;$i++)
           <hr>
           <div class="input">
             <div class="base-wrapper">
               <div class="base">
                 <div class="frame-5">
-                  <div class="label">子選單名稱</div>
+                  <div style="width:auto" class="label">{{$i+1}}:子選單名稱</div>
                 </div>
                 <div class="input-field">
                   <input name="child_menu{{$i}}" type="text" class="border">
@@ -71,7 +71,7 @@
             <div class="base-wrapper">
               <div class="base">
                 <div class="frame-5">
-                  <div class="label">子選單連結</div>
+                  <div style="width:auto" class="label">{{$i+1}}:子選單連結</div>
                 </div>
                 <div class="input-field">
                   <input name="menu_link{{$i}}" type="text" class="border">
