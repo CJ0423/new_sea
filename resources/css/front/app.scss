@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 // 要特別注意
 * {
     box-sizing: border-box;
@@ -164,7 +163,9 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 }
 
 .banner-pc .swiper {
+    // max-width: 1440px;
     width: 100%;
+    height: 100%;
 }
 
 .banner-pc .swiper .swiper-slide {
@@ -178,35 +179,6 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     align-items: center;
     // max-height: 100vh;
     height: 100%;
-
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    video {
-        pointer-events: none;
-    }
-
-    .video-slide-pc {
-        display: block;
-    }
-
-    .video-slide-pad {
-        display: none;
-    }
-
-    @media screen and (max-width: 767px) {
-        .video-slide-pc {
-            display: none;
-        }
-
-        .video-slide-pad {
-            display: block;
-        }
-    }
 }
 
 .recommend-logo {
@@ -223,13 +195,9 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 .recommend-logo img {
     width: 100%;
 }
-
 @media (max-width: 900px) {
     .recommend-logo {
-        width: 80%;
-
-        img {
-        }
+        width: 70%;
     }
 }
 
@@ -309,32 +277,15 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     right: var(--swiper-navigation-sides-offset, 50px);
 }
 
-.banner-pc .swiper .swiper-slide .banner-img.banner-img-pc {
-    display: block;
-}
-
-.banner-pc .swiper .swiper-slide .banner-img.banner-img-pad {
-    display: none;
-}
-
 @media (max-width: 767px) {
-    .banner-pc .swiper .swiper-slide .banner-img.banner-img-pc {
-        display: none;
-    }
-
-    .banner-pc .swiper .swiper-slide .banner-img.banner-img-pad {
-        display: block;
-    }
-
     .banner-pc {
         // 要特別注意
         // 最理想 690 1021
         // height: 158vw;
-        // height: 148vw;
+        height: 148vw;
         // height: 100vw;
         // max-height: calc(100vh - 54px);
     }
-
     .banner-pc .swiper .swiper-button-next {
         right: var(--swiper-navigation-sides-offset, 10px);
     }
@@ -740,7 +691,6 @@ div[data-aos="custom-animation-up"].aos-animate {
             width: 100% !important;
             height: 112vw !important;
         }
-
         .row-img {
             float: initial !important;
 

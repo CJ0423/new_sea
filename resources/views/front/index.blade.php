@@ -21,12 +21,11 @@
     <!-- Demo styles -->
     @yield('css')
     <style>
-        .close::after {
+        .close::after{
             content: none;
         }
     </style>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
@@ -50,20 +49,20 @@
 
                         {{-- {{dd($menus)}} --}}
 
-                        @foreach ($menus as $item)
-                            <li class="nav-item dropdown">
-                                <a href=" {{ $item->menu_link }}"
-                                    role="button"@if ($item->childMenus[0]->menu_name != null) class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{ $item->menu_name }} @else class="nav-link dropdown-toggle fw-bold close"  > {{ $item->menu_name }} @endif
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        @foreach ($item->childMenus as $data)
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ $data->menu_link }}">{{ $data->menu_name }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                            </li>
+                        @foreach ($menus as $item )
+                        <li class="nav-item dropdown">
+                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
+                              @endif
+                            </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    @foreach ($item->childMenus as $data)
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="{{$data->menu_link}}">{{$data->menu_name}}</a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                        </li>
                         @endforeach
                     </ul>
                 </div>
@@ -75,29 +74,42 @@
     <section class="banner-pc">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+
+                <style>
+                    .banner-img {
+                        width: 100%;
+                        height: 100%;
+
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                </style>
+
                 @foreach ($swiper as $item)
-                    <div class="swiper-slide">
+
+                    <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
+
                         <style>
-                            .banner-img {
-                                width: 100%;
-                                height: 100%;
+                            #a{{$item->id}}{
                                 background-image: url({{ asset('storage/' . $item->img_pc_url) }});
 
-                                background-position: center;
-                                background-size: cover;
-                                background-repeat: no-repeat;
-
-                                @media (max-width:767px) {
-                                    background-image: url({{ asset('storage/' . $item->img_pad_url) }});
-                                }
                             }
+
+                                                @media (max-width:767px) {
+                                                    #{{$item->id}}{
+                                                        background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
+
+                                                    }
+
                         </style>
-                        <figure class="banner-img">
-                            <figcaption>
+                        <figure id="a{{$item->id}}" class="banner-img">
+                            {{-- <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
                             <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                        </figcaption>
+                        </figcaption> --}}
                         </figure>
                     </div>
                 @endforeach
@@ -226,159 +238,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    {{-- <script>
-        let second = 3000;
-        let version;
-        let timerId;
-        if (window.innerWidth >= 768) {
-            version = "video-slide-pc";
-        } else {
-            version = "video-slide-pad";
-        }
-        let firstVideo = document.querySelector(`.${version}`);
-        let videoWidth;
-        let videoHeight;
-        let radio = window.innerWidth;
-        firstVideo.addEventListener('loadedmetadata', function () {
-            videoWidth = firstVideo.videoWidth;
-            videoHeight = firstVideo.videoHeight;
-            let allSlide = document.querySelectorAll('.swiper-slide');
-            allSlide.forEach(item => {
-                for (let i = 0; i < item.children.length; i++) {
-                    if (item.children[i].tagName === "IMG") {
-                        item.children[i].style.width = `${radio}px`;
-                        item.children[i].style.height = `${radio / videoWidth * videoHeight}px`;
-                    } else if (item.children[i].tagName === "VIDEO") {
-                        if (item.children[i].classList.contains(version)) {
-                            item.children[i].setAttribute("width", `${radio}`);
-                            item.children[i].setAttribute("height", `${radio / videoWidth * videoHeight}`);
-                        }
-                    }
-                }
-                item.style.width = `${radio}px`;
-            });
-        });
-        var bannerSwiper = new Swiper(".bannerSwiper", {
-            autoplay: false,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: "auto",
-            on: {
-                init: function () {
-                    let firstSwiperSlide = document.querySelector('.bannerSwiper .swiper-slide');
-                    let isVideo = false;
-                    for (let i = 0; i < firstSwiperSlide.children.length; i++) {
-                        if (firstSwiperSlide.children[i].tagName === "VIDEO") {
-                            isVideo = true;
-                            break;
-                        } else if (firstSwiperSlide.children[i].tagName === "IMG") {
-                            timerId = setTimeout(function () {
-                                bannerSwiper.slideNext();
-                            }, second);
-                            break;
-                        }
-                    }
-                    if (isVideo) {
-                        for (let i = 0; i < firstSwiperSlide.children.length; i++) {
-                            if (firstSwiperSlide.children[i].classList.contains(version)) {
-                                firstSwiperSlide.children[i].addEventListener('ended', videoNext);
-                                firstSwiperSlide.children[i].play();
-                            }
-                        }
-                    }
-                },
-                slideChange: function () {
-                    let allSwiperSlide = document.querySelectorAll('.bannerSwiper .swiper-slide');
-                    allSwiperSlide.forEach(item => {
-                        for (let i = 0; i < item.children.length; i++) {
-                            if (item.children[i].tagName === "VIDEO") {
-                                item.children[i].pause();
-                                item.children[i].currentTime = 0;
-                                item.children[i].removeEventListener('ended', videoNext);
-                            }
-                        }
-                        clearTimeout(timerId);
-                    });
-                    let lastOne = false;
-                    let nowVideo = null;
-                    let item = this.slides[this.activeIndex];
-                    let tagType = null;
-                    if (this.realIndex === (this.slides.length - 1)) {
-                        lastOne = true;
-                    }
-                    for (let i = 0; i < item.children.length; i++) {
-                        tagType = item.children[i].tagName;
-                        if (item.children[i].tagName === "VIDEO" && item.children[i].classList.contains(version)) {
-                            nowVideo = item.children[i];
-                        }
-                    }
-                    if (!lastOne) {
-                        if (tagType === "VIDEO") {
-                            if (nowVideo) {
-                                nowVideo.play();
-                                nowVideo.addEventListener('ended', videoNext);
-                            }
-                        } else if (tagType === "IMG") {
-                            timerId = setTimeout(function () {
-                                bannerSwiper.slideNext();
-                            }, second);
-                        }
-                    } else {
-                        if (tagType === "VIDEO") {
-                            if (nowVideo) {
-                                nowVideo.play();
-                                nowVideo.addEventListener('ended', videoNext);
-                                nowVideo.addEventListener('ended', function () {
-                                    bannerSwiper.slideTo(0, 500);
-                                });
-                            }
-                        } else if (tagType === "IMG") {
-                            timerId = setTimeout(function () {
-                                bannerSwiper.slideTo(0, 500);
-                                lastOne = false;
-                            }, second);
-                        }
-                    }
-                },
-            },
-        });
-        function videoNext() {
-            bannerSwiper.slideNext();
-            this.removeEventListener('ended', videoNext);
-        }
-        resizeImg();
-        function resizeImg() {
-
-            if (window.innerWidth >= 768) {
-                version = "video-slide-pc";
-            } else {
-                version = "video-slide-pad";
-            }
-            firstVideo = document.querySelector(`.${version}`);
-            videoWidth = firstVideo.videoWidth;
-            videoHeight = firstVideo.videoHeight;
-            radio = window.innerWidth;
-            let allSlide = document.querySelectorAll('.bannerSwiper .swiper-slide');
-            allSlide.forEach(item => {
-                for (let i = 0; i < item.children.length; i++) {
-                    if (item.children[i].tagName === "IMG") {
-                        item.children[i].style.width = `${radio}px`;
-                        item.children[i].style.height = `${radio / videoWidth * videoHeight}px`;
-                    } else if (item.children[i].tagName === "VIDEO") {
-                        if (item.children[i].classList.contains(version)) {
-                            item.children[i].setAttribute("width", `${radio}`);
-                            item.children[i].setAttribute("height", `${radio / videoWidth * videoHeight}`);
-                        }
-                    }
-                }
-                item.style.width = `${radio}px`;
-            });
-        }
-        window.addEventListener('resize', resizeImg);
-    </script> --}}
-
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
@@ -417,13 +276,13 @@
 
             if (window.innerWidth <= 900) {
                 direction = 2
-                // console.log(1)
+                console.log(1)
             } else if (window.innerWidth <= 1200) {
                 direction = 2
-                // console.log(2)
+                console.log(2)
             } else {
                 direction = 3
-                // console.log(3)
+                console.log(3)
             }
             return direction
         }
