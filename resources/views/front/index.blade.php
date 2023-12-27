@@ -93,7 +93,6 @@
                 </style>
 
                 @foreach ($swiper as $item)
-
                     <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
 
                         <style>
@@ -131,9 +130,12 @@
 
                         </style>
                         <figure  class="banner-img">
+
                             @if (str_contains($item->img_pc_url,'mp4'))
+
                                 <video autoplay muted id="b-pc{{$item->id}}" src={{asset('storage/'.$item->img_pc_url)}}></video>
                             @else
+
                             <div id="a{{$item->id}}"></div>
 
                             @endif
