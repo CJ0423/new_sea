@@ -98,18 +98,45 @@
 
                         <style>
                             #a{{$item->id}}{
+                                width: 100%;
+                                height: 100%;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
                                 background-image: url({{ asset('storage/' . $item->img_pc_url) }});
+                            }
+                            #b-pc{{$item->id}}{
+                                display:block;
+                                width: 100%;
+                                aspect-ratio:16/9;
+
 
                             }
-
+                            #b-mobile{{$item->id}}{
+                                display:none
+                            }
                                                 @media (max-width:767px) {
-                                                    #{{$item->id}}{
+                                                    #a{{$item->id}}{
+                                                        background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
+
+                                                    #b-pc{{$item->id}}{
+                                                       display:none;
+                                                     }
+
+                                                    #b-mobile{{$item->id}}{
+                                                        display:block;
                                                         background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
 
                                                     }
 
                         </style>
-                        <figure id="a{{$item->id}}" class="banner-img">
+                        <figure  class="banner-img">
+                            @if (str_contains($item->img_pc_url,'mp4'))
+                                <video autoplay muted id="b-pc{{$item->id}}" src={{asset('storage/'.$item->img_pc_url)}}></video>
+                            @else
+                            <div id="a{{$item->id}}"></div>
+
+                            @endif
                             <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
