@@ -22,15 +22,22 @@
     </style>
 @endsection
 
+@php
+    $array = ['patter-925X1500', 'patter-925X1000', 'patter-925X480', 'patter-1860X550'];
+@endphp
+
 @section('version')
     <div class="container-pc container-pc-a3">
         @foreach ($activities as $index => $item)
             <div data-aos="custom-animation-up" class="a{{ $index + 1 }} {{ $item->img_size_pad }} ">
                 <figure class="main-img a1-{{ $index + 1 }}">
                     <figcaption>
-                        <h2>{{ $item->title }}</h2>
-                        <h3>{{ $item->subtitle }}</h3>
-                        <a href="{{ $item->button_link }}" class="buy-now-button">{{ $item->button_name }}</a>
+
+                        <div class="{{ $array[$index] }}">
+                            <h2>{{ $item->title }}</h2>
+                            <h3>{{ $item->subtitle }}</h3>
+                            <a href="{{ $item->button_link }}" class="buy-now-button">{{ $item->button_name }}</a>
+                        </div>
                     </figcaption>
                 </figure>
             </div>
