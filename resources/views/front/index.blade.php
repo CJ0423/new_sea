@@ -57,10 +57,14 @@
                             </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     @foreach ($item->childMenus as $data)
+                                    @if ($data->menu_name!=null)
                                     <li>
                                         <a class="dropdown-item"
                                             href="{{$data->menu_link}}">{{$data->menu_name}}</a>
                                     </li>
+                                    @else
+                                    @break
+                                    @endif
                                     @endforeach
                                 </ul>
                         </li>
