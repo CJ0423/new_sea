@@ -242,7 +242,6 @@
         let videoHeight;
         let radio = window.innerWidth;
         if (firstVideo) {
-
             firstVideo.addEventListener('loadedmetadata', function() {
                 videoWidth = firstVideo.videoWidth;
                 videoHeight = firstVideo.videoHeight;
