@@ -21,11 +21,12 @@
     <!-- Demo styles -->
     @yield('css')
     <style>
-        .close::after{
+        .close::after {
             content: none;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
@@ -49,20 +50,20 @@
 
                         {{-- {{dd($menus)}} --}}
 
-                        @foreach ($menus as $item )
-                        <li class="nav-item dropdown">
-                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
-                              @endif
-                            </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    @foreach ($item->childMenus as $data)
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="{{$data->menu_link}}">{{$data->menu_name}}</a>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                        </li>
+                        @foreach ($menus as $item)
+                            <li class="nav-item dropdown">
+                                <a href=" {{ $item->menu_link }}"
+                                    role="button"@if ($item->childMenus[0]->menu_name != null) class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{ $item->menu_name }} @else class="nav-link dropdown-toggle fw-bold close"  > {{ $item->menu_name }} @endif
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        @foreach ($item->childMenus as $data)
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="{{ $data->menu_link }}">{{ $data->menu_name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
@@ -84,27 +85,25 @@
                         background-size: cover;
                         background-repeat: no-repeat;
                     }
-
                 </style>
 
                 @foreach ($swiper as $item)
-
-                    <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
+                    <div class="swiper-slide" onclick="window.open('{{ $item->button_link }}', '_blank');">
 
                         <style>
-                            #a{{$item->id}}{
+                            #a{{ $item->id }} {
                                 background-image: url({{ asset('storage/' . $item->img_pc_url) }});
 
                             }
 
-                                                @media (max-width:767px) {
-                                                    #{{$item->id}}{
-                                                        background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
+                            @media (max-width:767px) {
+                                #{{ $item->id }} {
+                                    background-image: url({{ asset('storage/' . $item->img_pad_url) }});
+                                }
 
-                                                    }
-
+                            }
                         </style>
-                        <figure id="a{{$item->id}}" class="banner-img">
+                        <figure id="a{{ $item->id }}" class="banner-img">
                             {{-- <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
@@ -253,7 +252,34 @@
             },
         });
     </script>
+
     <script>
+        var swiper2 = new Swiper(".swiper2", {
+            slidesPerView: 3,
+            freeMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        function updateSwiper() {
+            if (window.innerWidth < 767) {
+                swiper2.params.slidesPerView = 2;
+            } else if (window.innerWidth <= 1200) {
+                swiper2.params.slidesPerView = 2;
+            } else {
+                swiper2.params.slidesPerView = 3;
+            }
+            swiper2.update();
+        }
+
+        window.addEventListener('resize', updateSwiper);
+
+        window.dispatchEvent(new Event('resize'));
+    </script>
+
+    {{-- <script>
         var swiper = new Swiper('.swiper2', {
             slidesPerView: getDirection(),
             direction: 'horizontal',
@@ -274,7 +300,13 @@
             var windowWidth = window.innerWidth
             let direction = 0
 
-            if (window.innerWidth <= 900) {
+            if (window.innerWidth <= 767) {
+                // var swiper = new Swiper('.swiper2', {
+                //     slidesPerView: 2,
+                //     freeMode: true,
+                // })
+                console.log(123)
+            }else if (window.innerWidth <= 900) {
                 direction = 2
                 console.log(1)
             } else if (window.innerWidth <= 1200) {
@@ -298,7 +330,7 @@
             swiper.params.slidesPerView = getDirection()
             swiper.update()
         });
-    </script>
+    </script> --}}
     <script src="./js/dropdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">

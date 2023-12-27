@@ -197,7 +197,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 }
 @media (max-width: 900px) {
     .recommend-logo {
-        width: 70%;
+        width: 90%;
     }
 }
 
@@ -436,20 +436,30 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .container-pc div .main-img figcaption h2 {
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2rem;
     margin-block-start: 0.23em;
     margin-block-end: 0.23em;
 }
+@media (max-width: 767px) {
+    .container-pc div .main-img figcaption h2 {
+        font-size: 1.2rem;
+    }
+}
 
 .container-pc div .main-img figcaption h3 {
-    font-size: 1.4em;
+    font-size: 1.5rem;
     margin-block-start: 0.23em;
     margin-block-end: 0.23em;
     font-weight: 500;
 }
+@media (max-width: 767px) {
+    .container-pc div .main-img figcaption h3 {
+        font-size: 1rem;
+    }
+}
 
 .container-pc div .main-img figcaption a {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 0px 2px 8px 20px;
     color: white;
     text-decoration: none;
@@ -458,6 +468,12 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     border-radius: 8px;
     margin-top: 20px;
     position: relative;
+}
+@media (max-width: 767px) {
+    .container-pc div .main-img figcaption a {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
 }
 
 .container-pc div .main-img figcaption a::after {
@@ -519,13 +535,13 @@ footer .swiper-control {
     width: 90%;
 }
 
-@media (max-width: 465px) {
+@media (max-width: 767px) {
     footer .swiper-button-next {
         display: none;
     }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 767px) {
     footer .swiper-button-prev {
         display: none;
     }
@@ -699,4 +715,45 @@ div[data-aos="custom-animation-up"].aos-animate {
             // 100:54
         }
     }
+}
+
+.patter-925X480 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)50%);
+}
+.patter-925X550 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)50%);
+}
+.patter-925X1000 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+.patter-925X850 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+.patter-925X1130 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)30%);
+}
+.patter-925X1500 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)30%);
+}
+
+.patter-1860X550 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)40%);
 }
