@@ -114,7 +114,6 @@
                     </div>
                 @endforeach
 
-            </div>
             <div class="swiper-button-next">
                 <img src="{{ asset('front-img/arrow-left.png') }}" alt="">
             </div>
