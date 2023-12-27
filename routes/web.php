@@ -231,7 +231,7 @@ Route::middleware('auth')->group(function () {
     // 版型設定 更新版型之後的事情
     Route::put('seagate/store_PatternCreate/{id}', [PatternController::class, 'update'])->name('store_patternUpdate');
 
-    Route::put('seagate/destory/{id}', [PatternController::class, 'destory'])->name('destoryPattern');
+    Route::delete('seagate/destory/{id}', [PatternController::class, 'destory'])->name('destoryPattern');
 
 
     // 建立新的版型 選擇好之後要上傳的時候才是這邊
