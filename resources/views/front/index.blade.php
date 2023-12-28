@@ -5,15 +5,20 @@
 <head>
     <meta charset="utf-8" />
     <title>
-        @yield('title')
+        {{-- @yield('title') --}}
+        容量擴充首選！全球最大硬碟品牌｜Seagate 希捷
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta
+    content="超過 40 年不斷的創新與技術突破，Seagate 希捷是全球最知名的資料儲存專家，打造各式商品，為全世界儲存更多的資料。"
+    name="description">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.seagate-disty.com/tw/zh/consumer/assets/icon/favicon.ico">
 
     <!-- <link rel="stylesheet" href="./css/swiper.css"> -->
     @vite(['resources/css/front/app.scss'])
