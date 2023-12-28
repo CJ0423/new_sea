@@ -207,13 +207,15 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 @media (max-width: 767px) {
     .recommend-logo {
         width: 200px;
-        height: 200px;
+        aspect-ratio: 1/1;
+
+        // height: 200px;
     }
 }
 @media (max-width: 545px) {
     .recommend-logo {
         width: 145px;
-        height: 145px;
+        // height: 145px;
     }
 }
 // @media (max-width: 380px) {
@@ -583,6 +585,16 @@ footer .swiper-control .swiper2 {
     height: 100%;
 }
 
+@media (max-width: 767px) {
+    footer {
+        .swiper-control {
+            overflow: visible;
+            .swiper2 {
+                overflow: visible;
+            }
+        }
+    }
+}
 footer .swiper-control .swiper2 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -728,7 +740,6 @@ div[data-aos="custom-animation-up"].aos-animate {
 
 @media (max-width: 767px) {
     .container-pc {
-
         // height: 305vh;
         .column-img {
             float: initial !important;

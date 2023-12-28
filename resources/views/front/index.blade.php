@@ -363,7 +363,7 @@ window.addEventListener('resize', updateAutoplay);
         });
         function updateSwiper() {
             if (window.innerWidth < 767) {
-                swiper2.params.slidesPerView = 'auto';
+                swiper2.params.slidesPerView = 3;
 
             } else if (window.innerWidth <= 1200) {
                 swiper2.params.slidesPerView = 2;
@@ -379,7 +379,7 @@ window.addEventListener('resize', updateAutoplay);
                 console.log("767")
                let target= document.querySelector(".swiper-control-pad")
                 console.log()
-                target.style.transform = "translate3d(-10px, 0px, 0px)";
+                target.style.transform = "translate3d(0px, 0px, 0px)";
             }
         }
         window.addEventListener('resize', updateSwiper);
