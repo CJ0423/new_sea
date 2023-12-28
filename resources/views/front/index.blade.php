@@ -119,7 +119,7 @@
                             #b-pad{{$item->id}}{
                                 display:none
                             }
-                                                @media (max-width:500px) {
+                                                @media (max-width:767px) {
                                                     #a-pc{{$item->id}}{
                                                         display:none;
 
@@ -147,13 +147,13 @@
 
                             @if (str_contains($item->img_pc_url,'mp4'))
 
-                                <video autoplay muted id="b-pc{{$item->id}}" src={{asset('storage/'.$item->img_pc_url)}}></video>
+                                <video class="pc-video" autoplay muted id="b-pc{{$item->id}}" src={{asset('storage/'.$item->img_pc_url)}}></video>
                             @else
                             <div id="a-pc{{$item->id}}"></div>
                             @endif
 
                             @if (str_contains($item->img_pad_url,'mp4'))
-                                <video autoplay muted id="b-pad{{$item->id}}" src={{asset('storage/'.$item->img_pad_url)}}></video>
+                                <video class="pad-video" autoplay muted id="b-pad{{$item->id}}" src={{asset('storage/'.$item->img_pad_url)}}></video>
                             @else
                             <div id="a-pad{{$item->id}}"></div>
                             @endif
@@ -319,14 +319,22 @@
 
     function updateAutoplay() {
     var screenWidth = window.innerWidth;
-    if (screenWidth <= 500) { // 使用768px作為閾值
+    if ((screenWidth <= 767)&&(document.querySelector(".pad-video")!=null)) { // 使用768px作為閾值
+
+        swiper.autoplay.stop();
+    }
+    else if((screenWidth >= 767)&&(document.querySelector(".pc-video")!=null)){
+
+
+        swiper.autoplay.stop();
+    }
+    else {
+        console.log()
         swiper.params.autoplay = {
-            delay: 2500,
+            delay: 4500,
             disableOnInteraction: false,
         };
         swiper.autoplay.start();
-    } else {
-        swiper.autoplay.stop();
     }
 }
 
@@ -343,7 +351,6 @@ window.addEventListener('resize', updateAutoplay);
                 prevEl: ".swiper-button-prev",
             },
         });
-
         function updateSwiper() {
             if (window.innerWidth < 767) {
                 swiper2.params.slidesPerView = 2;

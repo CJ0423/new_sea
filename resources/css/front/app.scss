@@ -280,10 +280,11 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 @media (max-width: 767px) {
     .banner-pc {
+        aspect-ratio: 9/16;
         // 要特別注意
         // 最理想 690 1021
         // height: 158vw;
-        height: 148vw;
+        // height: 148vw;
         // height: 100vw;
         // max-height: calc(100vh - 54px);
     }
@@ -721,40 +722,96 @@ div[data-aos="custom-animation-up"].aos-animate {
 .patter-925X480 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0)50%);
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 50%
+    );
 }
 .patter-925X550 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0)50%);
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 50%
+    );
 }
 .patter-925X1000 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+    );
 }
 .patter-925X850 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+    );
 }
 .patter-925X1130 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0)30%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 30%
+    );
 }
 .patter-925X1500 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0)30%);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 30%
+    );
 }
 
 .patter-1860X550 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)40%);
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0) 40%
+    );
 }
