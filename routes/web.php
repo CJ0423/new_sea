@@ -74,11 +74,22 @@ Route::get('/', function () {
     // 取得swiper
     $swiper = DB::table('banner_table')
         ->where(function ($query) use ($now) {
-            // 當前時間在start_time和end_time之間
             $query->where('start_time', '<=', $now)
-                ->where('end_time', '>=', $now);
+                ->where(function ($query) use ($now) {
+                    $query->where('end_time', '>=', $now)
+                        ->orWhereNull('end_time');
+                });
         })->orderBy('Rank', 'asc')
         ->get();
+
+    // 這個抓不到空的
+    //$swiper = DB::table('banner_table')
+    //     ->where(function ($query) use ($now) {
+    //         // 當前時間在start_time和end_time之間
+    //         $query->where('start_time', '<=', $now)
+    //             ->where('end_time', '>=', $now);
+    //     })->orderBy('Rank', 'asc')
+    //     ->get();
     // if (isEmpty($swiper)) {
     //     dd($swiper);
 

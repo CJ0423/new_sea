@@ -92,32 +92,97 @@
                     <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
 
                         <style>
-                            #a{{$item->id}}{
+                            #a-pc{{$item->id}}{
+                                width: 100%;
+                                height: 100%;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
                                 background-image: url({{ asset('storage/' . $item->img_pc_url) }});
+                            }
+                            #a-pad{{$item->id}}{
+                                display:none;
+                                width: 100%;
+                                height: 100%;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-image: url({{ asset('storage/' . $item->img_pad_url) }});
+                            }
+                            #b-pc{{$item->id}}{
+                                display:block;
+                                width: 100%;
+                                aspect-ratio:16/9;
+
 
                             }
-
+                            #b-pad{{$item->id}}{
+                                display:none
+                            }
                                                 @media (max-width:767px) {
-                                                    #{{$item->id}}{
+                                                    #a-pc{{$item->id}}{
+                                                        display:none;
+
+                                                    }
+                                                    #a-pad{{$item->id}}{
+                                                        display:block;
+                                                        aspect-ratio:9/16;
+
+                                                    }
+
+                                                    #b-pc{{$item->id}}{
+                                                       display:none;
+                                                     }
+
+                                                    #b-pad{{$item->id}}{
+                                                        width:100%;
+                                                        aspect-ratio:9/16;
+                                                        display:block;
                                                         background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
 
-                            }
+                                                    }
+
                         </style>
-                        <figure id="a{{$item->id}}" class="banner-img">
-                            {{-- <figcaption>
-                            <h2>主標題文字</h2>
-                            <h3>副標題文字</h3>
-                            <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
+                        <figure  class="banner-img">
+
+                            @if (str_contains($item->img_pc_url,'mp4'))
+
+                                <video autoplay muted id="b-pc{{$item->id}}" src={{asset('storage/'.$item->img_pc_url)}}></video>
+                            @else
+                            <div id="a-pc{{$item->id}}"></div>
+                            @endif
+
+                            @if (str_contains($item->img_pad_url,'mp4'))
+                                <video autoplay muted id="b-pad{{$item->id}}" src={{asset('storage/'.$item->img_pad_url)}}></video>
+                            @else
+                            <div id="a-pad{{$item->id}}"></div>
+                            @endif
+                            <figcaption>
+                            @if($item->title!=null)
+                            <h2>{{$item->title}}</h2>
+                                 @if($item->title!=null)
+
+                                     <h3>{{$item->subtitle}}</h3>
+                                @else
+                                <h3 style="visibility: hidden">填充</h3>
+                                 @endif
+                                 @if($item->button_name!=null)
+                                 <a href={{$item->button_link}} class="buy-now-button">{{$item->button_name}}</a>
+                                 @else
+                                 <a style="visibility: hidden"  class="buy-now-button">填充</a>
+                                 @endif
+
+                            @endif
+
                         </figcaption>
                         </figure>
                     </div>
                 @endforeach
-
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next clear-btn">
                 <img src="{{ asset('front-img/arrow-left.png') }}" alt="">
             </div>
-            <div class="swiper-button-prev">
+            <div class="swiper-button-prev clear-btn">
                 <img src="{{ asset('front-img/arrow-right.png') }}" alt="">
             </div>
 
@@ -335,6 +400,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
+    <script src="./js/autoplay.js"></script>
 </body>
 
 </html>
