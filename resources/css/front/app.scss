@@ -246,7 +246,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 
 .banner-pc .swiper .swiper-slide figure figcaption a::after {
     content: "";
-    background-image: url("{{ asset('front-img/mainImg/iconamoon_arrow-right-2.png') }}");
+    background-image: url("../../../public/front-img/mainImg/iconamoon_arrow-right-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
