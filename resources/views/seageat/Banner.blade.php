@@ -70,7 +70,16 @@
                                     @else
                                      banner-down @endif">
                                 <th scope="row">{{ $item->id }}</th>
-                                <td><img src='{{ asset("storage/$item->img_pc_url") }}' alt=""></td>
+                                <td>
+                                    @if (str_contains($item->img_pc_url,'mp4'))
+                                    <video style="max-width: 100px" src="{{ asset('storage/' . $item->img_pc_url) }}" autoplay  muted></video>
+
+                                    @else
+                                    <img src='{{ asset("storage/$item->img_pc_url") }}' alt="">
+                                    @endif
+
+
+                                </td>
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->Rank }}</td>
                                 <td>{{ $item->start_time }}<br>{{ $item->end_time }}</td>
