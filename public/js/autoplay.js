@@ -8,5 +8,9 @@ clearBtns.forEach(element => {
 })
 
 function repeatAgain () {
-    console.log("text")
+    videos.forEach(element => {
+        console.log(element)
+        element.currentTime = 0
+    })
+
 }

@@ -52,7 +52,7 @@
 
                         @foreach ($menus as $item )
                         <li class="nav-item dropdown">
-                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
+                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"> {{$item->menu_name}}
                               @endif
                             </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -119,7 +119,7 @@
                             #b-pad{{$item->id}}{
                                 display:none
                             }
-                                                @media (max-width:767px) {
+                                                @media (max-width:500px) {
                                                     #a-pc{{$item->id}}{
                                                         display:none;
 
@@ -316,6 +316,22 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+    function updateAutoplay() {
+    var screenWidth = window.innerWidth;
+    if (screenWidth <= 500) { // 使用768px作為閾值
+        swiper.params.autoplay = {
+            delay: 2500,
+            disableOnInteraction: false,
+        };
+        swiper.autoplay.start();
+    } else {
+        swiper.autoplay.stop();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateAutoplay);
+window.addEventListener('resize', updateAutoplay);
     </script>
 
     <script>
