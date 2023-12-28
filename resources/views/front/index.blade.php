@@ -111,7 +111,7 @@
 
 
                             }
-                            #b-mobile{{$item->id}}{
+                            #b-pad{{$item->id}}{
                                 display:none
                             }
                                                 @media (max-width:767px) {
@@ -122,7 +122,9 @@
                                                        display:none;
                                                      }
 
-                                                    #b-mobile{{$item->id}}{
+                                                    #b-pad{{$item->id}}{
+                                                        width:100%;
+                                                        aspect-ratio:9/16;
                                                         display:block;
                                                         background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
 
@@ -135,9 +137,13 @@
 
                                 <video autoplay muted id="b-pc{{$item->id}}" src={{asset('storage/'.$item->img_pc_url)}}></video>
                             @else
-
                             <div id="a{{$item->id}}"></div>
+                            @endif
 
+                            @if (str_contains($item->img_pad_url,'mp4'))
+                                <video autoplay muted id="b-pad{{$item->id}}" src={{asset('storage/'.$item->img_pad_url)}}></video>
+                            @else
+                            <div id="a{{$item->id}}"></div>
                             @endif
                             <figcaption>
                             <h2>主標題文字</h2>
