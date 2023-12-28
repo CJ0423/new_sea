@@ -146,9 +146,23 @@
                             <div id="a{{$item->id}}"></div>
                             @endif
                             <figcaption>
-                            <h2>主標題文字</h2>
-                            <h3>副標題文字</h3>
-                            <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
+                            @if($item->title!=null)
+                            <h2>{{$item->title}}</h2>
+                                 @if($item->title!=null)
+
+                                     <h3>{{$item->subtitle}}</h3>
+                                @else
+                                <h3 style="visibility: hidden">填充</h3>
+
+                                 @endif
+                                 @if($item->button_name!=null)
+                                 <a href={{$item->button_link}} class="buy-now-button">{{$item->button_name}}</a>
+                                 @else
+                                 <a style="visibility: hidden"  class="buy-now-button">填充</a>
+                                 @endif
+
+                            @endif
+
                         </figcaption>
                         </figure>
                     </div>
