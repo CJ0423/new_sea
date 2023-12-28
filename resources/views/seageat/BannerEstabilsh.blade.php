@@ -16,7 +16,7 @@
     <!-- 以下分割 -->
     <div class="size16">建立Banner</div>
     <div class="border border-0 card">
-        <div class="frame-2">
+        <div class="frame-2">｀｀
             <div class="size12"></div>
         </div>
         <div class="frame-3">

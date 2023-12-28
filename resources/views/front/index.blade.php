@@ -50,20 +50,20 @@
 
                         {{-- {{dd($menus)}} --}}
 
-                        @foreach ($menus as $item)
-                            <li class="nav-item dropdown">
-                                <a href=" {{ $item->menu_link }}"
-                                    role="button"@if ($item->childMenus[0]->menu_name != null) class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{ $item->menu_name }} @else class="nav-link dropdown-toggle fw-bold close"  > {{ $item->menu_name }} @endif
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        @foreach ($item->childMenus as $data)
-                                            <li>
-                                                <a class="dropdown-item"
-                                                    href="{{ $data->menu_link }}">{{ $data->menu_name }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                            </li>
+                        @foreach ($menus as $item )
+                        <li class="nav-item dropdown">
+                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
+                              @endif
+                            </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    @foreach ($item->childMenus as $data)
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="{{$data->menu_link}}">{{$data->menu_name}}</a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                        </li>
                         @endforeach
                     </ul>
                 </div>
@@ -88,27 +88,27 @@
                 </style>
 
                 @foreach ($swiper as $item)
-                    <div class="swiper-slide" onclick="window.open('{{ $item->button_link }}', '_blank');">
+
+                    <div class="swiper-slide"  onclick="window.open('{{ $item->button_link }}', '_blank');">
 
                         <style>
-                            #a{{ $item->id }} {
+                            #a{{$item->id}}{
                                 background-image: url({{ asset('storage/' . $item->img_pc_url) }});
 
                             }
 
-                            @media (max-width:767px) {
-                                #{{ $item->id }} {
-                                    background-image: url({{ asset('storage/' . $item->img_pad_url) }});
-                                }
+                                                @media (max-width:767px) {
+                                                    #{{$item->id}}{
+                                                        background-image: url({{ asset('storage/' . $item->img_pad_url) }});}
 
                             }
                         </style>
-                        <figure id="a{{ $item->id }}" class="banner-img">
+                        <figure id="a{{$item->id}}" class="banner-img">
                             {{-- <figcaption>
                             <h2>主標題文字</h2>
                             <h3>副標題文字</h3>
                             <a href="link-to-purchase-page" class="buy-now-button">按鍵名稱</a>
-                        </figcaption> --}}
+                        </figcaption>
                         </figure>
                     </div>
                 @endforeach
