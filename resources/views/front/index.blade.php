@@ -237,7 +237,7 @@
             <h1 class="title">推薦通路</h1>
             <div class="swiper-control">
                 <div class="swiper2">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper swiper-control-pad">
                         {{-- {{ dd($recommend) }} --}}
                         @foreach ($recommend as $item)
                             <div class="swiper-slide">
@@ -367,7 +367,19 @@ window.addEventListener('resize', updateAutoplay);
             swiper2.update();
         }
 
+        function controlSwiper(){
+
+
+            if (window.innerWidth < 767) {
+               let target= document.querySelector(".swiper-control-pad")
+                console.log()
+                target.style.transform = "translate3d(-20px, 0px, 0px)";
+
+            }
+        }
+
         window.addEventListener('resize', updateSwiper);
+        window.addEventListener('resize', controlSwiper);
 
         window.dispatchEvent(new Event('resize'));
     </script>
