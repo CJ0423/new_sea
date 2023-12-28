@@ -57,15 +57,19 @@
 
                         @foreach ($menus as $item )
                         <li class="nav-item dropdown">
-                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"> {{$item->menu_name}}
+                            <a  href=" {{$item->menu_link}}" role="button"@if (($item->childMenus[0]->menu_name)!=null)class="nav-link dropdown-toggle fw-bold "data-bs-toggle="dropdown" aria-expanded="false" >{{$item->menu_name}} @else class="nav-link dropdown-toggle fw-bold close"  > {{$item->menu_name}}
                               @endif
                             </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     @foreach ($item->childMenus as $data)
+                                    @if ($data->menu_name!=null)
                                     <li>
                                         <a class="dropdown-item"
                                             href="{{$data->menu_link}}">{{$data->menu_name}}</a>
                                     </li>
+                                    @else
+                                    @break
+                                    @endif
                                     @endforeach
                                 </ul>
                         </li>
@@ -355,31 +359,32 @@ window.addEventListener('resize', updateAutoplay);
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            spaceBetween:20
         });
         function updateSwiper() {
             if (window.innerWidth < 767) {
-                swiper2.params.slidesPerView = 2;
+                swiper2.params.slidesPerView = 'auto';
+
             } else if (window.innerWidth <= 1200) {
                 swiper2.params.slidesPerView = 2;
             } else {
                 swiper2.params.slidesPerView = 3;
             }
             swiper2.update();
+            controlSwiper()
         }
 
         function controlSwiper(){
-
-
             if (window.innerWidth < 767) {
+                console.log("767")
                let target= document.querySelector(".swiper-control-pad")
                 console.log()
-                target.style.transform = "translate3d(-20px, 0px, 0px)";
-
+                target.style.transform = "translate3d(-10px, 0px, 0px)";
             }
         }
-
         window.addEventListener('resize', updateSwiper);
         window.addEventListener('resize', controlSwiper);
+        window.addEventListener('load', updateSwiper);
 
         window.dispatchEvent(new Event('resize'));
     </script>
