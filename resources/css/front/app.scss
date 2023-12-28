@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 // 要特別注意
 * {
     box-sizing: border-box;
@@ -196,11 +197,31 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
 .recommend-logo img {
     width: 100%;
 }
+
 @media (max-width: 900px) {
     .recommend-logo {
         width: 90%;
     }
 }
+
+@media (max-width: 767px) {
+    .recommend-logo {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 545px) {
+    .recommend-logo {
+        width: 145px;
+        height: 145px;
+    }
+}
+// @media (max-width: 380px) {
+//     .recommend-logo {
+//         width: 120px;
+//         height: 120px;
+//     }
+// }
 
 .banner-pc .swiper .swiper-slide figure {
     margin: 0px;
@@ -287,6 +308,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
         // height: 100vw;
         // max-height: calc(100vh - 54px);
     }
+
     .banner-pc .swiper .swiper-button-next {
         right: var(--swiper-navigation-sides-offset, 10px);
     }
@@ -441,6 +463,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     margin-block-start: 0.23em;
     margin-block-end: 0.23em;
 }
+
 @media (max-width: 767px) {
     .container-pc div .main-img figcaption h2 {
         font-size: 1.2rem;
@@ -453,6 +476,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     margin-block-end: 0.23em;
     font-weight: 500;
 }
+
 @media (max-width: 767px) {
     .container-pc div .main-img figcaption h3 {
         font-size: 1rem;
@@ -470,6 +494,7 @@ header nav .nav-right .dropdown .dropdown-content.dropdown-active {
     margin-top: 20px;
     position: relative;
 }
+
 @media (max-width: 767px) {
     .container-pc div .main-img figcaption a {
         font-size: 1rem;
@@ -702,12 +727,14 @@ div[data-aos="custom-animation-up"].aos-animate {
 
 @media (max-width: 767px) {
     .container-pc {
+
         // height: 305vh;
         .column-img {
             float: initial !important;
             width: 100% !important;
             height: 112vw !important;
         }
+
         .row-img {
             float: initial !important;
 
@@ -724,28 +751,33 @@ div[data-aos="custom-animation-up"].aos-animate {
     background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0)50%);
 }
+
 .patter-925X550 {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0)50%);
 }
+
 .patter-925X1000 {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
+
 .patter-925X850 {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
+
 .patter-925X1130 {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0)30%);
+            rgba(0, 0, 0, 0)30%);
 }
+
 .patter-925X1500 {
     width: 100%;
     height: 100%;
