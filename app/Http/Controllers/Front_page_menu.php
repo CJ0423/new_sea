@@ -12,7 +12,7 @@ class Front_page_menu extends Controller
     {
         $requestArray = $request->all();
         // dd($requestArray);
-        $requestArrayLength = count($requestArray) - 3; //重複次數剛好減少4就是要存儲的資料數
+        $requestArrayLength = count($requestArray) - 3; //重複次數剛好減少3就是要存儲的資料數
         // dd($requestArray);
         // dd($requestArrayLength);
         $chosePatternId = DB::table('menu')->insertGetId([

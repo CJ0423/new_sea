@@ -292,7 +292,7 @@ class ProfileController extends Controller
     // }
     public function ActivityEstablishChosePattern()
     {
-        return view('seageat.activityEstablishChosePattern');
+        return view('seageat.ActivityEstablishChosePattern');
     }
     public function ActivityEstablishChosePattern2()
     {
