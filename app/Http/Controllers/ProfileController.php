@@ -79,6 +79,25 @@ class ProfileController extends Controller
     {
         $child = DB::table('childmenu')->where('menu_id', $id)->get();
         $menu = DB::table('menu')->where('id', $id)->get();
+
+        // 威斯利支援
+        if ($child->count() < 10) {
+            $add_child_row = 10 - $child->count();
+            for ($i = 0; $i < $add_child_row; $i++) {
+                DB::table('childmenu')->insert([
+                    'menu_name'  => null,
+                    'menu_link'  => null,
+                    'menu_id'    => $id,
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now()
+                ]);
+            }
+
+            $child = DB::table('childmenu')->where('menu_id', $id)->get();
+        }
+        //到此
+
+
         return view('seageat.FrontPageEditMenu', compact('child', 'menu'));
     }
     // Banner管理
