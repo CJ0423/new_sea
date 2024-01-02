@@ -266,18 +266,24 @@
                 </div>
                 <div class="icons">
                     <div class="icon">
-                        <a href=""><img src="{{ asset('img/icon/icon-bottom/Link.png') }}" alt=""></a>
+                        <style>
+                            .icon-bootm{
+                                widows: 44px;
+                                height: 44px;
+                            }
+                        </style>
+                        <a href="https://twitter.com/seagategaming?elqTrackId=1d3f221db1704f55b6181b70dde648e8&elqaid=4873&elqat=2"><img class="icon-bootm"  src="{{asset('img/front/img/icon/tw.png') }}" alt=""></a>
                     </div>
                     <div class="icon">
-                        <a href=""><img src="{{ asset('img/icon/icon-bottom/Link (1).png') }}"
+                        <a href="https://www.instagram.com/seagategaming/?elqTrackId=f58332b5e270448f922f2d148c6ad771&elqaid=4873&elqat=2"><img  class="icon-bootm" src="{{ asset('img/front/img/icon/ig.png') }}"
                                 alt=""></a>
                     </div>
                     <div class="icon">
-                        <a href=""><img src="{{ asset('img/icon/icon-bottom/Link (2).png') }}"
+                        <a href="https://www.youtube.com/user/SeagateTechnology"><img class="icon-bootm" src="{{ asset('img/front/img/icon/yt.png') }}"
                                 alt=""></a>
                     </div>
                     <div class="icon">
-                        <a href=""><img src="{{ asset('img/icon/icon-bottom/Link (3).png') }}"
+                        <a href="https://www.facebook.com/seagatetaiwan/?brand_redir=27335728124&elqTrackId=5820b09affa24270bb193ad1cfcd09b4&elqaid=4873&elqat=2"><img class="icon-bootm" src="{{ asset('img/front/img/icon/fb.png') }}"
                                 alt=""></a>
                     </div>
 
