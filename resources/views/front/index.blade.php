@@ -298,7 +298,7 @@
                 <a href="">聯絡我們</a>
             </div>
             <div class="copyright">
-                <div> Copyright © 2023 Xander International Corp. </div>
+                <div> Copyright © 2024 Xander International Corp. </div>
                 <div>All Rights Reserved.</div>
             </div>
         </footer>
